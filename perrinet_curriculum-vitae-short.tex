@@ -1,0 +1,146 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+%------------------------------------
+\newcommand{\Title}{Curriculum Vit\ae} 
+\newcommand{\Author}{Laurent U. Perrinet} 
+\newcommand{\Address}{Researcher in Computational Neuroscience\\ Institut de Neurosciences de la Timone\\
+UMR 7289, CNRS / Aix-Marseille Universit{\'e}\\ 27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}%
+\newcommand{\Website}{http://www.invibe.net/LaurentPerrinet}
+\newcommand{\Email}{Laurent.Perrinet@univ-amu.fr} 
+%------------------------------------
+\documentclass[11pt, a4paper]{article}
+\usepackage{fontspec} 
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=13cm, textheight=24cm, marginparsep=7pt, marginparwidth=3cm}
+\setlength\parindent{0in}
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
+\setmonofont[Scale=0.8]{Monaco} 
+%\setsansfont[Scale=0.9]{Optima Regular} 
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- CUSTOM AMPERSAND
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
+\newcommand{\amper}{{\selectfont\itshape\&}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\sffamily\mdseries\large\underline} 
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize} 
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[bookmarks, colorlinks, breaklinks]{hyperref}  %dvipdfm, 
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,
+pdftitle={\Title},%
+pdfauthor={\Author < \Email > \Address - \Website},%
+pdfsubject={\Title}%
+}%
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+% DOCUMENT
+\begin{document}
+\pagestyle{empty}
+\reversemarginpar
+\textsf{\Large \Author}\\[1cm]
+\Address \\[.2cm]
+%Phone: \texttt{609-734-8000}\\
+%Fax: \texttt{609-924-8399}\\[.2cm]
+%email: \href{mailto:\Email}{\Email}\\
+\textsc{url}: \href{\Website}{\Website}\\ 
+%\vfill
+\section*{Research interests}
+I am interested in bridging the gap between the structure and the function of neural systems by showing how they optimally adapt to the statistics of natural environments.
+%\vfill
+%Born:  February 23rd, 1973---Bordeaux, France\\
+%Nationality:  French
+
+%%%\hrule
+%\section*{Current position}
+%\noindent\years{since 2004}\emph{Researcher (CR1)}, Institut de Neurosciences de la Timone (INT).
+
+%%\hrule
+\section*{Areas of specialization}
+Spatio-temporal inference in low-level sensory areas. \\
+Motion Perception. \\
+Free-energy and active perception.
+
+%%%\hrule
+%\section*{Appointments held}
+%
+%\noindent\years{2010--12}Visiting Scholar, UCL (London, UK). Karl Friston's theoretical neurobiology group.\\
+%\noindent\years{1999}Research Scholar, USAFB (Rome, NY) / University of San Diego in California.\\
+%\years{1997}Research Scholar, Jet Propulsion Laboratory (Nasa), Pasadena, California. Department of Terrestrial Science, Imaging Radar Laboratory\\
+%\years{9/1995-6/96}Engineer at Alcatel, Vienna (Austria). Department of Voice Processing Systems.\\
+%
+
+%\hrule
+\section*{Education}
+
+\noindent\years{1999-2003}\textsc{PhD} in Cognitive Neuroscience, ONERA/DTIM, Toulouse (France)\\
+\years{1993 - 1998}\textsc{MSc} in Engineering  {\sc Supaéro} (Toulouse, France), one of the leading French Engineering Schools ("Grandes Ecoles"). Specialization in stochastic models for signal and image processing. 
+% \years{10/1999-2/2003}\textsc{Master} in Cognitive Sciences, ONERA/DTIM, Toulouse (France)
+%
+%%\hrule
+%\section*{Grants, honors \amper{} awards}
+
+%\noindent\years{1921}Nobel Prize in Physics, Nobel Foundation
+
+\section*{Selected publications}% \amper{} talks}
+
+%\subsection*{Journal articles}
+\noindent\years{2012}Karl Friston, Rick A. Adams, Laurent U. Perrinet and Michael Breakspear,  ``Perceptions as Hypotheses: Saccades as Experiments'', {\bf Frontiers in Psychology}.\\
+\noindent\years{2012}Claudio Simoncini, Laurent U. Perrinet, Anna Montagnini, Pascal Mamassian and Guillaume S. Masson, ``More is not always better: dissociation between perception and action explained by adaptive gain control'', {\bf Nature Neuroscience} (2012).\\
+\noindent\years{2012}Paula S. Leon, Ivo Vanzetta, Guillaume S. Masson and Laurent U. Perrinet, ``Motion Clouds: Model-based stimulus synthesis of natural-like random textures for the study of motion perception'', {\bf Journal of Neurophysiology}.\\%, 107(11):3217--3226.\\
+\noindent\years{2012}Laurent~U. Perrinet and Guillaume~S. Masson, ``Motion-based prediction is sufficient to solve the aperture problem", {\bf Neural Computation}. \\ %
+\noindent\years{2011}Guillaume~S. Masson  and Laurent~U. Perrinet, ``The behavioral receptive field underlying motion integration for primate tracking eye movements", {\bf Neuroscience and biobehavioral reviews}. %\\ %
+%\noindent\years{2010}Laurent~U. Perrinet, ``Role of homeostasis in learning sparse representations", {\bf Neural Computation}.\\%, 22\penalty0 (7). \\ %
+%\noindent\years{2007}Frederic Barthelemy, Laurent~U. Perrinet, Eric Castet, and  Guillaume~S. Masson, ``Dynamics of distributed {1{D}} and {2{D}} motion representations for short-latency ocular following", {\bf Vision {R}esearch}.\\%, 48\penalty0 (4):\penalty0 501--22. \\%\newblock \doi{10.1016/j.visres.2007.10.020}.\\
+%\noindent\years{2007}Laurent~U. Perrinet and Guillaume~S. Masson, ``Modeling spatial integration in the ocular following response using a  probabilistic framework", {\bf Journal of {P}hysiology ({P}aris)}.\\%
+%\noindent\years{2007}Sylvain Fischer, Rafael Redondo, Laurent~U. Perrinet, and Gabriel  Crist{\'o}bal, ``Sparse approximation of images inspired from the functional architecture of the primary visual areas'' {\bf EURASIP Journal on Advances in Signal Processing},  (1):122.\\
+%\noindent\years{2004}Laurent U. Perrinet, “Feature detection using spikes : the greedy approach", {\bf Journal of Physiology, Paris}.\\
+%\noindent\years{2004}Laurent U. Perrinet, Manuel Samuelides and Simon Thorpe, ``Coding static natural images using spiking event times : do neurons cooperate?",  {\bf IEEE Transactions on Neural Networks}.\\%, 15(5):1164--75.%
+%\end{itemize}
+%\subsection*{Book chapter}
+%
+%\noindent\years{2007}Laurent U. Perrinet (2007) “Dynamical neural networks: modeling low-level vision at short latencies".  In \emph{Topics in Dynamical Neural Networks: From Large Scale Neural Networks to Motor Control and Vision}: volume 142 of {\bf The European Physical Journal (Special Topics)}.  Springer Berlin / Heidelberg.%, mar 2007, pages 163--225.  \doi{10.1140/epjst/e2007-00061-7}. % 
+%
+
+%
+%\subsection*{Talks}
+%
+%\noindent\years{2008}Laurent U. Perrinet (2008), “Adaptive sparse spike coding : applications of neuroscience to the compression of natural images." In \emph{Optical and Digital Image Processing Conference 7000 -  Proceedings of SPIE Volume 7000, April 2008}, pages 15 -- S4\\
+
+%%\vspace{1cm}
+%\vfill{}
+%\hrulefill
+
+%\end{center}
+
+
+\end{document}
