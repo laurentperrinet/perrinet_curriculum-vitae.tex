@@ -1,0 +1,777 @@
+%!TEX TS-program = pdfLaTeX
+%!TEX encoding = IsoLatin
+%!TEX spellcheck = fr-FR
+%!BIB TS-program = biber
+\documentclass[11pt,french,a4paper,oneside]{article}%,twoside,draft
+%============ common ===================
+\usepackage[latin1]{inputenc}%
+\usepackage[french,english]{babel}%
+\usepackage{csquotes}%
+%\usepackage{luaotfload}
+%\usepackage[EU2]{fontenc}
+%\usepackage{lmodern}
+%\usepackage{fontspec}
+%\setmainfont[Ligatures=TeX]{Minion Pro}
+%\usepackage{fontspec}%0
+%\defaultfontfeatures{Mapping=tex-text} 
+%\setsansfont[Ligatures={Common}]{Futura}
+%\setmonofont[Scale=0.8]{Monaco} 
+%\setmainfont[Numbers={Proportional,OldStyle}]{TeX Gyre Schola}%TeX Gyre Adventor}%Inconsolata}%Verdana}%TeX Gyre Bonum}
+%\setsansfont[Numbers={Proportional,OldStyle},Scale=MatchLowercase]{TeX Gyre Adventor}%Inconsolata}%Latin Modern Sans}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{etaremune}%
+\usepackage[final]{pdfpages}%
+%% --- unit formatting ---
+\usepackage{units}%
+\usepackage{siunitx}%
+\newcommand{\m}{\si{\meter}}%
+
+\newcommand{\nF}{\si{\nano\farad}}%
+\newcommand{\uS}{\si{\micro\siemens}}%
+\newcommand{\nS}{\si{\nano\siemens}}%
+\newcommand{\kHz}{\si{\kilo\hertz}}%
+\newcommand{\Hz}{\si{\hertz}}%
+\newcommand{\mV}{\si{\milli\volt}}%
+\newcommand{\ms}{\si{\milli\second}}%
+\newcommand{\s}{\si{\second}}%
+
+\usepackage{microtype}	% Better typography [protrusion=true,expansion=true,kerning=true,spacing=true]
+%\hyphenpenalty=10
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\widowpenalty=10000
+\vfuzz \hfuzz
+\raggedbottom
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amsfonts,amsthm}			% Math packages
+\usepackage{bm}%This package defines commands to access bold math symbols
+\usepackage{graphicx}					% Enable pdflatex
+%============ front-matter ===================
+\newcommand{\BookTitle}{Centre National de la Recherche Scientifique} 
+\newcommand{\Title}{%
+Liste des publications}% 
+\newcommand{\SubTitle}{%
+Pour évaluation par les sections du Comité national}%
+\newcommand{\Author}{Laurent U.~Perrinet}%
+\newcommand{\Team}{\'Equipe Inference in Visual Behaviour (InViBe)}%
+\newcommand{\Institute}{Institut de Neurosciences de la Timone}%
+\newcommand{\InstituteUMR}{UMR 7289, CNRS / Aix-Marseille Université}%
+\newcommand{\Address}{27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France} 
+\newcommand{\Website}{http://invibe.net/LaurentPerrinet}
+\newcommand{\Email}{Laurent.Perrinet@univ-amu.fr} 
+%%%%%%%%%%%%%%%%%%
+%BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%
+\usepackage[natbib=true,
+			bibencoding=utf8,
+                     sortcites=true,
+                     block=space,
+                     backend=biber,
+%                     doi=false,isbn=false,url=false,
+                     citestyle=alphabetic,%authoryear-comp,
+                     backref=true,
+                     bibstyle=alphabetic
+                     ]{biblatex}%
+%\addbibresource[location=remote]{http://www.citeulike.org/bibtex/user/LaurentPerrinet}
+\addbibresource{LaurentPerrinet.bib}
+%\addbibresource{~/science/CloudBib/citeulike/Papers/LaurentPerrinet.bib}%
+%\addbibresource{~/science/CloudBib/citeulike/Papers/LaurentPerrinet.bib}%
+%\addbibresource{~/science/CloudBib/babel.bib}%
+%\addbibresource{~/Desktop/Dropbox/bibtexing/mendeley/library.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OPTIONAL MACRO FILES
+\usepackage{fltpage}
+\usepackage{tikz} 
+%%%%%%%%%%%%%%%%%%
+%\usepackage{multicol}
+%\usepackage{nag}
+%============ graphics ===================
+\usepackage{graphicx}
+%============ hyperref ===================
+\usepackage[unicode,linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,pdfborder={0 0 0}]{hyperref}%
+\hypersetup{%
+unicode = true, %
+pdftitle={\Title},%
+pdfauthor={\Author < \Email > - \Institute, \InstituteUMR , \Address - \Website},%
+pdfsubject={\Title}%
+}%
+%\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+%\hyphenpenalty=5000
+%\tolerance=1000
+%% DOCUMENT LAYOUT
+%\usepackage{geometry} 
+%\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+%\setlength\parindent{0in}
+%% ---- MARGIN YEARS
+\newcommand{\years}[1]{\marginpar{\textit{\scriptsize #1}}}
+\providecommand{\natexlab}[1]{#1}
+%\providecommand{\url}[1]{\texttt{#1}}
+%\expandafter\ifx\csname urlstyle\endcsname\relax
+ \providecommand{\doi}[1]{doi: #1}%\else
+%  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+%\makepagestyle{chapter}
+%\makeoddfoot{chapter}{\addRevisionData}{\thepage}{}
+%\makeevenfoot{chapter}{\addRevisionData}{\thepage}{}
+\graphicspath{{/Users/laurentperrinet/quantic/2016_science/2014-04-17_HDR/figures/}}%,{./khoei13jpp/figures/},{./bednar/},{./kaplan13/},{./friston/},{../../sci/dyva/lup/Learning/mp_sparsenet/mp_sparsenet/results/20080502T174325}}%
+%%%%%%%%%%%% Her begynner selve dokumentet %%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+%\vskip 2cm
+\emph{\Large \BookTitle }%
+\vskip 2cm
+{\Huge \Title}
+\vskip 1cm
+{\Large Laurent \textsc{Perrinet}}
+\vskip 1cm
+\emph{\Large \SubTitle }\\%
+\begin{tabular}[t]{ccc}
+\includegraphics[height=2.5cm]{logo_cnrs-UAM.png} &%\includegraphics[]{}
+\includegraphics[height=2.5cm]{logo_int.png} %& %
+%	\includegraphics[height=2.5cm]{U2_logo.pdf} 
+\end{tabular}
+
+\vskip 1cm
+\begin{tabular}[t]{|c|}
+\hline
+\Team \\\hline
+\Institute \\ \InstituteUMR \\\hline
+\Address \\\hline
+\url{\Website}\\\hline
+\url{\Email}\\\hline
+\end{tabular}
+\vskip .5cm
+
+%\begin{tabular}[t]{|l|l|}
+%\hline
+%\multicolumn{2}{|c|}{Jury composé de Messieurs :} \\
+%\hline
+%Prof. Laurent Madelain & Université Lille III \\
+%Dr. Alain Destexhe & Université Paris XI (Rapporteur) \\
+%Prof. Gustavo Deco & Universitat Pompeu Fabra, Barcelona (Rapporteur) \\
+%Dr. Guillaume Masson & Aix-Marseille Université \\
+%Dr. Viktor Jirsa &  Aix-Marseille Université (Rapporteur) \\
+%Prof. Jean-Louis Mege & Aix-Marseille Université \\
+%\hline
+%\end{tabular}
+
+\vfill
+{\large Rapport d'activité -  Février 2017}
+%\pageskip
+\end{center}
+\end{titlepage}
+
+
+\section{Liste des publications}
+%% 
+%Vous présenterez la liste de vos publications scientifiques depuis les 5 ou 10 derniers semestres (distincte de la liste exhaustive de vos publications, mise à jour et transmise en fichier séparé) selon l?une des deux listes suivantes :
+
+\subsection{Articles de revues internationales à comité de lecture}%
+%Publications dans des journaux à comité de lecture}
+\begin{enumerate}
+%\item \fullcite{Simoncini12}
+%\item \fullcite{Khoei13}
+
+
+%Jonathan Vacher, Andrew Isaac Meso, Laurent U Perrinet, Gabriel Peyré (in preparation). Bayesian Modeling of Motion Perception using Dynamical Stochastic Textures. 2016
+
+%  
+
+\item[A37] \years{2017} \fullcite{KhoeiMassonPerrinet17}%
+
+
+\item[A36] \years{2016} \fullcite{Kremkow16}%
+
+
+\item[A36] \years{2015} \fullcite{Taouali15}%
+
+
+\item[A35] \fullcite{Vacher15nips}%
+
+
+\item[A34] \fullcite{PerrinetBednar15}%
+
+
+\item[A33] \years{2013} \fullcite{PerrinetAdamsFriston14}%
+
+
+\item[A32] \years{2013} \fullcite{Khoei13jpp}%
+%Mina A. Khoei, Guillaume S. Masson, Laurent U. Perrinet. 
+%Motion-based prediction explains the role of tracking in motion extrapolation. 
+%\newblock \emph{Journal of Physiology-Paris},  107(5):409--420. 
+
+
+\item[A31] %
+Bernhard A. Kaplan, Anders Lansner, Guillaume S. Masson, Laurent U. Perrinet. 
+Anisotropic connectivity implements motion-based prediction in a spiking neural network. 
+\newblock \emph{Frontiers Computational Neuroscience},  7:112.
+
+\item[A30] %
+Rodrigo Nava, J. Victor Marcos, Boris Escalante-Ram\'irez, Gabriel Crist\'obal, Laurent U. Perrinet, Ra\'ul S. J. Estépar. 
+\newblock \emph{Progress in Pattern Recognition, Image Analysis, Computer Vision, and Applications
+Lecture Notes in Computer Science},  Volume 8259, 2013, pp 214-221.
+
+\item[A29] %
+Claudio Simoncini, \years{2012} Laurent~U. Perrinet, Anna Montagnini, Pascal Mamassian and Guillaume~S. Masson.
+\newblock More is not always better: Adaptive gain control explains dissociation between perception and action.
+\newblock \emph{Nature Neuroscience}
+\newblock vol. 15, no. 11, pp. 1596--1603, 2012.
+\newblock \doi{10.1038/nn.3229}.
+\newblock URL \url{http://invibe.net/LaurentPerrinet/Publications/Simoncini12}.
+
+%\item \fullcite{Perrinet12pred}
+\item[A28] %\bibitem[Perrinet and Masson(2012)]{Perrinet12pred}
+Laurent~U. Perrinet and Guillaume~S. Masson.
+\newblock {Motion-based prediction is sufficient to solve the aperture
+  problem}.
+\newblock \emph{Neural Computation}, pages 1--25, June 2012.
+\newblock ISSN 1530-888X.
+%\newblock \doi{10.1162/NECO_a_00332}.
+%\newblock URL \url{http://dx.doi.org/10.1162/NECO_a_00332}.
+
+\item[A27] %\bibitem[Leon et~al.(2012)Leon, Vanzetta, Masson, and Perrinet]{Leon12}
+Paula~Sanz Leon, Ivo~Vanzetta, Guillaume~S. Masson, and Laurent~U. Perrinet.
+\newblock {Motion clouds: model-based stimulus synthesis of natural-like random
+  textures for the study of motion perception}.
+\newblock \emph{Journal of Neurophysiology}, 107\penalty0 (11):\penalty0
+  3217--3226, March 2012.
+%\newblock ISSN 1522-1598.
+\newblock \doi{10.1152/jn.00737.2011}.
+%\newblock URL \url{http://dx.doi.org/10.1152/jn.00737.2011}.
+
+\item[A26] %\bibitem[Friston et~al.(2012)Friston, Adams, Perrinet, and  Breakspear]{Friston12}
+Karl Friston, Rick~A. Adams, Laurent~U. Perrinet, and Michael Breakspear.
+\newblock {Perceptions as hypotheses: Saccades as experiments}.
+\newblock \emph{Frontiers in Psychology}, 3, 2012.
+%\newblock ISSN 1664-1078.
+\newblock \doi{10.3389/fpsyg.2012.00151}.
+%\newblock URL \url{http://dx.doi.org/10.3389/fpsyg.2012.00151}.
+
+\item[A25] %
+Rick~A. Adams, Laurent~U. Perrinet, and Karl Friston.
+\newblock {Smooth pursuit and visual occlusion: active inference and oculomotor control in schizophrenia}.
+\newblock \emph{PLoS ONE}, 7 (10),  2012.
+%\newblock URL \url{http://invibe.net/LaurentPerrinet/Publications/Adams12}
+%\newblock \doi{10.1371/journal.pone.0047502}.
+
+\item[A24] %\bibitem[Masson and Perrinet(2012)]{Masson12}
+Guillaume~S. Masson and Laurent~U. Perrinet.
+\newblock {The behavioral receptive field underlying motion integration for
+  primate tracking eye movements}.
+\newblock \emph{Neuroscience \& Biobehavioral Reviews}, 36\penalty0
+  (1):\penalty0 1--25, January 2012.
+%\newblock ISSN 0149-7634.
+\newblock \doi{doi:10.1016/j.neubiorev.2011.03.009}.
+%\newblock URL \url{http://dx.doi.org/doi:10.1016/j.neubiorev.2011.03.009}.
+
+\item[A23] %\bibitem[Voges and Perrinet(2012)]{Voges12}
+Nicole~Voges and Laurent~U. Perrinet.
+\newblock {Complex dynamics in recurrent cortical networks based on spatially
+  realistic connectivities}.
+\newblock \emph{Frontiers in Computational Neuroscience}, 6, 2012.
+\newblock ISSN 1662-5188.
+\newblock \doi{10.3389/fncom.2012.00041}.
+%\newblock URL \url{http://invibe.net/LaurentPerrinet/Publications/Voges12}.
+
+
+\item[A22] %\bibitem[Fleuriet et~al.(2011)Fleuriet, Hugues, Perrinet, and  Goffart]{Fleuriet11a}
+Jerome Fleuriet, \years{2011} Sandrine Hugues, Laurent~U. Perrinet, and Laurent Goffart.
+\newblock {Saccadic foveation of a moving visual target in the rhesus monkey}.
+\newblock \emph{Journal of neurophysiology}, 105\penalty0 (2):\penalty0
+  883--895, February 2011.
+%\newblock ISSN 1522-1598.
+\newblock \doi{10.1152/jn.00622.2010}.
+%\newblock URL \url{http://dx.doi.org/10.1152/jn.00622.2010}.
+
+
+\item[A21] %\bibitem[Bogadhi et~al.(2011)Bogadhi, Montagnini, Mamassian, Perrinet, and  Masson]{Bogadhi11a}
+Amarender~R. Bogadhi, Anna Montagnini, Pascal Mamassian, Lau\-rent~U. Perrinet,
+  and Guillaume~S. Masson.
+\newblock Pursuing motion illusions: A realistic oculomotor framework for
+  {B}ayesian inference.
+\newblock \emph{Vision Research}, 51:\penalty0 867--880, 2011.
+%\newblock ISSN 1878-5646.
+\newblock \doi{10.1016/j.visres.2010.10.021}.
+%\newblock URL \url{http://dx.doi.org/10.1016/j.visres.2010.10.021}.
+
+
+\item[A20] %\bibitem[Perrinet(2010)]{Perrinet10shla}
+Laurent~U. Perrinet.
+\years{2010} 
+\newblock {Role of homeostasis in learning sparse representations}.
+\newblock \emph{Neural Computation}, 22\penalty0 (7):\penalty0 1812--1836, July
+  2010.
+%\newblock ISSN 1530-888X.
+\newblock \doi{10.1162/neco.2010.05-08-795}.
+%\newblock URL
+%  \url{http://invibe.net/LaurentPerrinet/Publications/Perrinet10shl}.
+
+\item[A19] %\bibitem[Dauc{\'e} and Perrinet(2010)]{Dauce10}
+Emmanuel Dauc{\'e} and Laurent~U. Perrinet.
+\newblock Computational neuroscience, from multiple levels to multi-level.
+\newblock \emph{Journal of {P}hysiology ({P}aris)}, 104\penalty0
+  (1--2):\penalty0 1--4, 2010.
+
+\item[A18] %\bibitem[Voges and Perrinet(2010)]{Voges10a}
+Nicole Voges and Laurent~U. Perrinet.
+\newblock {Phase space analysis of networks based on biologically realistic
+  parameters.}
+\newblock \emph{Journal of physiology, Paris}, 104\penalty0 (1-2):\penalty0
+  51--60, November 2010.
+\newblock ISSN 1769-7115.
+\newblock \doi{10.1016/j.jphysparis.2009.11.004}.
+%\newblock URL \url{http://dx.doi.org/10.1016/j.jphysparis.2009.11.004}.
+
+\item[A17] %\bibitem[Kremkow et~al.(2010)Kremkow, Perrinet, Masson, and  Aertsen]{Kremkow10jcns}
+Jens Kremkow, Laurent~U. Perrinet, Guillaume~S. Masson, and Ad~Aertsen.
+\newblock Functional consequences of correlated excitatory and inhibitory
+  conductances in cortical networks.
+\newblock \emph{Journal of {C}omputational {N}euroscience}, 28\penalty0
+  (3):\penalty0 579--94, jun 2010.
+
+\item[A16] %\bibitem[Kremkow et~al.(2010)Kremkow, Perrinet, Masson, and  Aertsen]{Kremkow10jcns}
+Khaled Masmoudi, Marc Antonini, Pierre Kornprobst, Laurent U. Perrinet
+\newblock A novel bio-inspired static image compression scheme for noisy data transmission over low-bandwidth channels.
+\newblock \emph{Acoustics Speech and Signal Processing (ICASSP)}, 2010.
+
+\item[A15] %\bibitem[Davison et~al.(2008)Davison, Br\"{u}derle, Eppler, Kremkow, Muller,  Pecevski, Perrinet, and Yger]{Davison08PyNN}
+Andrew~P. Davison, \years{2008} Daniel Br\"{u}derle, Jochen Eppler, Jens Kremkow, Eilif  Muller, Dejan Pecevski, Laurent~U. Perrinet, and Pierre Yger.
+\newblock {PyNN}: A common interface for neuronal network simulators.
+\newblock \emph{Frontiers in Neuroinformatics}, 2, 2008.
+%\newblock ISSN 1662-5196.
+\newblock \doi{10.3389/neuro.11.011.2008}.
+%\newblock URL \url{http://dx.doi.org/10.3389/neuro.11.011.2008}.
+
+
+\item[A14] %\bibitem[Fischer et~al.(2007)Fischer, Sroubek, Perrinet, Redondo, and  Crist{\'o}bal]{Fischer07cv}
+Laurent~U. Perrinet
+\newblock Sparse Spike Coding: applications of Neuroscience to the processing of natural images.
+\newblock \emph{Proceedings of SPIE - The International Society for Optical Engineering} Vol 7000, 2008 
+\newblock \doi{10.1117/12.787076}
+%}, Arxiv preprint arXiv:0804.4830.
+
+\item[A13] Frédéric Barthélemy, Laurent~U. Perrinet, Eric Castet, Guillaume S. Masson
+\newblock Dynamics of distributed 1D and 2D motion representations for short-latency ocular following.
+\newblock \emph{Vision research}, 48 (4), 501-522, 2008.
+
+
+\item[A12] %\bibitem[Fischer et~al.(2007)Fischer, Sroubek, Perrinet, Redondo, and  Crist{\'o}bal]{Fischer07cv}
+Sylvain Fischer, \years{2007} Filip Sroubek, Laurent~U. Perrinet, Rafael Redondo, and
+  Gabriel Crist{\'o}bal.
+\newblock Self-invertible 2{D} log-{G}abor wavelets.
+\newblock \emph{International Journal of Computer Vision}, 2007.
+\newblock \doi{10.1007/s11263-006-0026-8}
+
+\item[A11] %\bibitem[Fischer et~al.(2007)Fischer, Sroubek, Perrinet, Redondo, and  Crist{\'o}bal]{Fischer07cv}
+Sylvain Fischer, Rafael Redondo, Laurent~U. Perrinet, and   Gabriel Crist{\'o}bal.
+\newblock Sparse approximation of images inspired from the functional architecture of the primary visual areas.
+\newblock \emph{Eurasip Journal on Advances in Signal Processing}, 2007.
+\newblock \doi{10.1155/2007/90727}
+
+\item[A10] %\bibitem[Montagnini et~al.(2007)Montagnini, Mamassian, Perrinet,  Castet, and Masson]{Montagnini07}
+Anna Montagnini, Pascal Mamassian, Laurent~U. Perrinet, Eric Castet, and
+  Guillaume~S. Masson.
+\newblock Bayesian modeling of dynamic motion integration.
+\newblock \emph{Journal of {P}hysiology ({P}aris)}, 101\penalty0
+  (1-3):\penalty0 64--77, Jan-May 2007.
+
+\item[A9] %\bibitem[Perrinet and Masson(2007)]{Perrinet07neurocomp}
+Laurent~U. Perrinet and Guillaume~S. Masson.
+\newblock Modeling spatial integration in the ocular following response using a
+  probabilistic framework.
+\newblock \emph{Journal of {P}hysiology ({P}aris)}, 101\penalty0
+  (1--3):\penalty0 46--55, 2007.
+
+
+\item[A8] %\bibitem[Perrinet(2004)]{Perrinet04}
+Laurent~U. Perrinet. \years{2004}
+\newblock Finding {I}ndependent {C}omponents using spikes : a natural result of
+  Hebbian learning in a sparse spike coding scheme.
+\newblock \emph{Natural {C}omputing}, 3\penalty0 (2):\penalty0 159--75, January
+  2004.
+
+\item[A7] %\bibitem[Perrinet(2004)]{Perrinet04tauc}
+Laurent~U. Perrinet.
+\newblock Feature detection using spikes : the greedy approach.
+\newblock \emph{Journal of {P}hysiology ({P}aris)}, 98\penalty0 (4-6):\penalty0
+  530--9, 2004.
+
+\item[A6] %\bibitem[Perrinet et~al.(2004)Perrinet, Samuelides, and Thorpe]{Perrinet03ieee}
+Laurent~U. Perrinet, Manuel Samuelides, and Simon~J. Thorpe.
+\newblock Coding static natural images using spiking event times: do neurons
+  cooperate?
+\newblock \emph{I{EEE} {T}ransactions on {N}eural {N}etworks}, 15\penalty0
+  (5):\penalty0 1164--75, September 2004.
+%\newblock ISSN 1045-9227.
+\newblock {S}pecial issue on '{T}emporal {C}oding for {N}eural {I}nformation
+  {P}rocessing'.
+\newblock \doi{10.1109/TNN.2004.833303}
+
+
+
+\item[A5] %\bibitem[Perrinet et~al.(2003)Perrinet, Samuelides, and Thorpe]{Perrinet03}
+Laurent~U. Perrinet, \years{2003} Manuel Samuelides, and Simon~J. Thorpe.
+\newblock Emergence of filters from natural scenes in a sparse spike coding scheme.
+\newblock \emph{Neurocomputing}, 58--60\penalty0 (C):\penalty0 821--6, 2003.
+%\newblock Special issue: Computational Neuroscience: Trends in Research 2004 -  Edited by E. De Schutter.
+
+
+\item[A4] %\bibitem[Perrinet et~al.(2002)Perrinet, Samuelides, and  Thorpe]{Perrinet02sparse}
+Laurent~U. Perrinet, \years{2002} Manuel Samuelides, and Simon~J. Thorpe.
+\newblock Sparse spike coding in an asynchronous feed-forward multi-layer neural network using {M}atching {P}ursuit.
+\newblock \emph{Neurocomputing}, 57\penalty0 (C):\penalty0 125--34, 2002.
+%\newblock Special issue: New Aspects in Neurocomputing: 10th European Symposium  on Artificial Neural Networks 2002 - Edited by T. Villmann.
+\newblock \doi{10.1016/j.neucom.2004.01.010}
+
+\item[A3] %
+Laurent~U. Perrinet, Arnaud~Delorme, Manuel Samuelides, and Simon~J. Thorpe.
+\newblock Networks of integrate-and-fire neuron using rank order coding~A: How to implement spike time dependent Hebbian plasticity.
+\newblock \emph{Neurocomputing}, 38-40\penalty0 (C):\penalty0 817--822, 2002.
+\newblock \doi{10.1016/S0925-2312(01)00460-X}
+
+\item[A2] %
+Arnaud~Delorme, Laurent~U. Perrinet, Manuel Samuelides, and Simon~J. Thorpe.
+\newblock Networks of integrate-and-fire neuron using rank order coding~B: Spike timing dependent plasticity and emergence of orientation selectivity.
+\newblock \emph{Neurocomputing}, 38-40\penalty0 (C):\penalty0 539--545, 2002.
+\newblock \doi{10.1016/S0925-2312(01)00403-9}
+
+\item[A1] % {Perrinet02stdp}
+Laurent~U. Perrinet, Manuel Samuelides.
+\newblock Coherence detection in a spiking neuron via hebbian learning,
+\newblock \emph{Neurocomputing}, 44--46\penalty0 (C):\penalty0 817--22, 2002.
+\newblock \doi{10.1016/S0925-2312(02)00374-0}
+
+\end{enumerate}
+
+
+\subsection{Chapitres d'ouvrage à comité de lecture}%
+\begin{enumerate}
+%
+\item[-] \fullcite{CristobalPerrinetKeil15bicv_chap1}
+
+\item[-] \fullcite{Montagnini15bicv}
+
+\item[-] \fullcite{Perrinet15bicv}
+
+%\item[-] \fullcite{Nava13}
+
+\item[-] %\bibitem[Perrinet(2007)]{Perrinet06}
+Laurent~U. Perrinet.
+\newblock Dynamical neural networks: modeling low-level vision at short
+  latencies.
+\newblock In \emph{Topics in Dynamical Neural Networks: From Large Scale Neural
+  Networks to Motor Control and Vision}, volume 142 of \emph{The European
+  Physical Journal (Special Topics)}, pages 163--225. Springer Verlag, Berlin /
+  Heidelberg, mar 2007.
+
+%\item[1] { Laurent~U. Perrinet.}
+%\newblock { Dynamical neural networks: modelling low-level vision at short latencies.}
+%\newblock \emph{EPJ Special Topics "Topics in Dynamical Neural Networks: From Large Scale Neural Networks to Motor Control and Vision". Volume 142, pages 163--225.  mar 2007.}.
+%%
+ \end{enumerate}
+
+\subsection{Thèses et ouvrages}%
+
+\begin{enumerate}
+
+\item[-] \fullcite{CristobalPerrinetKeil15bicv}
+
+\item[-] %\bibitem[Perrinet(2003)]{Perrinet03these}
+Laurent~U. Perrinet.
+\newblock \emph{Comment d{\'e}chiffrer le code impulsionnel de la vision?
+  {\'{E}}tude du flux parall{\`e}le, asynchrone et {\'e}pars dans le traitement
+  visuel ultra-rapide}.
+\newblock PhD thesis, Universit{\'e} Paul Sabatier, Toulouse, France, 2003.
+ \end{enumerate}
+
+
+\subsection{Actes de conférences internationales à comité de lecture}%
+%~\citep{Perrinet08spie}
+\begin{etaremune}%enumerate}
+% TODO: sort by date
+
+%\item \fullcite{}
+%\item \fullcite{}
+\item \fullcite{Perrinet16EUVIP}
+\item \fullcite{Mansour16sfn}
+\item \fullcite{Mansour16gdr}
+\item \fullcite{Damasse16ecvp}
+\item \fullcite{Mansour16ecvp}
+\item \fullcite{Damasse16vss}
+\item \fullcite{Montagnini16ecvp}
+\item \fullcite{Perrinet16networks}
+
+\item \fullcite{Ravello2015}
+\item \fullcite{Vacher15icms}
+\item \fullcite{Perrinet15eusipco}
+\item \fullcite{Montagnini15sfn}
+\item \fullcite{Taouali15vss}
+\item \fullcite{Damasse15vss}
+\item \fullcite{Danion15sfn}
+\item \fullcite{Taouali15icmns}
+
+\item \fullcite{Vacher14ihp}
+\item \fullcite{Rudiger14cosyne}%
+\item \fullcite{PerrinetBednar14vss}
+\item \fullcite{Simoncini14vss}
+\item \fullcite{KaplanKhoei14}
+\item \fullcite{Khoei14vss}
+\item \fullcite{Taouali14neurocomp}
+\item \fullcite{Taouali14areadne}
+
+\item \fullcite{Meso14vss}
+\item \fullcite{Khoei13cns}
+\item \fullcite{Perrinet13cns}
+\item \fullcite{Khoei13cns}%
+\item \fullcite{Meso13vss}%
+\item \fullcite{Perrinet13jffos}%
+\item \fullcite{Simoncini13vss}
+
+\item \fullcite{Perrinet12areadne}
+\item \fullcite{Masson12areadne}
+\item \fullcite{Khoei12sfn}
+\item \fullcite{Simoncini12coding}
+\item \fullcite{Simoncini12vss}
+
+\item \fullcite{Simoncini2011Pattern}
+\item \fullcite{Simoncini10vss}
+%	Pattern discrimination for moving random textures: Richer stimuli are more difficult to recognize
+%C Simoncini, A Montagnini, LU Perrinet, P Mamassian, GS Masson
+%Journal of Vision 11 (11), 749-749			2011
+
+%
+%	The relationship between cortical network structure and the corresponding state space dynamics
+%N Voges, L Perrinet
+%BMC Neuroscience 12 (Suppl 1), P345			2011
+%
+%	Motion-based predictive coding is sufficient to solve the aperture problem
+%M Khoei, L Perrinet, G Masson
+%BMC Neuroscience 12 (Suppl 1), P279
+
+
+%\item \fullcite{Meso13vss}
+%\item \fullcite{Simoncini13vss}
+%\item \fullcite{Perrinet11sfn}
+%
+
+\item %\bibitem[Perrinet et~al.(2011)Perrinet, Fitzpatrick, and Bednar]{Perrinet11sfn}
+Laurent~U. Perrinet, David Fitzpatrick, and James~A. Bednar.
+\newblock Edge statistics in natural images versus laboratory animal
+  environments: implications for understanding lateral connectivity in {V1}.
+\newblock In Www Washington, editor, \emph{Society for Neuroscience Abstracts},
+  number Program No. 530.04, 2011.
+%\newblock URL
+%  \url{http://invibe.net/LaurentPerrinet/Publications/Perrinet11sfn}.
+
+\item \fullcite{Perrinet10tauc}
+
+
+\item %\bibitem[Perrinet et~al.(2009)Perrinet, Reynaud, Chavane, and  Masson]{Perrinet09vss}
+Laurent~U. Perrinet, Alexandre Reynaud, Fr{\'e}d{\'e}ric Chavane, and
+  Guillaume~S. Masson.
+\newblock Inferring monkey ocular following responses from {V1} population
+  dynamics using a probabilistic model of motion integration.
+\newblock In \emph{Vision Science Society}, number 23.411, 2009.
+
+\item %\bibitem[Perrinet et~al.(2009)Perrinet, Voges, Kremkow, and  Masson]{Perrinet09cosyne}
+Laurent~U. Perrinet, Nicole Voges, Jens Kremkow, and Guillaume~S. Masson.
+\newblock Decoding center-surround interactions in population of neurons for
+  the ocular following response.
+\newblock In \emph{Proceedings of COSYNE, 2009}, 2009.
+
+\item %\bibitem[Voges and Perrinet()]{Voges08neurocomp}
+Nicole Voges and Laurent~U. Perrinet.
+\newblock Analyzing cortical network dynamics with respect to different
+  connectivity assumptions.
+
+\item %\bibitem[Voges and Perrinet(2009)]{Voges09cosyne}
+Nicole Voges and Laurent~U. Perrinet.
+\newblock Dynamical state spaces of cortical networks representing various
+  horizontal connectivities.
+\newblock In \emph{Proceedings of COSYNE, 2009}, 2009.
+
+\item %\bibitem[Voges and Perrinet(2009)]{Voges09gns}
+Nicole Voges and Laurent~U. Perrinet.
+\newblock Dynamics of cortical networks including long-range patchy
+  connections.
+\newblock In \emph{Eighth G{\"o}ttingen Meeting of the German Neuroscience
+  Society}, pages T26--3C, 2009.
+\item %\bibitem[Kremkow et~al.(2009)Kremkow, Perrinet, Masson, and  Aertsen]{Kremkow09gns}
+Jens Kremkow, Laurent~U. Perrinet, Guillaume~S. Masson, and Ad~Aertsen.
+\newblock Functional consequences of correlated excitation and inhibition on
+  single neuron integration and signal propagation through synfire chains.
+\newblock In \emph{Eighth G{\"o}ttingen Meeting of the German Neuroscience
+  Society}, pages T26--6B, 2009.
+
+\item %\bibitem[Kremkow et~al.(2008)Kremkow, Perrinet, Baudot, Levy, Marre, Monier,  Fr{\'e}gnac, Masson, and Aertsen]{Kremkow08sfn}
+Jens Kremkow, Laurent~U. Perrinet, Pierre Baudot, Manu Levy, Olivier Marre,
+  Cyril Monier, Yves Fr{\'e}gnac, Guillaume~S. Masson, and Ad~Aertsen.
+\newblock Control of the temporal interplay between excitation and inhibition
+  by the statistics of visual input: a {V}1 network modelling study.
+\newblock In \emph{Proceedings of the Society for Neuroscience conference},
+  2008.
+
+\item %\bibitem[Voges et~al.(2008)Voges, Kremkow, and Perrinet]{Voges08}
+Nicole Voges, Jens Kremkow, and Laurent~U. Perrinet.
+\newblock Dynamics of cortical networks based on patchy connectivity patterns.
+\newblock In \emph{FENS Abstract}, volume~4, 2008.
+\item %\bibitem[Kremkow et~al.()Kremkow, Perrinet, Aertsen, and Masson]{Kremkow08neurocomp}
+Jens Kremkow, Laurent~U. Perrinet, Ad~M. Aertsen, and Guillaume~S. Masson.
+\newblock Functional properties of feed-forward inhibition.
+
+\item %\bibitem[Perrinet and Masson(2008)]{Perrinet08CosyneMotion}
+Laurent~U. Perrinet and Guillaume~S. Masson.
+\newblock Modeling spatial integration in the ocular following response to
+  center-surround stimulation using a probabilistic framework.
+\newblock In \emph{Proceedings of COSYNE, 2008}, 2008.
+
+\item %\bibitem[Perrinet and Masson(2008)]{Perrinet08areadne}
+Laurent~U. Perrinet and Guillaume~S. Masson.
+\newblock Decoding the population dynamics underlying ocular following response
+  using a probabilistic framework.
+\newblock In \emph{Proceedings of AREADNE, 2008}, 2008.
+
+\item %\bibitem[Perrinet(2008)]{Perrinet08CosyneLearning}
+Laurent~U. Perrinet.
+\newblock What adaptive code for efficient spiking representations? a model for
+  the formation of receptive fields of simple cells.
+\newblock In \emph{Proceedings of COSYNE, 2008}, 2008.
+
+\item %\bibitem[Perrinet(2008)]{Perrinet08spie}
+Laurent~U. Perrinet.
+\newblock Adaptive sparse spike coding : applications of neuroscience to the
+  compression of natural images.
+\newblock In Gabriel Crist{\'o}bal Fr{\'e}d{\'e}ric~Truchetet Peter~Schelkens,
+  Touradj~Ebrahimi, editor, \emph{Optical and Digital Image Processing
+  Conference 7000 - Proceedings of SPIE Volume 7000, 7 - 11 April 2008}, volume
+  7000, page 70000F. SPIE, 2008.
+
+
+\item %\bibitem[Davison et~al.(2007)Davison, Yger, Kremkow, Perrinet, and  Muller]{Davison07cns}
+Andrew Davison, Pierre Yger, Jens Kremkow, Laurent~U. Perrinet, and Eilif
+  Muller.
+\newblock {PyNN}: towards a universal neural simulator api in {P}ython.
+\newblock In BMC Neuroscience, editor, \emph{Sixteenth Annual Computational
+  Neuroscience Meeting: CNS*2007, Toronto, Canada. 7--12 July 2007}, volume
+  8(Suppl 2):P2, 2007.
+
+
+\item %\bibitem[Kremkow et~al.(2007)Kremkow, Perrinet, Kumar, Aertsen,  and Masson]{Kremkow07cns}
+Jens Kremkow, Laurent~U. Perrinet, Arvind Kumar, Ad~M. Aertsen, and
+  Guillaume~S. Masson.
+\newblock Synchrony in thalamic inputs enhances propagation of activity through
+  cortical layers.
+\newblock In BMC~Neuroscience 2007, editor, \emph{Sixteenth Annual
+  Computational Neuroscience Meeting: CNS*2007, Toronto, Canada. 7--12 July
+  2007}, volume 8(Suppl 2):P206, 2007.
+ 
+
+\item %\bibitem[Montagnini et~al.(2007)Montagnini, Mamassian, Perrinet,  Castet, and Masson]{Montagnini07a}
+Anna Montagnini, Pascal Mamassian, Laurent~U. Perrinet, Eric Castet, and
+  Guillaume~S. Masson.
+\newblock Dynamic inference for motion tracking.
+\newblock In \emph{Perception 36 ECVP Abstract Supplement}, 2007.
+
+\item %\bibitem[Montagnini et~al.(2007)Montagnini, Mamassian, Perrinet,  and Masson]{Montagnini07b}
+Anna Montagnini, Pascal Mamassian, Laurent~U. Perrinet, and Guillaume~S.  Masson.
+\newblock Visual tracking of ambiguous moving objects: A recursive bayesian model.
+\newblock \emph{Journal of Vision}, 7\penalty0 (9):\penalty0 406,
+  2007.
+
+
+\item %\bibitem[Perrinet(2006)]{Perrinet06cns}
+Laurent~U. Perrinet.
+\newblock An efficiency razor for model selection and adaptation in the primary
+  visual cortex.
+\newblock In \emph{Fifteenth Annual Computational Neuroscience Meeting}, 2006.
+
+
+\item %\bibitem[Perrinet et~al.(2006)Perrinet, Barth{\'e}lemy, and  Masson]{Perrinet06neurocomp}
+Laurent~U. Perrinet, Fr{\'e}d{\'e}ric~V. Barth{\'e}lemy, and Guillaume~S.
+  Masson.
+\newblock Input-output transformation in the visuo-oculomotor loop: modeling
+  the ocular following response to center-surround stimulation in a
+  probabilistic framework.
+\newblock In \emph{1{\`e}re conf{\'e}rence francophone NEUROsciences
+  COMPutationnelles - NeuroComp}, 2006.
+
+\item %\bibitem[Perrinet et~al.(2006)Perrinet, Kremkow, Barth{\'e}lemy,  Masson, and Chavane]{Perrinet06fens}
+Laurent~U. Perrinet, Jens Kremkow, Fr{\'e}d{\'e}ric Barth{\'e}lemy,
+  Guillaume~S. Masson, and Fr{\'e}d{\'e}ric Chavane.
+\newblock Input-output transformation in the visuo-oculomotor loop: modeling
+  the ocular following response to center-surround stimulation in a
+  probabilistic framework.
+\newblock In \emph{{FENS}}, 2006.
+
+\item %\bibitem[Montagnini et~al.(2006)Montagnini, Mamassian, Perrinet, Castet, and  Masson]{Montagnini06neurocomp}
+Anna Montagnini, Pascal Mamassian, Laurent~U. Perrinet, Eric Castet, and
+  Guillaume~S. Masson.
+\newblock Bayesian modeling of dynamic motion integration.
+\newblock In \emph{1{\`e}re conf{\'e}rence francophone NEUROsciences
+  COMPutationnelles (NeuroComp)}, 2006.
+
+\item %\bibitem[Fischer et~al.(2005)Fischer, Redondo, Perrinet, and  Crist{\'o}bal]{Fischer05}
+Sylvain Fischer, Rafael Redondo, Laurent~U. Perrinet, and Gabriel
+  Crist{\'o}bal.
+\newblock Efficient representation of natural images using local cooperation.
+\newblock In Ricardo~A. Carmona and Gustavo Linan-Cembrano, editors,
+  \emph{Perception}, volume~34 of \emph{E{CVP}}, page 241, 2005.
+
+\item %\bibitem[Redondo et~al.(2005)Redondo, Fischer, Perrinet, and  Crist{\'o}bal]{Redondo05}
+Rafael Redondo, Sylvain Fischer, Laurent~U. Perrinet, and Gabriel
+  Crist{\'o}bal.
+\newblock Modeling of simple cells through a sparse overcomplete gabor wavelet
+  representation based on local inhibition and facilitation.
+\newblock In Ricardo~A. Carmona and Gustavo Linan-Cembrano, editors,
+  \emph{Perception}, volume~34 of \emph{ECVP}, page 238, August 2005.
+  
+
+%Sparse gabor wavelets by local operations: Proceedings of SPIE - The International Society for Optical Engineering 2005
+%DOI: 10.1117/12.608403  
+%http://www.scopus.com/inward/record.url?eid=2-s2.0-28444467755&partnerID=MN8TOARS
+%Fischer, S. and Redondo, R. and Perrinet, L. and Cris?bal, G., (2005). "Sparse gabor wavelets by local operations", Proceedings of SPIE - The International Society for Optical Engineering, vol. 5839, pp. 75-86
+%Title: Sparse gabor wavelets by local operations
+%Author(s): Fischer, S.; Redondo, R.; Perrinet, L.; et al.
+%Source: Proceedings of SPIE - The International Society for Optical Engineering Volume: 5839 Pages: 75-86 Published: 2005 
+%Times Cited: 2 
+%DOI: 10.1117/12.608403 
+
+\item %\bibitem[Fischer et~al.(2005)Fischer, Redondo, Perrinet, and  Crist{\'o}bal]{Fischer05a}
+Sylvain Fischer, Rafael Redondo, Laurent~U. Perrinet, and Gabriel
+  Crist{\'o}bal.
+\newblock Sparse {G}abor wavelets by local operations.
+\newblock In Gustavo Linan-Cembrano Ricardo A.~Carmona, editor,
+  \emph{Proceedings {SPIE}}, volume 5839 of \emph{Bioengineered and Bioinspired
+  Systems II}, pages 75--86, Jun 2005.
+
+\item %\bibitem[Perrinet(2005)]{Perrinet05}
+Laurent~U. Perrinet.
+\newblock Efficient {S}ource {D}etection {U}sing {I}ntegrate-and-{F}ire
+  {N}eurons.
+\newblock In W.~Duch et~al., editor, \emph{I{CANN} 2005, {LNCS} 3696}, volume
+  3696 of \emph{Lecture Notes in Computer Science}, pages 167--72, Berlin
+  Heidelberg, 2005. Springer.
+
+\item %\bibitem[Perrinet et~al.(2005)Perrinet, Barth{\'e}lemy, Castet, and  Masson]{Perrinet05a}
+Laurent~U. Perrinet, Fr{\'e}d{\'e}ric Barth{\'e}lemy, Eric Castet, and
+  Guillaume~S. Masson.
+\newblock Dynamics of motion representation in short-latency ocular following:
+  A two-pathways bayesian model.
+\newblock In Ricardo~A. Carmona and Gustavo Linan-Cembrano, editors,
+  \emph{Perception}, volume~34 of \emph{E{CVP}}, page~38, 2005.
+
+\item \fullcite{Perrinet02nsi}
+\item \fullcite{Perrinet02esann}
+\item \fullcite{Perrinet00}
+
+%Perrinet, L. U. (1999). Apprentissage hebbien d?un reseau de neurones asynchrone a codage par rang.
+\item Perrinet, L. U., and Samuelides, M. 
+	\newblock A generative model for {S}pike {T}ime {D}ependent {H}ebbian {P}lasticity. 
+	\newblock In \emph{Proceedings of DYNN}, 2000.
+
+\end{etaremune}%
+\end{document}
