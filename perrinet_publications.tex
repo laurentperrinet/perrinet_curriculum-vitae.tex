@@ -13,28 +13,14 @@
 %\usepackage{fontspec}
 %\setmainfont[Ligatures=TeX]{Minion Pro}
 %\usepackage{fontspec}%0
-%\defaultfontfeatures{Mapping=tex-text} 
+%\defaultfontfeatures{Mapping=tex-text}
 %\setsansfont[Ligatures={Common}]{Futura}
-%\setmonofont[Scale=0.8]{Monaco} 
+%\setmonofont[Scale=0.8]{Monaco}
 %\setmainfont[Numbers={Proportional,OldStyle}]{TeX Gyre Schola}%TeX Gyre Adventor}%Inconsolata}%Verdana}%TeX Gyre Bonum}
 %\setsansfont[Numbers={Proportional,OldStyle},Scale=MatchLowercase]{TeX Gyre Adventor}%Inconsolata}%Latin Modern Sans}
 %\setmonofont[Scale=MatchLowercase]{Inconsolata}
 \usepackage{etaremune}%
 \usepackage[final]{pdfpages}%
-%% --- unit formatting ---
-\usepackage{units}%
-\usepackage{siunitx}%
-\newcommand{\m}{\si{\meter}}%
-
-\newcommand{\nF}{\si{\nano\farad}}%
-\newcommand{\uS}{\si{\micro\siemens}}%
-\newcommand{\nS}{\si{\nano\siemens}}%
-\newcommand{\kHz}{\si{\kilo\hertz}}%
-\newcommand{\Hz}{\si{\hertz}}%
-\newcommand{\mV}{\si{\milli\volt}}%
-\newcommand{\ms}{\si{\milli\second}}%
-\newcommand{\s}{\si{\second}}%
-
 \usepackage{microtype}	% Better typography [protrusion=true,expansion=true,kerning=true,spacing=true]
 %\hyphenpenalty=10
 \tolerance 1414
@@ -49,18 +35,18 @@
 \usepackage{bm}%This package defines commands to access bold math symbols
 \usepackage{graphicx}					% Enable pdflatex
 %============ front-matter ===================
-\newcommand{\BookTitle}{Centre National de la Recherche Scientifique} 
+\newcommand{\BookTitle}{Centre National de la Recherche Scientifique}
 \newcommand{\Title}{%
-Liste des publications}% 
+Liste des publications}%
 \newcommand{\SubTitle}{%
-Pour évaluation par les sections du Comité national}%
+Pour ï¿½valuation par les sections du Comitï¿½ national}%
 \newcommand{\Author}{Laurent U.~Perrinet}%
-\newcommand{\Team}{\'Equipe Inference in Visual Behaviour (InViBe)}%
+\newcommand{\Team}{NEuronal OPerations in visual TOpographic maps (NeOpTo)}%
 \newcommand{\Institute}{Institut de Neurosciences de la Timone}%
-\newcommand{\InstituteUMR}{UMR 7289, CNRS / Aix-Marseille Université}%
-\newcommand{\Address}{27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France} 
-\newcommand{\Website}{http://invibe.net/LaurentPerrinet}
-\newcommand{\Email}{Laurent.Perrinet@univ-amu.fr} 
+\newcommand{\InstituteUMR}{UMR 7289, CNRS / Aix-Marseille Universitï¿½}%
+\newcommand{\Address}{27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}
+\newcommand{\Website}{https://laurentperrinet.github.io/}
+\newcommand{\Email}{Laurent.Perrinet@univ-amu.fr}
 %%%%%%%%%%%%%%%%%%
 %BIBLIOGRAPHY
 %%%%%%%%%%%%%%%%%%
@@ -82,8 +68,8 @@ Pour évaluation par les sections du Comité national}%
 %\addbibresource{~/Desktop/Dropbox/bibtexing/mendeley/library.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% OPTIONAL MACRO FILES
-\usepackage{fltpage}
-\usepackage{tikz} 
+%\usepackage{fltpage}
+%\usepackage{tikz}
 %%%%%%%%%%%%%%%%%%
 %\usepackage{multicol}
 %\usepackage{nag}
@@ -97,11 +83,11 @@ pdftitle={\Title},%
 pdfauthor={\Author < \Email > - \Institute, \InstituteUMR , \Address - \Website},%
 pdfsubject={\Title}%
 }%
-%\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+%\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue}
 %\hyphenpenalty=5000
 %\tolerance=1000
 %% DOCUMENT LAYOUT
-%\usepackage{geometry} 
+%\usepackage{geometry}
 %\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
 %\setlength\parindent{0in}
 %% ---- MARGIN YEARS
@@ -114,7 +100,6 @@ pdfsubject={\Title}%
 %\makepagestyle{chapter}
 %\makeoddfoot{chapter}{\addRevisionData}{\thepage}{}
 %\makeevenfoot{chapter}{\addRevisionData}{\thepage}{}
-\graphicspath{{/Users/laurentperrinet/quantic/2016_science/2014-04-17_HDR/figures/}}%,{./khoei13jpp/figures/},{./bednar/},{./kaplan13/},{./friston/},{../../sci/dyva/lup/Learning/mp_sparsenet/mp_sparsenet/results/20080502T174325}}%
 %%%%%%%%%%%% Her begynner selve dokumentet %%%%%%%%%%%%%%%
 \begin{document}
 
@@ -132,7 +117,7 @@ pdfsubject={\Title}%
 \begin{tabular}[t]{ccc}
 \includegraphics[height=2.5cm]{logo_cnrs-UAM.png} &%\includegraphics[]{}
 \includegraphics[height=2.5cm]{logo_int.png} %& %
-%	\includegraphics[height=2.5cm]{U2_logo.pdf} 
+%	\includegraphics[height=2.5cm]{U2_logo.pdf}
 \end{tabular}
 
 \vskip 1cm
@@ -148,38 +133,38 @@ pdfsubject={\Title}%
 
 %\begin{tabular}[t]{|l|l|}
 %\hline
-%\multicolumn{2}{|c|}{Jury composé de Messieurs :} \\
+%\multicolumn{2}{|c|}{Jury composï¿½ de Messieurs :} \\
 %\hline
-%Prof. Laurent Madelain & Université Lille III \\
-%Dr. Alain Destexhe & Université Paris XI (Rapporteur) \\
+%Prof. Laurent Madelain & Universitï¿½ Lille III \\
+%Dr. Alain Destexhe & Universitï¿½ Paris XI (Rapporteur) \\
 %Prof. Gustavo Deco & Universitat Pompeu Fabra, Barcelona (Rapporteur) \\
-%Dr. Guillaume Masson & Aix-Marseille Université \\
-%Dr. Viktor Jirsa &  Aix-Marseille Université (Rapporteur) \\
-%Prof. Jean-Louis Mege & Aix-Marseille Université \\
+%Dr. Guillaume Masson & Aix-Marseille Universitï¿½ \\
+%Dr. Viktor Jirsa &  Aix-Marseille Universitï¿½ (Rapporteur) \\
+%Prof. Jean-Louis Mege & Aix-Marseille Universitï¿½ \\
 %\hline
 %\end{tabular}
 
 \vfill
-{\large Rapport d'activité -  Février 2017}
+{\large Rapport d'activitï¿½ -  Fï¿½vrier 2017}
 %\pageskip
 \end{center}
 \end{titlepage}
 
 
 \section{Liste des publications}
-%% 
-%Vous présenterez la liste de vos publications scientifiques depuis les 5 ou 10 derniers semestres (distincte de la liste exhaustive de vos publications, mise à jour et transmise en fichier séparé) selon l?une des deux listes suivantes :
+%%
+%Vous prï¿½senterez la liste de vos publications scientifiques depuis les 5 ou 10 derniers semestres (distincte de la liste exhaustive de vos publications, mise ï¿½ jour et transmise en fichier sï¿½parï¿½) selon l?une des deux listes suivantes :
 
-\subsection{Articles de revues internationales à comité de lecture}%
-%Publications dans des journaux à comité de lecture}
+\subsection{Articles de revues internationales ï¿½ comitï¿½ de lecture}%
+%Publications dans des journaux ï¿½ comitï¿½ de lecture}
 \begin{enumerate}
 %\item \fullcite{Simoncini12}
 %\item \fullcite{Khoei13}
 
 
-%Jonathan Vacher, Andrew Isaac Meso, Laurent U Perrinet, Gabriel Peyré (in preparation). Bayesian Modeling of Motion Perception using Dynamical Stochastic Textures. 2016
+%Jonathan Vacher, Andrew Isaac Meso, Laurent U Perrinet, Gabriel Peyrï¿½ (in preparation). Bayesian Modeling of Motion Perception using Dynamical Stochastic Textures. 2016
 
-%  
+%
 
 \item[A37] \years{2017} \fullcite{KhoeiMassonPerrinet17}%
 
@@ -200,18 +185,18 @@ pdfsubject={\Title}%
 
 
 \item[A32] \years{2013} \fullcite{Khoei13jpp}%
-%Mina A. Khoei, Guillaume S. Masson, Laurent U. Perrinet. 
-%Motion-based prediction explains the role of tracking in motion extrapolation. 
-%\newblock \emph{Journal of Physiology-Paris},  107(5):409--420. 
+%Mina A. Khoei, Guillaume S. Masson, Laurent U. Perrinet.
+%Motion-based prediction explains the role of tracking in motion extrapolation.
+%\newblock \emph{Journal of Physiology-Paris},  107(5):409--420.
 
 
 \item[A31] %
-Bernhard A. Kaplan, Anders Lansner, Guillaume S. Masson, Laurent U. Perrinet. 
-Anisotropic connectivity implements motion-based prediction in a spiking neural network. 
+Bernhard A. Kaplan, Anders Lansner, Guillaume S. Masson, Laurent U. Perrinet.
+Anisotropic connectivity implements motion-based prediction in a spiking neural network.
 \newblock \emph{Frontiers Computational Neuroscience},  7:112.
 
 \item[A30] %
-Rodrigo Nava, J. Victor Marcos, Boris Escalante-Ram\'irez, Gabriel Crist\'obal, Laurent U. Perrinet, Ra\'ul S. J. Estépar. 
+Rodrigo Nava, J. Victor Marcos, Boris Escalante-Ram\'irez, Gabriel Crist\'obal, Laurent U. Perrinet, Ra\'ul S. J. Estï¿½par.
 \newblock \emph{Progress in Pattern Recognition, Image Analysis, Computer Vision, and Applications
 Lecture Notes in Computer Science},  Volume 8259, 2013, pp 214-221.
 
@@ -221,7 +206,7 @@ Claudio Simoncini, \years{2012} Laurent~U. Perrinet, Anna Montagnini, Pascal Mam
 \newblock \emph{Nature Neuroscience}
 \newblock vol. 15, no. 11, pp. 1596--1603, 2012.
 \newblock \doi{10.1038/nn.3229}.
-\newblock URL \url{http://invibe.net/LaurentPerrinet/Publications/Simoncini12}.
+\newblock URL \url{https://laurentperrinet.github.io/Publications/Simoncini12}.
 
 %\item \fullcite{Perrinet12pred}
 \item[A28] %\bibitem[Perrinet and Masson(2012)]{Perrinet12pred}
@@ -255,7 +240,7 @@ Karl Friston, Rick~A. Adams, Laurent~U. Perrinet, and Michael Breakspear.
 Rick~A. Adams, Laurent~U. Perrinet, and Karl Friston.
 \newblock {Smooth pursuit and visual occlusion: active inference and oculomotor control in schizophrenia}.
 \newblock \emph{PLoS ONE}, 7 (10),  2012.
-%\newblock URL \url{http://invibe.net/LaurentPerrinet/Publications/Adams12}
+%\newblock URL \url{https://laurentperrinet.github.io/Publications/Adams12}
 %\newblock \doi{10.1371/journal.pone.0047502}.
 
 \item[A24] %\bibitem[Masson and Perrinet(2012)]{Masson12}
@@ -275,7 +260,7 @@ Nicole~Voges and Laurent~U. Perrinet.
 \newblock \emph{Frontiers in Computational Neuroscience}, 6, 2012.
 \newblock ISSN 1662-5188.
 \newblock \doi{10.3389/fncom.2012.00041}.
-%\newblock URL \url{http://invibe.net/LaurentPerrinet/Publications/Voges12}.
+%\newblock URL \url{https://laurentperrinet.github.io/Publications/Voges12}.
 
 
 \item[A22] %\bibitem[Fleuriet et~al.(2011)Fleuriet, Hugues, Perrinet, and  Goffart]{Fleuriet11a}
@@ -301,14 +286,14 @@ Amarender~R. Bogadhi, Anna Montagnini, Pascal Mamassian, Lau\-rent~U. Perrinet,
 
 \item[A20] %\bibitem[Perrinet(2010)]{Perrinet10shla}
 Laurent~U. Perrinet.
-\years{2010} 
+\years{2010}
 \newblock {Role of homeostasis in learning sparse representations}.
 \newblock \emph{Neural Computation}, 22\penalty0 (7):\penalty0 1812--1836, July
   2010.
 %\newblock ISSN 1530-888X.
 \newblock \doi{10.1162/neco.2010.05-08-795}.
 %\newblock URL
-%  \url{http://invibe.net/LaurentPerrinet/Publications/Perrinet10shl}.
+%  \url{https://laurentperrinet.github.io/Publications/Perrinet10shl}.
 
 \item[A19] %\bibitem[Dauc{\'e} and Perrinet(2010)]{Dauce10}
 Emmanuel Dauc{\'e} and Laurent~U. Perrinet.
@@ -350,11 +335,11 @@ Andrew~P. Davison, \years{2008} Daniel Br\"{u}derle, Jochen Eppler, Jens Kremkow
 \item[A14] %\bibitem[Fischer et~al.(2007)Fischer, Sroubek, Perrinet, Redondo, and  Crist{\'o}bal]{Fischer07cv}
 Laurent~U. Perrinet
 \newblock Sparse Spike Coding: applications of Neuroscience to the processing of natural images.
-\newblock \emph{Proceedings of SPIE - The International Society for Optical Engineering} Vol 7000, 2008 
+\newblock \emph{Proceedings of SPIE - The International Society for Optical Engineering} Vol 7000, 2008
 \newblock \doi{10.1117/12.787076}
 %}, Arxiv preprint arXiv:0804.4830.
 
-\item[A13] Frédéric Barthélemy, Laurent~U. Perrinet, Eric Castet, Guillaume S. Masson
+\item[A13] Frï¿½dï¿½ric Barthï¿½lemy, Laurent~U. Perrinet, Eric Castet, Guillaume S. Masson
 \newblock Dynamics of distributed 1D and 2D motion representations for short-latency ocular following.
 \newblock \emph{Vision research}, 48 (4), 501-522, 2008.
 
@@ -448,7 +433,7 @@ Laurent~U. Perrinet, Manuel Samuelides.
 \end{enumerate}
 
 
-\subsection{Chapitres d'ouvrage à comité de lecture}%
+\subsection{Chapitres d'ouvrage ï¿½ comitï¿½ de lecture}%
 \begin{enumerate}
 %
 \item[-] \fullcite{CristobalPerrinetKeil15bicv_chap1}
@@ -474,7 +459,7 @@ Laurent~U. Perrinet.
 %%
  \end{enumerate}
 
-\subsection{Thèses et ouvrages}%
+\subsection{Thï¿½ses et ouvrages}%
 
 \begin{enumerate}
 
@@ -489,7 +474,7 @@ Laurent~U. Perrinet.
  \end{enumerate}
 
 
-\subsection{Actes de conférences internationales à comité de lecture}%
+\subsection{Actes de confï¿½rences internationales ï¿½ comitï¿½ de lecture}%
 %~\citep{Perrinet08spie}
 \begin{etaremune}%enumerate}
 % TODO: sort by date
@@ -565,7 +550,7 @@ Laurent~U. Perrinet, David Fitzpatrick, and James~A. Bednar.
 \newblock In Www Washington, editor, \emph{Society for Neuroscience Abstracts},
   number Program No. 530.04, 2011.
 %\newblock URL
-%  \url{http://invibe.net/LaurentPerrinet/Publications/Perrinet11sfn}.
+%  \url{https://laurentperrinet.github.io/Publications/Perrinet11sfn}.
 
 \item \fullcite{Perrinet10tauc}
 
@@ -668,7 +653,7 @@ Jens Kremkow, Laurent~U. Perrinet, Arvind Kumar, Ad~M. Aertsen, and
 \newblock In BMC~Neuroscience 2007, editor, \emph{Sixteenth Annual
   Computational Neuroscience Meeting: CNS*2007, Toronto, Canada. 7--12 July
   2007}, volume 8(Suppl 2):P206, 2007.
- 
+
 
 \item %\bibitem[Montagnini et~al.(2007)Montagnini, Mamassian, Perrinet,  Castet, and Masson]{Montagnini07a}
 Anna Montagnini, Pascal Mamassian, Laurent~U. Perrinet, Eric Castet, and
@@ -728,17 +713,17 @@ Rafael Redondo, Sylvain Fischer, Laurent~U. Perrinet, and Gabriel
   representation based on local inhibition and facilitation.
 \newblock In Ricardo~A. Carmona and Gustavo Linan-Cembrano, editors,
   \emph{Perception}, volume~34 of \emph{ECVP}, page 238, August 2005.
-  
+
 
 %Sparse gabor wavelets by local operations: Proceedings of SPIE - The International Society for Optical Engineering 2005
-%DOI: 10.1117/12.608403  
+%DOI: 10.1117/12.608403
 %http://www.scopus.com/inward/record.url?eid=2-s2.0-28444467755&partnerID=MN8TOARS
 %Fischer, S. and Redondo, R. and Perrinet, L. and Cris?bal, G., (2005). "Sparse gabor wavelets by local operations", Proceedings of SPIE - The International Society for Optical Engineering, vol. 5839, pp. 75-86
 %Title: Sparse gabor wavelets by local operations
 %Author(s): Fischer, S.; Redondo, R.; Perrinet, L.; et al.
-%Source: Proceedings of SPIE - The International Society for Optical Engineering Volume: 5839 Pages: 75-86 Published: 2005 
-%Times Cited: 2 
-%DOI: 10.1117/12.608403 
+%Source: Proceedings of SPIE - The International Society for Optical Engineering Volume: 5839 Pages: 75-86 Published: 2005
+%Times Cited: 2
+%DOI: 10.1117/12.608403
 
 \item %\bibitem[Fischer et~al.(2005)Fischer, Redondo, Perrinet, and  Crist{\'o}bal]{Fischer05a}
 Sylvain Fischer, Rafael Redondo, Laurent~U. Perrinet, and Gabriel
@@ -769,8 +754,8 @@ Laurent~U. Perrinet, Fr{\'e}d{\'e}ric Barth{\'e}lemy, Eric Castet, and
 \item \fullcite{Perrinet00}
 
 %Perrinet, L. U. (1999). Apprentissage hebbien d?un reseau de neurones asynchrone a codage par rang.
-\item Perrinet, L. U., and Samuelides, M. 
-	\newblock A generative model for {S}pike {T}ime {D}ependent {H}ebbian {P}lasticity. 
+\item Perrinet, L. U., and Samuelides, M.
+	\newblock A generative model for {S}pike {T}ime {D}ependent {H}ebbian {P}lasticity.
 	\newblock In \emph{Proceedings of DYNN}, 2000.
 
 \end{etaremune}%
