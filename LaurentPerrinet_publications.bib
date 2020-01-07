@@ -1,10 +1,12 @@
 @comment{%% This BibTeX bibliography file was created using BibDesk.
 %% http://bibdesk.sourceforge.net/
 
-%% Created for Laurent Perrinet at 2020-01-07 11:47:54 +0100 
+%% Created for Laurent Perrinet at 2020-01-07 17:10:47 +0100 
 
 
 %% Saved with string encoding Unicode (UTF-8)}
+
+@comment{%% This BibTeX bibliography file was created using BibDesk. %% http://bibdesk.sourceforge.net/  %% Created for Laurent Perrinet at 2020-01-07 11:47:54 +0100    %% Saved with string encoding Unicode (UTF-8)}
 
 @article{Adams12,
     abstract = {This paper introduces a model of oculomotor control during the smooth pursuit of occluded visual targets. This model is based upon active inference, in which subjects try to minimise their (proprioceptive) prediction error based upon posterior beliefs about the hidden causes of their (exteroceptive) sensory input. Our model appeals to a single principle -- the minimisation of variational free energy -- to provide Bayes optimal solutions to the smooth pursuit problem. However, it tries to accommodate the cardinal features of smooth pursuit of partially occluded targets that have been observed empirically in normal subjects and schizophrenia. Specifically, we account for the ability of normal subjects to anticipate periodic target trajectories and emit pre-emptive smooth pursuit eye movements -- prior to the emergence of a target from behind an occluder. Furthermore, we show that a single deficit in the postsynaptic gain of prediction error units (encoding the precision of posterior beliefs) can account for several features of smooth pursuit in schizophrenia: namely, a reduction in motor gain and anticipatory eye movements during visual occlusion, a paradoxical improvement in tracking unpredicted deviations from target trajectories and a failure to recognise and exploit regularities in the periodic motion of visual targets. This model will form the basis of subsequent (dynamic causal) models of empirical eye tracking measurements, which we hope to validate, using psychopharmacology and studies of schizophrenia.},
@@ -75,6 +77,21 @@
     url = {http://dx.doi.org/10.1016/j.visres.2010.10.021},
     volume = {51},
     year = {2011}
+}
+
+@inproceedings{Boutin20sigma,
+    abstract = {Both neurophysiological and psychophysical experiments have pointed out the crucial role of recurrent and feedback connections to process context-dependent information in the early visual cortex. While numerous models have accounted for feedback effects at either neural or representational level, none of them were able to bind those two levels of analysis. Is it possible to describe feedback effects at both levels using the same model? We answer this question by combining Predictive Coding (PC) and Sparse Coding (SC) into a hierarchical and convolutional framework. In this Sparse Deep Predictive Coding (SDPC) model, the SC component models the internal recurrent processing within each layer, and the PC component describes the interactions between layers using feedforward and feedback connections. Here, we train a 2-layered SDPC on two different databases of images, and we interpret it as a model of the early visual system (V1~&~V2). We first demonstrate that once the training has converged, SDPC exhibits oriented and localized receptive fields in V1 and more complex features in V2. Second, we analyze the effects of feedback on the neural organization beyond the classical receptive field of V1 neurons using interaction maps. These maps are similar to association fields and reflect the Gestalt principle of good continuation. We demonstrate that feedback signals reorganize interaction maps and modulate neural activity to promote contour integration. Third, we demonstrate at the representational level that the SDPC feedback connections are able to overcome noise in input images. Therefore, the SDPC captures the association field principle at the neural level which results in better disambiguation of blurred images at the representational level.},
+    author = {Boutin, Victor and Franciosini, Angelo and Chavane, Frédéric Y and Ruffier, Franck and Perrinet, Laurent U},
+    booktitle = {SIGMA'2020 (Signal, Image, Geometry, Modelling, Approximation)},
+    date = {2019-03-03},
+    date-added = {2020-01-07 15:45:52 +0100},
+    date-modified = {2020-01-07 17:10:41 +0100},
+    grants = {doc-2-amu,phd-icn; mesocentre},
+    keywords = {sparse coding},
+    preprint = {https://arxiv.org/abs/1902.07651},
+    title = {Sparse Deep Predictive Coding captures contour integration capabilities of the early visual system},
+    url = {https://arxiv.org/abs/1902.07651},
+    year = {2020}
 }
 
 @article{BoutinFranciosiniChavaneRuffierPerrinet19,
@@ -210,18 +227,20 @@ We train a 2-layered network on 3 different databases using SDPC or Hi-La, and w
     year = {2007}
 }
 
-@article{Cessac07a,
+@incollection{Cessac07a,
     author = {Cessac, Bruno and Daucé, Emmanuel and Perrinet, Laurent U and Samuelides, Manuel},
     bdsk-url-1 = {http://www.springerlink.com/index/10.1140/epjst/e2007-00057-3},
     bdsk-url-2 = {https://doi.org/10.1140/epjst/e2007-00057-3},
+    booktitle = {Topics in Dynamical Neural Networks: From Large Scale Neural Networks to Motor Control and Vision},
     date = {2007-03},
-    date-modified = {2019-02-22 12:23:02 +0100},
+    date-modified = {2020-01-07 12:47:21 +0100},
     doi = {10.1140/epjst/e2007-00057-3},
     issn = {1951-6355},
-    journal = {The European Physical Journal Special Topics},
     keywords = {computational neuroscience},
     number = {1},
     pages = {1--5},
+    publisher = {Springer Verlag},
+    series = {The European Physical Journal Special Topics},
     title = {Introduction to Topics in Dynamical Neural Networks: From Large Scale Neural Networks to Motor Control and Vision},
     url = {http://www.springerlink.com/index/10.1140/epjst/e2007-00057-3},
     volume = {142},
@@ -267,7 +286,7 @@ We train a 2-layered network on 3 different databases using SDPC or Hi-La, and w
     year = {2015}
 }
 
-@inbook{CristobalPerrinetKeil15bicv_chap1,
+@incollection{CristobalPerrinetKeil15bicv_chap1,
     abstract = {This is the introductory chapter of the book, which serves as a comprehensive but rigorous reference in the area of biologically inspired computer vision modeling. Biological vision shows excellence in terms of performance and robustness. Biologically inspired vision, that is, the study of visual systems of living beings, can be considered as a two-way process. The book often follows Marr's classical, three-level approach to vision, but also goes beyond Marr's approach in the design of novel and more advanced vision sensors. It provides an overview of a few representative applications and current state of the art of the research in this area. The book also provides an overview of bioinspired computer vision, starting from fundamentals to the most recent advances and applications in the field.},
     author = {Cristóbal, Gabriel and Perrinet, Laurent U and Keil, Matthias S},
     bdsk-url-1 = {http://bicv.github.io/chap1/},
@@ -275,7 +294,7 @@ We train a 2-layered network on 3 different databases using SDPC or Hi-La, and w
     booktitle = {Biologically Inspired Computer Vision},
     chapter = {1},
     date = {2015-11},
-    date-modified = {2019-09-01 15:43:40 +0300},
+    date-modified = {2020-01-07 12:55:17 +0100},
     doi = {10.1002/9783527680863.ch1},
     editor = {Cristóbal, Gabriel and Perrinet, Laurent U and Keil, Matthias S},
     keywords = {Biologically Inspired Computer vision},
@@ -618,6 +637,31 @@ We train a 2-layered network on 3 different databases using SDPC or Hi-La, and w
     url = {http://dx.doi.org/10.1152/jn.00622.2010},
     volume = {105},
     year = {2011}
+}
+
+@inproceedings{Franciosini20sigma,
+    abstract = {Cells in the primary visual cortex of mammals (V1) have historically been divided into two classes: simple and complex. Simple cells exhibit a rectified linear response to oriented visual stimuli while complex cells show various degrees of invariance with respect to the stimulus' phase (position). The existence of these two populations can be explained by hierarchical models where simple cells feed information into complex cells through a non-linear spatial pooling [1]. Nevertheless, how the brain develops this structure remains an open question. One of the most successful theories to model hierarchical processing in the brain is Predictive Coding (PC): a framework introduced by Rao & Ballard [2] that exploits feedback and feedforward connectivity to solve a Bayesian inference problem. We extended the classical PC to account for a sparse representation of the input data (natural images) and a convolutional structure to allow translation invariance. We demonstrate that this framework, called Sparse Deep Predictive Coding (SDPC) [3], can easily replicate complex-like neurons when a non-linear pooling is included between the layers. In particular, we show that a large population of complex-like neurons, showing various degrees of phase invariance, emerges in the 2nd layer of the model when the pooling function is extended to include not only neighboring spatial locations but also neighboring neurons with different tuning properties. We trained various networks on natural images (STL-10 data-set). To quantify the complex behavior of the model neurons, we used the modulation ratio F1/F0[4]: if F1/F0 ≥ 1 the cell is identified as simple-like, if F1/F0<1 the cell is complex-like. In all the tested settings the 1st layer of the network exhibits simple-like neurons, while the 2nd layer always presents a fraction of complex-like cells. We observed the emergence of different behaviors by introducing different types on non-linear pooling. A striking emergent property of our model is that this non-linearities induce a topographical structure on the neurons of the network. This organization shows qualitatively strong similarities with that found in V1.  Importantly, this organization is solely a consequence of the feedback connection coming from the 2nd layer: enforcing the pooling across neighboring neurons constrains neighboring simple-cells to encode for similar features. In particular, edge-like filters with similar orientations and frequencies, but different phases, tend to be grouped together. We were able to reproduce similar effects with two different types of pooling (l2-pooling, max-pooling) and different network sizes, obtaining different degrees of topographical organization and different ratios of complex-like cells. A possible explanation of this phenomenon lies in the computational bottleneck caused by a reduction in the network layers' size. This is also in line with previous studies that showed how cortical networks with the same functional characterization can explain different behavior with different structural parameters [5]. The novelty of this model lies in its ability to highlight the link between structure and function in a neural network. This study addresses a long-debated question on the function and role of the diversity of topographical structure in the visual cortex of mammals across species.
+
+
+[1]  Ko Sakai and Shigeru Tanaka. ``Spatial pooling in the second-order spatial structure of cortical complex cells''. In: Vision Research40.7 (2000), pp. 855--871.
+
+[2]  Rajesh PN Rao and Dana H Ballard. ``Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects''. In: Nature neuroscience2.1 (1999), p. 79.
+
+[3]  Victor Boutin et al. ``Sparse Deep Predictive Coding captures contour integration capabilities of the early visual system''. In: arXiv preprint arXiv:1902.07651(2019).
+
+[4]  Bernt C Skottun et al. ``Classifying simple and complex cells on the basis of response modulation''. In: Vision research31.7-8 (1991), pp. 1078--1086.
+
+[5]  Jaeson Jang, Min Song, and Se-Bum Paik. ``Classification of columnar and salt-and-pepper organization in mammalian visual cortex''. In: bioRxiv(2019), p. 698043},
+    author = {Franciosini, Angelo and Boutin, Victor and and Perrinet, Laurent U},
+    bdsk-url-1 = {https://arxiv.org/abs/1902.07651},
+    booktitle = {SIGMA'2020 (Signal, Image, Geometry, Modelling, Approximation)},
+    date = {2019-03-03},
+    date-added = {2020-01-07 17:08:39 +0100},
+    date-modified = {2020-01-07 17:10:15 +0100},
+    grants = {doc-2-amu,phd-icn; mesocentre},
+    keywords = {sparse coding},
+    title = {Modelling Complex-cells and topological structure in the visual cortex of mammals using Sparse Predictive Coding},
+    year = {2020}
 }
 
 @inproceedings{FranciosiniPerrinet18cs,
@@ -1194,14 +1238,14 @@ of 1D and 2D motion information.},
     year = {2007}
 }
 
-@inbook{Montagnini15bicv,
+@incollection{Montagnini15bicv,
     author = {Montagnini, Anna and Perrinet, Laurent U and Masson, Guillaume S},
     bdsk-url-1 = {https://arxiv.org/abs/1611.07831},
     bdsk-url-2 = {https://doi.org/10.1002/9783527680863.ch12},
     booktitle = {Biologically Inspired Computer Vision},
     chapter = {12},
     date = {2015-11},
-    date-modified = {2020-01-07 11:46:56 +0100},
+    date-modified = {2020-01-07 12:55:09 +0100},
     doi = {10.1002/9783527680863.ch12},
     editor = {Cristóbal, Gabriel and Perrinet, Laurent U and Keil, Matthias S},
     grants = {anr-speed},
@@ -1241,7 +1285,7 @@ of 1D and 2D motion information.},
     year = {2016}
 }
 
-@inbook{Nava13,
+@article{Nava13,
     abstract = {In recent years, with the advent of High-resolution Computed Tomography (HRCT), there has been an increased interest for diagnosing Chronic Obstructive Pulmonary Disease (COPD), which is commonly presented as emphysema. Since low-attenuation areas in HRCT images describe different emphysema patterns, the discrimination problem should focus on the characterization of both local intensities and global spatial variations. We propose a novel texture-based classification framework using complex Gabor filters and local binary patterns. We also analyzed a set of global and local texture descriptors to characterize emphysema morphology. The results have shown the effectiveness of our proposal and that the combination of descriptors provides robust features that lead to an improvement in the classification rate.},
     author = {Nava, Rodrigo and Marcos, J Victor and Escalante-Ramirez, Boris and Cristóbal, Gabriel and Perrinet, Laurent U and Estépar, Raúl S J},
     bdsk-url-1 = {http://dx.doi.org/10.1007/978-3-642-41827-3%5C_27},
@@ -1249,16 +1293,16 @@ of 1D and 2D motion information.},
     booktitle = {Progress in Pattern Recognition, Image Analysis, Computer Vision, and Applications},
     chapter = {27},
     date = {2013},
-    date-modified = {2019-02-22 12:20:56 +0100},
+    date-modified = {2020-01-07 12:42:01 +0100},
     doi = {10.1007/978-3-642-41827-3_27},
     editor = {Hutchison, David and Kanade, Takeo and Kittler, Josef and Kleinberg, Jon M. and Mattern, Friedemann and Mitchell, John C. and Naor, Moni and Nierstrasz, Oscar and Pandu Rangan, C. and Steffen, Bernhard and Sudan, Madhu and Terzopoulos, Demetri and Tygar, Doug and Vardi, Moshe Y. and Weikum, Gerhard and Ruiz-Shulcloper, José and Sanniti di Baja, Gabriella},
     isbn = {978-3-642-41826-6},
     issn = {1611-3349},
+    journal = {Lecture Notes in Computer Science},
     keywords = {Biologically Inspired Computer vision,Image texture,sparse coding},
     location = {Berlin, Heidelberg},
     pages = {214--221},
     publisher = {Springer Berlin Heidelberg},
-    series = {Lecture Notes in Computer Science},
     title = {Advances in Texture Analysis for Emphysema Classification},
     url = {http://dx.doi.org/10.1007/978-3-642-41827-3_27},
     volume = {8259},
@@ -1337,7 +1381,7 @@ Humans are able to accurately track a moving object with a combination of saccad
     date = {2019-09-26},
     date-added = {2019-07-23 11:45:15 +0200},
     date-modified = {2020-01-06 16:08:18 +0100},
-    doi = {10.1101/784116 },
+    doi = {10.1101/784116},
     grants = {pace-itn},
     journal = {Submitted},
     keywords = {motion anticipation},
@@ -1372,22 +1416,6 @@ Humans are able to accurately track a moving object with a combination of saccad
     title = {Network of integrate-and-fire neurons using Rank Order Coding A: how to implement spike timing dependant plasticity},
     volume = {38--40},
     year = {2001}
-}
-
-@article{Perrinet02,
-    author = {Perrinet, Laurent U},
-    bdsk-url-1 = {http://dx.doi.org/10.1016/s0925-2312(02)00374-0},
-    date = {2002-06},
-    date-modified = {2019-02-21 18:02:41 +0100},
-    doi = {10.1016/s0925-2312(02)00374-0},
-    issn = {09252312},
-    journal = {Neurocomputing},
-    keywords = {stdp},
-    pages = {133--139},
-    title = {Coherence detection in a spiking neuron via Hebbian learning},
-    url = {http://dx.doi.org/10.1016/s0925-2312(02)00374-0},
-    volume = {44-46},
-    year = {2002}
 }
 
 @inproceedings{Perrinet02esann,
@@ -1433,8 +1461,8 @@ Humans are able to accurately track a moving object with a combination of saccad
     abstract = {It is generally assumed that neurons in the central nervous system communicate through temporal firing patterns. As a first step, we will study the learning of a layer of realistic neurons in the particular case where the relevant messages are formed by temporally cor- related patterns, or synfire patterns. The model is a layer of Integrate-and-Fire (IF) neurons with synaptic current dynamics that adapts by minimizing a cost according to a gradient descent scheme. This leads to a rule similar to Spike-Time Dependent Hebbian Plasticity (STDHP). Our results show that the rule that we derive is biologically plausible and leads to the detection of the coherence in the input in an unsupervised way. An application to shape recognition is shown as an illustration.},
     author = {Perrinet, Laurent U and Samuelides, Manuel},
     bdsk-url-1 = {http://dx.doi.org/10.1016/S0925-2312(02)00374-0},
-    date = {2002},
-    date-modified = {2019-02-22 12:20:31 +0100},
+    date = {2002-06},
+    date-modified = {2020-01-07 12:51:03 +0100},
     doi = {10.1016/S0925-2312(02)00374-0},
     journal = {Neurocomputing},
     keywords = {coding decoding,rank-order-coding,sparse hebbian learning,spike,stdp},
@@ -1532,12 +1560,13 @@ Humans are able to accurately track a moving object with a combination of saccad
     year = {2004}
 }
 
-@inbook{Perrinet05,
+@inproceedings{Perrinet05,
     author = {Perrinet, Laurent U},
     bdsk-url-1 = {http://dx.doi.org/10.1007/11550822%5C_27},
+    booktitle = {International Conference on Artificial Neural Networks},
     chapter = {27},
     date = {2005},
-    date-modified = {2019-02-22 12:24:18 +0100},
+    date-modified = {2020-01-07 12:54:27 +0100},
     doi = {10.1007/11550822_27},
     editor = {Hutchison, David and Kanade, Takeo and Kittler, Josef and Kleinberg, Jon M. and Mattern, Friedemann and Mitchell, John C. and Naor, Moni and Nierstrasz, Oscar and Pandu Rangan, C. and Steffen, Bernhard and Sudan, Madhu and Terzopoulos, Demetri and Tygar, Dough and Vardi, Moshe Y. and Weikum, Gerhard and Duch, Włodzisław and Kacprzyk, Janusz and Oja, Erkki and Zadrożny, Sławomir},
     isbn = {978-3-540-28752-0},
@@ -1724,6 +1753,7 @@ Humans are able to accurately track a moving object with a combination of saccad
 }
 
 @book{Perrinet08neurocomp,
+    bdsk-url-1 = {https://hal.archives-ouvertes.fr/NEUROCOMP08},
     booktitle = {Proceedings of NeuroComp08, Marseille},
     date = {2008-10},
     date-modified = {2020-01-07 11:29:28 +0100},
@@ -1910,14 +1940,14 @@ Humans are able to accurately track a moving object with a combination of saccad
     year = {2013}
 }
 
-@inbook{Perrinet15bicv,
+@incollection{Perrinet15bicv,
     abstract = {The representation of images in the brain is known to be sparse. That is, as neural activity is recorded in a visual area ---for instance the primary visual cortex of primates--- only a few neurons are active at a given time with respect to the whole population. It is believed that such a property reflects the efficient match of the representation with the statistics of natural scenes. Applying such a paradigm to computer vision therefore seems a promising approach towards more biomimetic algorithms. Herein, we will describe a biologically-inspired approach to this problem. First, we will describe an unsupervised learning paradigm which is particularly adapted to the efficient coding of image patches. Then, we will outline a complete multi-scale framework ---SparseLets--- implementing a biologically inspired sparse representation of natural images. Finally, we will propose novel methods for integrating prior information into these algorithms and provide some preliminary experimental results. We will conclude by giving some perspective on applying such algorithms to computer vision. More specifically, we will propose that bio-inspired approaches may be applied to computer vision using predictive coding schemes, sparse models being one simple and efficient instance of such schemes.},
     author = {Perrinet, Laurent U},
     bdsk-url-1 = {https://arxiv.org/abs/1701.06859},
     booktitle = {Biologically Inspired Computer Vision},
     chapter = {13},
     date = {2015-11},
-    date-modified = {2020-01-07 11:47:51 +0100},
+    date-modified = {2020-01-07 12:54:57 +0100},
     doi = {10.1002/9783527680863.ch14},
     editor = {Cristóbal, Gabriel and Perrinet, Laurent U and Keil, Matthias S},
     isbn = {9783527680863},
@@ -2092,14 +2122,14 @@ Furthermore, this decoding approach shows different properties: First, informati
 
 @article{Perrinet19temps,
     abstract = {Lorsque nous observons un sablier, lorsque nous fixons notre regard sur les grains de sable qui tombent, nous avons le sentiment que le temps s'écoule de façon continue. Nous pensons qu'il en est ainsi depuis la naissance du monde, et que rien ne peut contredire cette vérité universelle. Pourtant, nos perceptions sensorielles et les neurones qui en sont à l'origine ont une toute autre manière de scander le temps. Une manière subjective et sensuelle, au sens propre du terme.},
+    annote = {Laurent Perrinet a reçu des financements de l'Agence Nationale de la Recherche (ANR HOR-V1 ANR-17-CE37-0006) et du CNRS (SpikeAI). Cet article n'aurait pas vu le jour sans la journée des Neurostories de la NeuroSchool d'Aix-Marseille Université, ceux qui l'ont fait vivre et parmi eux: François Féron, Alexia Belleville, Jean-Marc Michelangeli, Camille Grasso, Daniele Schön, Anne-Marie François-Bellan, Jennifer Coull, Corine Sombrun et Francis Taulelle.},
     author = {Perrinet, Laurent U},
     bdsk-url-1 = {https://laurentperrinet.github.io/publication/perrinet-19-temps/},
     booktitle = {The Conversation},
     date-added = {2019-12-20 03:56:24 +0200},
-    date-modified = {2019-12-20 03:56:24 +0200},
+    date-modified = {2020-01-07 13:06:59 +0100},
     grants = {anr-horizontal-v1},
     journal = {The Conversation},
-    note = {Laurent Perrinet a reçu des financements de l'Agence Nationale de la Recherche (ANR HOR-V1 ANR-17-CE37-0006) et du CNRS (SpikeAI). Cet article n'aurait pas vu le jour sans la journée des Neurostories de la NeuroSchool d'Aix-Marseille Université, ceux qui l'ont fait vivre et parmi eux: François Féron, Alexia Belleville, Jean-Marc Michelangeli, Camille Grasso, Daniele Schön, Anne-Marie François-Bellan, Jennifer Coull, Corine Sombrun et Francis Taulelle.},
     preprint = {https://theconversation.com/temps-et-cerveau-comment-notre-perception-nous-fait-voyager-dans-le-temps-127567},
     projects = {tout-public},
     title = {Temps et cerveau : comment notre perception nous fait voyager dans le temps},
@@ -2196,13 +2226,13 @@ Furthermore, this decoding approach shows different properties: First, informati
     author = {Ravello, Cesar U and Escobar, Maria-José and Palacios, Adrián G and Perrinet, Laurent U},
     bdsk-url-1 = {https://laurentperrinet.github.io/publication/ravello-16-droplets},
     date = {2016-11},
-    date-modified = {2019-02-22 12:20:23 +0100},
+    date-modified = {2020-01-07 13:04:16 +0100},
     file = {https://hal.archives-ouvertes.fr/hal-01396545/file/Ravello16nips.pdf},
     keywords = {Biologically Inspired Computer vision,Image texture,Retina,sparse coding},
     note = {working paper or preprint},
     title = {Differential response of the retinal neural code with respect to the sparseness of natural images},
     url = {https://laurentperrinet.github.io/publication/ravello-16-droplets},
-    year = {2016}
+    year = {2020}
 }
 
 @article{Ravello19,
@@ -2283,6 +2313,25 @@ Furthermore, this decoding approach shows different properties: First, informati
     number = {43.503},
     title = {Different pooling of motion information for perceptual speed discrimination and behavioral speed estimation},
     year = {2010}
+}
+
+@inproceedings{Simoncini11Pattern,
+    abstract = {In order to analyze the characteristics of a rich dynamic visual environment, the visual system must integrate information collected at different scales through different spatiotemporal frequency channels. Still, it remains unclear how reliable representations of motion direction or speed are elaborated when presented with large bandwidth motion stimuli or natural statistics. Last year, we have shown that broadening the spatiotemporal frequency content of a textured pattern moving at constant speed leads to different results on a reflexive tracking task and a speed discrimination task. Larger bandwidth stimuli increase response amplitude and sensitivity of ocular following, consistently with a maximum-likelihood (ML) model of motion decoding. In contrast, larger bandwidth stimuli impair speed discrimination performance, suggesting that the perceptual system cannot take advantage of such additional, redundant information. Instead of ML, a gain control decoding mechanism can explain the drop in performance, suggesting that action and perception rely on different decoding mechanisms. To further investigate such task-dependant pooling of motion information, we measured pattern discrimination performance using these textured stimuli. Two noise patterns were presented sequentially for 250 ms on a CRT monitor (1280 × 1024 @ 100 Hz) and covered 47$,^∘$ of visual angle with identical properties (mean SF, bandwidth SF, speed) except for a randomized phase spectrum. A test pattern was then presented and subjects were asked to match it with one or the other reference stimulus (ABX task). At small bandwidth and optimal mean spatial frequency (0.3 cpd), subjects were able to discriminate the two patterns with high accuracy. Performance dropped to chance level as spatial frequency bandwidth increased. Increasing the mean spatial frequency decreased the overall performance. Again, these results suggest that perceptual performance is deteriorated in presence of larger information.},
+    author = {Simoncini, Claudio and Montagnini, Anna and Perrinet, Laurent U and Mamassian, Pascal and Masson, Guillaume S},
+    bdsk-url-1 = {http://dx.doi.org/10.1167/11.11.749},
+    date = {2011-09-23},
+    date-modified = {2020-01-07 13:00:32 +0100},
+    doi = {10.1167/11.11.749},
+    issn = {1534-7362},
+    journal = {Journal of Vision},
+    keywords = {eye movements,motion detection,motion-clouds,psychophysics},
+    number = {11},
+    pages = {749},
+    publisher = {Association for Research in Vision and Ophthalmology},
+    title = {Pattern discrimination for moving random textures: Richer stimuli are more difficult to recognize},
+    url = {http://dx.doi.org/10.1167/11.11.749},
+    volume = {11},
+    year = {2011}
 }
 
 @inproceedings{Simoncini11vss,
@@ -2383,25 +2432,6 @@ Furthermore, this decoding approach shows different properties: First, informati
     url = {http://dx.doi.org/10.1167/14.10.110},
     volume = {14},
     year = {2014}
-}
-
-@inproceedings{Simoncini2011Pattern,
-    abstract = {In order to analyze the characteristics of a rich dynamic visual environment, the visual system must integrate information collected at different scales through different spatiotemporal frequency channels. Still, it remains unclear how reliable representations of motion direction or speed are elaborated when presented with large bandwidth motion stimuli or natural statistics. Last year, we have shown that broadening the spatiotemporal frequency content of a textured pattern moving at constant speed leads to different results on a reflexive tracking task and a speed discrimination task. Larger bandwidth stimuli increase response amplitude and sensitivity of ocular following, consistently with a maximum-likelihood (ML) model of motion decoding. In contrast, larger bandwidth stimuli impair speed discrimination performance, suggesting that the perceptual system cannot take advantage of such additional, redundant information. Instead of ML, a gain control decoding mechanism can explain the drop in performance, suggesting that action and perception rely on different decoding mechanisms. To further investigate such task-dependant pooling of motion information, we measured pattern discrimination performance using these textured stimuli. Two noise patterns were presented sequentially for 250 ms on a CRT monitor (1280 × 1024 @ 100 Hz) and covered 47$,^∘$ of visual angle with identical properties (mean SF, bandwidth SF, speed) except for a randomized phase spectrum. A test pattern was then presented and subjects were asked to match it with one or the other reference stimulus (ABX task). At small bandwidth and optimal mean spatial frequency (0.3 cpd), subjects were able to discriminate the two patterns with high accuracy. Performance dropped to chance level as spatial frequency bandwidth increased. Increasing the mean spatial frequency decreased the overall performance. Again, these results suggest that perceptual performance is deteriorated in presence of larger information.},
-    author = {Simoncini, Claudio and Montagnini, Anna and Perrinet, Laurent U and Mamassian, Pascal and Masson, Guillaume S},
-    bdsk-url-1 = {http://dx.doi.org/10.1167/11.11.749},
-    date = {2011-09-23},
-    date-modified = {2019-02-22 12:43:40 +0100},
-    doi = {10.1167/11.11.749},
-    issn = {1534-7362},
-    journal = {Journal of Vision},
-    keywords = {eye movements,motion detection,motion-clouds,psychophysics},
-    number = {11},
-    pages = {749},
-    publisher = {Association for Research in Vision and Ophthalmology},
-    title = {Pattern discrimination for moving random textures: Richer stimuli are more difficult to recognize},
-    url = {http://dx.doi.org/10.1167/11.11.749},
-    volume = {11},
-    year = {2011}
 }
 
 @inproceedings{Taouali14areadne,
@@ -2524,19 +2554,20 @@ Furthermore, this decoding approach shows different properties: First, informati
     year = {2015}
 }
 
-@incollection{Vacher15nips,
+@article{Vacher15nips,
     annote = {https://arxiv.org/abs/1511.02705},
     author = {Vacher, Jonathan and Meso, Andrew Isaac and Perrinet, Laurent U and Peyré, Gabriel},
     bdsk-url-1 = {http://papers.nips.cc/paper/5769-biologically-inspired-dynamic-textures-for-probing-motion-perception.pdf},
-    booktitle = {Advances in Neural Information Processing Systems 28},
     date = {2015},
-    date-modified = {2019-02-25 23:07:17 +0100},
+    date-modified = {2020-01-07 12:41:18 +0100},
     grants = {anr-speed},
+    journal = {Advances in Neural Information Processing Systems},
     keywords = {motion-clouds},
     pages = {1918--1926},
     preprint = {https://hal-amu.archives-ouvertes.fr/hal-01225867},
     title = {Biologically Inspired Dynamic Textures for Probing Motion Perception},
     url = {http://papers.nips.cc/paper/5769-biologically-inspired-dynamic-textures-for-probing-motion-perception.pdf},
+    volume = {28},
     year = {2015}
 }
 
@@ -2627,13 +2658,13 @@ Furthermore, this decoding approach shows different properties: First, informati
     year = {2010}
 }
 
-@article{Voges10neurocomp,
+@inproceedings{Voges10neurocomp,
     abstract = {We study cortical network dynamics for a more realistic network model. It represents, in terms of spatial scale, a large piece of cortex allowing for long-range connections, resulting in a rather sparse connectivity. We use two different types of conductance-based I&F neurons as excitatory and in- hibitory units, as well as specific connection probabilities. In order to re- main computationally tractable, we reduce neuron density, modelling part of the missing internal input via external poissonian spike trains. Compared to previous studies, we observe significant changes in the dynamical phase space: Altered activity patterns require another regularity measure than the coefficient of variation. We identify two types of mixed states, where differ- ent phases coexist in certain regions of the phase space. More notably, our boundary between high and low activity states depends predominantly on the relation between excitatory and inhibitory synaptic strength instead of the input rate. Key words:Artificial neural networks, Data analysis, Simulation, Spiking neurons. This work is supported by EC IP project FP6-015879 (FACETS).},
     author = {Voges, Nicole and Perrinet, Laurent U},
+    booktitle = {Proceedings of NeuroComp},
     date = {2010},
-    date-modified = {2019-02-25 23:30:15 +0100},
+    date-modified = {2020-01-07 12:45:18 +0100},
     grants = {facets},
-    journal = {Journal of Physiology-Paris},
     keywords = {lateral connections},
     number = {1-2},
     pages = {51--60},
