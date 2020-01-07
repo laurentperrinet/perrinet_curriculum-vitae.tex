@@ -1,19 +1,21 @@
 @comment{%% This BibTeX bibliography file was created using BibDesk.
 %% http://bibdesk.sourceforge.net/
 
-%% Created for Laurent Perrinet at 2020-01-07 17:18:27 +0100 
+%% Created for Laurent Perrinet at 2020-01-07 17:45:07 +0100 
 
 
 %% Saved with string encoding Unicode (UTF-8)}
+
+@comment{%% This BibTeX bibliography file was created using BibDesk. %% http://bibdesk.sourceforge.net/  %% Created for Laurent Perrinet at 2020-01-07 17:18:27 +0100    %% Saved with string encoding Unicode (UTF-8)}
 
 @comment{%% This BibTeX bibliography file was created using BibDesk. %% http://bibdesk.sourceforge.net/  %% Created for Laurent Perrinet at 2020-01-07 11:47:54 +0100    %% Saved with string encoding Unicode (UTF-8)}
 
 @article{Adams12,
     abstract = {This paper introduces a model of oculomotor control during the smooth pursuit of occluded visual targets. This model is based upon active inference, in which subjects try to minimise their (proprioceptive) prediction error based upon posterior beliefs about the hidden causes of their (exteroceptive) sensory input. Our model appeals to a single principle -- the minimisation of variational free energy -- to provide Bayes optimal solutions to the smooth pursuit problem. However, it tries to accommodate the cardinal features of smooth pursuit of partially occluded targets that have been observed empirically in normal subjects and schizophrenia. Specifically, we account for the ability of normal subjects to anticipate periodic target trajectories and emit pre-emptive smooth pursuit eye movements -- prior to the emergence of a target from behind an occluder. Furthermore, we show that a single deficit in the postsynaptic gain of prediction error units (encoding the precision of posterior beliefs) can account for several features of smooth pursuit in schizophrenia: namely, a reduction in motor gain and anticipatory eye movements during visual occlusion, a paradoxical improvement in tracking unpredicted deviations from target trajectories and a failure to recognise and exploit regularities in the periodic motion of visual targets. This model will form the basis of subsequent (dynamic causal) models of empirical eye tracking measurements, which we hope to validate, using psychopharmacology and studies of schizophrenia.},
-    author = {Adams, Rick A. and Perrinet, Laurent U and Friston, Karl J},
+    author = {Adams, Rick A and Perrinet, Laurent U and Friston, Karl J},
     bdsk-url-1 = {http://dx.doi.org/10.1371/journal.pone.0047502},
     date = {2012-10-26},
-    date-modified = {2019-02-24 23:49:43 +0100},
+    date-modified = {2020-01-07 17:45:03 +0100},
     doi = {10.1371/journal.pone.0047502},
     journal = {PLoS ONE},
     keywords = {active inference,Bayesian model,eye movements,motion detection},
@@ -82,6 +84,7 @@
 @inproceedings{Boutin20sigma,
     abstract = {Both neurophysiological and psychophysical experiments have pointed out the crucial role of recurrent and feedback connections to process context-dependent information in the early visual cortex. While numerous models have accounted for feedback effects at either neural or representational level, none of them were able to bind those two levels of analysis. Is it possible to describe feedback effects at both levels using the same model? We answer this question by combining Predictive Coding (PC) and Sparse Coding (SC) into a hierarchical and convolutional framework. In this Sparse Deep Predictive Coding (SDPC) model, the SC component models the internal recurrent processing within each layer, and the PC component describes the interactions between layers using feedforward and feedback connections. Here, we train a 2-layered SDPC on two different databases of images, and we interpret it as a model of the early visual system (V1~&~V2). We first demonstrate that once the training has converged, SDPC exhibits oriented and localized receptive fields in V1 and more complex features in V2. Second, we analyze the effects of feedback on the neural organization beyond the classical receptive field of V1 neurons using interaction maps. These maps are similar to association fields and reflect the Gestalt principle of good continuation. We demonstrate that feedback signals reorganize interaction maps and modulate neural activity to promote contour integration. Third, we demonstrate at the representational level that the SDPC feedback connections are able to overcome noise in input images. Therefore, the SDPC captures the association field principle at the neural level which results in better disambiguation of blurred images at the representational level.},
     author = {Boutin, Victor and Franciosini, Angelo and Chavane, Frédéric Y and Ruffier, Franck and Perrinet, Laurent U},
+    bdsk-url-1 = {https://arxiv.org/abs/1902.07651},
     booktitle = {SIGMA'2020 (Signal, Image, Geometry, Modelling, Approximation)},
     date = {2019-03-03},
     date-added = {2020-01-07 15:45:52 +0100},
@@ -718,10 +721,10 @@ This model could shed light on the role of sparsity and feedback modulation in h
 
 @article{Friston12,
     abstract = {If perception corresponds to hypothesis testing (Gregory, 1980); then visual searches might be construed as experiments that generate sensory data. In this work, we explore the idea that saccadic eye movements are optimal experiments, in which data are gathered to test hypotheses or beliefs about how those data are caused. This provides a plausible model of visual search that can be motivated from the basic principles of self-organized behavior: namely, the imperative to minimize the entropy of hidden states of the world and their sensory consequences. This imperative is met if agents sample hidden states of the world efficiently. This efficient sampling of salient information can be derived in a fairly straightforward way, using approximate Bayesian inference and variational free-energy minimization. Simulations of the resulting active inference scheme reproduce sequential eye movements that are reminiscent of empirically observed saccades and provide some counterintuitive insights into the way that sensory evidence is accumulated or assimilated into beliefs about the world.},
-    author = {Friston, Karl J and Adams, Rick A. and Perrinet, Laurent U and Breakspear, Michael},
+    author = {Friston, Karl J and Adams, Rick A and Perrinet, Laurent U and Breakspear, Michael},
     bdsk-url-1 = {http://dx.doi.org/10.3389/fpsyg.2012.00151},
     date = {2012},
-    date-modified = {2019-02-24 23:49:43 +0100},
+    date-modified = {2020-01-07 17:45:03 +0100},
     doi = {10.3389/fpsyg.2012.00151},
     issn = {1664-1078},
     journal = {Frontiers in Psychology},
@@ -1885,10 +1888,10 @@ Humans are able to accurately track a moving object with a combination of saccad
 
 @inproceedings{Perrinet12areadne,
     abstract = {We consider the problem of sensorimotor delays in the optimal control of movement under uncertainty. Specifically, we consider axonal conduction delays in the visuo-oculomotor loop and their implications for active inference. Active inference uses a generalisation of Kalman filter- ing to provide Bayes optimal estimates of hidden states and action in generalised coordinates of motion. Representing hidden states in generalised coordinates provides a simple means of compensating for both sensory and oculomotor delays. This compensation is illustrated us- ing neuronal simulations of oculomotor following responses with and without compensation. We then consider an extension of the generative model that produces ocular following to simulate smooth pursuit eye movements --- in which the system believes both the target and its centre of gaze are attracted by a (fictive) point moving in the visual field. Finally, the gen- erative model is equipped with a hierarchical structure, so that it can register and remember unseen (occluded) trajectories and emit anticipatory responses. These simulations speak to a straightforward and neurobiologically plausible solution to the generic problem of integrating information from different sources with different temporal delays and the particular difficulties encountered when a system --- like the oculomotor system --- tries to control its environment with delayed signals. This work was supported from the European Community's Seventh Framework Program FP7/2007-2013 under grant agreement number 214728-2, (CODDE)},
-    author = {Perrinet, Laurent U and Adams, Rick A. and Friston, Karl J},
+    author = {Perrinet, Laurent U and Adams, Rick A and Friston, Karl J},
     booktitle = {Proceedings of AREADNE, Santorini, Greece, 21-24 June 2012, published by The AREADNE Foundation, Inc., Cambridge, Massachusetts, USA, http://areadne.org},
     date = {2012},
-    date-modified = {2019-09-01 15:49:55 +0300},
+    date-modified = {2020-01-07 17:45:03 +0100},
     grants = {codde},
     keywords = {active inference},
     title = {Active inference, smooth pursuit and oculomotor delays},
@@ -1914,11 +1917,11 @@ Humans are able to accurately track a moving object with a combination of saccad
 
 @inproceedings{Perrinet13cns,
     abstract = {We consider the problem of sensorimotor delays in the optimal control of movement under un- certainty. Specifically, we consider axonal conduction delays in the visuo-oculomotor loop and their implications for active inference. Active inference uses a generalisation of Kalman filter- ing to provide Bayes optimal estimates of hidden states and action in generalised coordinates of motion. Representing hidden states in generalised coordinates provides a simple means of compensating for both sensory and oculomotor delays. This compensation is illustrated us- ing neuronal simulations of oculomotor following responses with and without compensation. We then consider an extension of the generative model that produces ocular following to simulate smooth pursuit eye movements --- in which the system believes both the target and its centre of gaze are attracted by a (fictive) point moving in the visual field. Finally, the gen- erative model is equipped with a hierarchical structure, so that it can register and remember unseen (occluded) trajectories and emit anticipatory responses. These simulations speak to a straightforward and neurobiologically plausible solution to the generic problem of integrating information from different sources with different temporal delays and the particular difficulties encountered when a system --- like the oculomotor system --- tries to control its environment with delayed signals.},
-    author = {Perrinet, Laurent U and Adams, Rick A. and Friston, Karl J},
+    author = {Perrinet, Laurent U and Adams, Rick A and Friston, Karl J},
     bdsk-url-1 = {https://laurentperrinet.github.io/publication/perrinet-13-cns},
     booktitle = {CNS 2013, Paris},
     date = {2013},
-    date-modified = {2019-02-25 10:01:24 +0100},
+    date-modified = {2020-01-07 17:45:03 +0100},
     grants = {codde},
     keywords = {active inference},
     title = {Active inference, eye movements and oculomotor delays},
@@ -1928,11 +1931,11 @@ Humans are able to accurately track a moving object with a combination of saccad
 
 @inproceedings{Perrinet13jffos,
     abstract = {We consider the problem of sensorimotor delays in the optimal control of movement under un- certainty. Specifically, we consider axonal conduction delays in the visuo-oculomotor loop and their implications for active inference. Active inference uses a generalisation of Kalman filter- ing to provide Bayes optimal estimates of hidden states and action in generalised coordinates of motion. Representing hidden states in generalised coordinates provides a simple means of compensating for both sensory and oculomotor delays. This compensation is illustrated us- ing neuronal simulations of oculomotor following responses with and without compensation. We then consider an extension of the generative model that produces ocular following to simulate smooth pursuit eye movements --- in which the system believes both the target and its centre of gaze are attracted by a (fictive) point moving in the visual field. Finally, the gen- erative model is equipped with a hierarchical structure, so that it can register and remember unseen (occluded) trajectories and emit anticipatory responses. These simulations speak to a straightforward and neurobiologically plausible solution to the generic problem of integrating information from different sources with different temporal delays and the particular difficulties encountered when a system --- like the oculomotor system --- tries to control its environment with delayed signals.},
-    author = {Perrinet, Laurent U and Adams, Rick A. and Friston, Karl J},
+    author = {Perrinet, Laurent U and Adams, Rick A and Friston, Karl J},
     bdsk-url-1 = {https://laurentperrinet.github.io/Publications/Perrinet13jffos},
     booktitle = {The 7th Japanese-French Frontiers of Science Symposium},
     date = {2013},
-    date-modified = {2019-02-25 10:01:24 +0100},
+    date-modified = {2020-01-07 17:45:03 +0100},
     grants = {codde},
     keywords = {active inference},
     title = {Active inference, eye movements and oculomotor delays},
@@ -1999,11 +2002,11 @@ Humans are able to accurately track a moving object with a combination of saccad
 
 @inproceedings{Perrinet16networks,
     abstract = {We consider the problem of sensorimotor delays in the optimal control of movement under un- certainty. Specifically, we consider axonal conduction delays in the visuo-oculomotor loop and their implications for active inference. Active inference uses a generalisation of Kalman filter- ing to provide Bayes optimal estimates of hidden states and action in generalised coordinates of motion. Representing hidden states in generalised coordinates provides a simple means of compensating for both sensory and oculomotor delays. This compensation is illustrated us- ing neuronal simulations of oculomotor following responses with and without compensation. We then consider an extension of the generative model that produces ocular following to simulate smooth pursuit eye movements --- in which the system believes both the target and its centre of gaze are attracted by a (fictive) point moving in the visual field. Finally, the generative model is equipped with a hierarchical structure, so that it can register and remember unseen (occluded) trajectories and emit anticipatory responses. These simulations speak to a straightforward and neurobiologically plausible solution to the generic problem of integrating information from different sources with different temporal delays and the particular difficulties encountered when a system --- like the oculomotor system --- tries to control its environment with delayed signals.},
-    author = {Perrinet, Laurent U and Adams, Rick A. and Friston, Karl J},
+    author = {Perrinet, Laurent U and Adams, Rick A and Friston, Karl J},
     bdsk-url-1 = {https://laurentperrinet.github.io/publication/perrinet-16-networks},
     booktitle = {Complex Networks: from theory to interdisciplinary applications},
     date = {2016},
-    date-modified = {2019-02-25 10:01:24 +0100},
+    date-modified = {2020-01-07 17:45:03 +0100},
     grants = {codde},
     keywords = {active inference},
     pages = {paper 61},
@@ -2151,12 +2154,12 @@ Furthermore, this decoding approach shows different properties: First, informati
 @article{PerrinetAdamsFriston14,
     abstract = {This paper considers the problem of sensorimotor delays in the optimal control of (smooth) eye movements under uncertainty. Specifically, we consider delays in the visuo-oculomotor loop and their implications for active inference. Active inference uses a generalisation of Kalman filtering to provide Bayes optimal estimates of hidden states and action in generalised coordinates of motion. Representing hidden states in generalised coordinates provides a simple way of compensating for both sensory and oculomotor delays. The efficacy of this scheme is illustrated using neuronal simulations of pursuit initiation responses, with and without compensation. We then consider an extension of the generative model to simulate smooth pursuit eye movements---in which the visuo-oculomotor system believes both the target and its centre of gaze are attracted to a (hidden) point moving in the visual field. Finally, the generative model is equipped with a hierarchical structure, so that it can recognise and remember unseen (occluded) trajectories and emit anticipatory responses. These simulations speak to a straightforward and neurobiologically plausible solution to the generic problem of integrating information from different sources with different temporal delays and the particular difficulties encountered when a system---like the oculomotor system---tries to control its environment with delayed signals.},
     annote = {https://arxiv.org/abs/1610.05564},
-    author = {Perrinet, Laurent U and Adams, Rick A. and Friston, Karl J},
+    author = {Perrinet, Laurent U and Adams, Rick A and Friston, Karl J},
     bdsk-url-1 = {https://hal.archives-ouvertes.fr/hal-01382350},
     bdsk-url-2 = {https://doi.org/10.1007/s00422-014-0620-8},
     booktitle = {Biological Cybernetics},
     date = {2014-12-16},
-    date-modified = {2019-02-24 23:49:43 +0100},
+    date-modified = {2020-01-07 17:45:03 +0100},
     doi = {10.1007/s00422-014-0620-8},
     issn = {1432-0770},
     journal = {Biological Cybernetics},
