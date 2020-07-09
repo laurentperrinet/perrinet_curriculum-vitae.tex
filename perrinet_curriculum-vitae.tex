@@ -1,3 +1,5 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
 %------------------------------------
 % Dario Taraborelli
 % Typesetting your academic CV in LaTeX
@@ -8,8 +10,6 @@
 % configuration.
 % Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
 %------------------------------------
-%!TEX TS-program = lualatex
-%!TEX encoding = UTF-8 Unicode
 %------------------------------------
 \newcommand{\Title}{Curriculum Vit\ae}
 \newcommand{\Author}{Laurent U. Perrinet}
@@ -30,8 +30,8 @@ UMR 7289, CNRS / Aix-Marseille Universit{\'e}\\ 27, Bd. Jean Moulin, 13385 Marse
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
 %\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
-%\setmonofont[Scale=0.8]{Calibri} 
-%\setsansfont[Scale=0.9]{Optima Regular} 
+%\setmonofont[Scale=0.8]{Calibri}
+%\setsansfont[Scale=0.9]{Optima Regular}
 % ---- CUSTOM COMMANDS
 \chardef\&="E050
 \newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
@@ -49,15 +49,15 @@ UMR 7289, CNRS / Aix-Marseille Universit{\'e}\\ 27, Bd. Jean Moulin, 13385 Marse
 \reversemarginpar
 
 % HEADINGS
-\usepackage{sectsty} 
-\usepackage[normalem]{ulem} 
-\sectionfont{\sffamily\mdseries\large\underline} 
-\subsectionfont{\rmfamily\mdseries\scshape\normalsize} 
-\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\sffamily\mdseries\large\underline}
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize}
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
 
 % PDF SETUP
 % ---- FILL IN HERE THE DOC TITLE AND AUTHOR
-\usepackage[bookmarks, colorlinks, breaklinks]{hyperref}  %dvipdfm, 
+\usepackage[bookmarks, colorlinks, breaklinks]{hyperref}  %dvipdfm,
 \hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,
 pdftitle={\Title},%
 pdfauthor={\Author < \Email > \Address - \Website},%
@@ -75,7 +75,7 @@ pdfsubject={\Title}%
 %Phone: \texttt{609-734-8000}\\
 %Fax: \texttt{609-924-8399}\\[.2cm]
 email: \href{mailto:\Email}{\Email}\\
-\textsc{url}: \href{\Website}{\Website}\\ 
+\textsc{url}: \href{\Website}{\Website}\\
 \vfill
 \section*{Research interests}
 I am interested in bridging the gap between the structure and the function of neural systems by showing how they optimally adapt to the statistics of natural environments.
@@ -85,7 +85,7 @@ Nationality:  French
 
 %%\hrule
 \section*{Current position}
-\noindent\years{since 2004}\emph{Researcher (CNRS)}, Institut de Neurosciences de la Timone (INT).
+\noindent\years{since 2004}\emph{Researcher (DR2 CNRS)}, Institut de Neurosciences de la Timone (INT).
 
 %%\hrule
 \section*{Areas of specialization}
@@ -108,7 +108,7 @@ Predictive processes and active perception.
 
 \noindent\years{1999-2003}\textsc{PhD} in Cognitive Neuroscience, ONERA/DTIM, Toulouse (France)
 
-\years{1993 - 1998}\textsc{MSc} in Engineering  {\sc Supaéro} (Toulouse, France), one of the leading French Engineering Schools ("Grandes Ecoles"). Specialization in stochastic models for signal and image processing. 
+\years{1993 - 1998}\textsc{MSc} in Engineering  {\sc Supaéro} (Toulouse, France), one of the leading French Engineering Schools ("Grandes Ecoles"). Specialization in stochastic models for signal and image processing.
 % \years{10/1999-2/2003}\textsc{Master} in Cognitive Sciences, ONERA/DTIM, Toulouse (France)
 %
 %%\hrule
@@ -147,10 +147,10 @@ Predictive processes and active perception.
 %\end{itemize}
 %\subsection*{Book chapter}
 
-%\noindent\years{2007}Laurent U. Perrinet (2007) “Dynamical neural networks: modeling low-level vision at short latencies".  In \emph{Topics in Dynamical Neural Networks: From Large Scale Neural Networks to Motor Control and Vision}: volume 142 of {\bf The European Physical Journal (Special Topics)}.  Springer Berlin / Heidelberg.%, mar 2007, pages 163--225.  \doi{10.1140/epjst/e2007-00061-7}. % 
+%\noindent\years{2007}Laurent U. Perrinet (2007) “Dynamical neural networks: modeling low-level vision at short latencies".  In \emph{Topics in Dynamical Neural Networks: From Large Scale Neural Networks to Motor Control and Vision}: volume 142 of {\bf The European Physical Journal (Special Topics)}.  Springer Berlin / Heidelberg.%, mar 2007, pages 163--225.  \doi{10.1140/epjst/e2007-00061-7}. %
 \subsection*{Book}
 
-\noindent\years{2015}Gabriel Cristobal, Laurent U Perrinet et Matthias S Keil, editors. ``Biologically Inspired Computer Vision.'' {\bf Wiley-VCH} % Verlag GmbH et Co. KGaA, 7 oct. 2015. isbn : 9783527680863. 
+\noindent\years{2015}Gabriel Cristobal, Laurent U Perrinet et Matthias S Keil, editors. ``Biologically Inspired Computer Vision.'' {\bf Wiley-VCH} % Verlag GmbH et Co. KGaA, 7 oct. 2015. isbn : 9783527680863.
 doi : 10.1002/9783527680863. %url : http://onlinelibrary. wiley.com/book/10.1002/9783527680863
 %
 %\subsection*{Talks}
@@ -163,7 +163,7 @@ doi : 10.1002/9783527680863. %url : http://onlinelibrary. wiley.com/book/10.1002
 
 % FILL IN THE FULL URL TO YOUR CV
 \begin{center}
-%{\scriptsize  Last updated: \today\- •\- 
+%{\scriptsize  Last updated: \today\- •\-
 %% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
 %Typeset in \href{http://nitens.org/taraborelli/cvtex}{
 %% ---- FILL IN THE FULL URL TO YOUR CV HERE
