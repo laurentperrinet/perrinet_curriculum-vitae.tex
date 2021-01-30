@@ -132,7 +132,6 @@
 @article{BoutinFranciosiniChavaneRuffierPerrinet20,
     abstract = {Both neurophysiological and psychophysical experiments have pointed out the crucial role of recurrent and feedback connections to process context-dependent information in the early visual cortex. While numerous models have accounted for feedback effects at either neural or representational level, none of them were able to bind those two levels of analysis. Is it possible to describe feedback effects at both levels using the same model? We answer this question by combining Predictive Coding (PC) and Sparse Coding (SC) into a hierarchical and convolutional framework. In this Sparse Deep Predictive Coding (SDPC) model, the SC component models the internal recurrent processing within each layer, and the PC component describes the interactions between layers using feedforward and feedback connections. Here, we train a 2-layered SDPC on two different databases of images, and we interpret it as a model of the early visual system (V1~&~V2). We first demonstrate that once the training has converged, SDPC exhibits oriented and localized receptive fields in V1 and more complex features in V2. Second, we analyze the effects of feedback on the neural organization beyond the classical receptive field of V1 neurons using interaction maps. These maps are similar to association fields and reflect the Gestalt principle of good continuation. We demonstrate that feedback signals reorganize interaction maps and modulate neural activity to promote contour integration. Third, we demonstrate at the representational level that the SDPC feedback connections are able to overcome noise in input images. Therefore, the SDPC captures the association field principle at the neural level which results in better disambiguation of blurred images at the representational level.},
     author = {Boutin, Victor and Franciosini, Angelo and Chavane, Frédéric Y and Ruffier, Franck and Perrinet, Laurent U},
-    bdsk-url-1 = {https://arxiv.org/abs/1902.07651},
     date = {2020-05-12},
     date-added = {2019-06-18 13:53:53 +0200},
     date-modified = {2020-12-12 11:55:20 +0100},
@@ -141,7 +140,8 @@
     keywords = {sparse coding},
     preprint = {https://arxiv.org/abs/1902.07651},
     title = {Sparse Deep Predictive Coding captures contour integration capabilities of the early visual system},
-    url = {https://arxiv.org/abs/1902.07651},
+    url = {https://doi.org/10.1371/journal.pcbi.1008629},
+    doi = {10.1371/journal.pcbi.1008629},
     year = {2020}
 }
 
@@ -510,6 +510,23 @@ The brain has to solve inverse problems to correctly interpret sensory data and 
     volume = {20},
     year = {2020}
 }
+
+@inproceedings{Dauce20iwai,
+    author = {Daucé, Emmanuel and Perrinet, Laurent U},
+    date = {2020-12-17},
+	title = {Visual search as active inference},
+	booktitle = {IWAI*2020},
+	grants = {aprovis-3-d},
+	time_start = {2020-09-14T18:00:00},
+	doi = {10.1007/978-3-030-64919-7_17},
+	url = {https://laurentperrinet.github.io/publication/dauce-20-iwai},
+	url_code = {https://github.com/laurentperrinet/2020-09-14_IWAI/},
+	url_pdf = {https://iwaiworkshop.github.io/papers/2020/IWAI_2020_paper_19.pdf},
+	url_slides = {https://laurentperrinet.github.io/2020-09-14_IWAI},
+    keywords = {Active Inference,Deep Learning,Object localization,Visual search,Visuomotor control},
+    year = {2020}
+}
+
 
 @inproceedings{Davison07cns,
     abstract = {Trends in programming language development and adoption point to Python as the high-level systems integration language of choice. Python leverages a vast developer-base external to the neuroscience community, and promises leaps in simulation complexity and maintainability to any neural simulator that adopts it. PyNN http://neuralensemble.org/PyNN strives to provide a uniform application programming interface (API) across neural simulators. Presently NEURON and NEST are supported, and support for other simulators and neuromorphic VLSI hardware is under development. With PyNN it is possible to write a simulation script once and run it without modification on any supported simulator. It is also possible to write a script that uses capabilities specific to a single simulator. While this sacrifices simulator-independence, it adds flexibility, and can be a useful step in porting models between simulators. The design goals of PyNN include allowing access to low-level details of a simulation where necessary, while providing the capability to model at a high level of abstraction, with concomitant gains in development speed and simulation maintainability. Another of our aims with PyNN is to increase the productivity of neuroscience modeling, by making it faster to develop models de novo, by promoting code sharing and reuse across simulator communities, and by making it much easier to debug, test and validate simulations by running them on more than one simulator. Modelers would then become free to devote more software development effort to innovation, building on the simulator core with new tools such as network topology databases, stimulus programming, analysis and visualization tools, and simulation accounting. The resulting, community-developed 'meta-simulator' system would then represent a powerful tool for overcoming the so-called complexity bottleneck that is presently a major roadblock for neural modeling.},
@@ -2182,8 +2199,6 @@ Furthermore, this decoding approach shows different properties: First, informati
 @incollection{Perrinet20,
     abstract = {Within the central nervous system, visual areas are essential in transforming the raw luminous signal into a representation which efficiently conveys information about the environment. This process is constrained by the necessity of being robust and rapid. Indeed, there exists both a wide variety of potential changes in the geometrical characteristics of the visual scene and also a necessity to be able to respond as quickly as possible to the incoming sensory stream, for instance to drive a movement of the eyes to the location of a potential danger. Decades of study in neurophysiology and psychophysics at the different levels of vision have shown that this system takes advantage of a priori knowledge about the structure of visual information, such as the regularity in the shape and motion of visual objects. As such, the predictive processing framework offers a unified theory to explain a variety of visual mechanisms. However, we still lack a global normative approach unifying those mechanisms and we will review here some recent and promising approaches. First, we will describe Active Inference, a form of predictive processing equipped with the ability to actively sample the visual space. Then, we will extend this paradigm to the case where information is distributed on a topography, such as is the case for retinotopically organized visual areas. In particular, we will compare such models in light of recent neurophysiological data showing the role of traveling waves in shaping visual processing. Finally, we will propose some lines of research to understand how these functional models may be implemented at the neural level. In particular, we will review potential models of cortical processing in terms of prototypical micro-circuits. These allow to separate the different flows of information, from feed-forward prediction error to feed-back anticipation error. Still, the design of such a generic predictive processing circuit is still not fully understood and we will enumerate some possible implementations using biomimetic neural networks.},
     author = {Perrinet, Laurent U},
-    bdsk-url-1 = {https://laurentperrinet.github.io/publication/perrinet-20/},
-    bdsk-url-2 = {https://doi.org/10.5040/9781350099784.ch-005},
     booktitle = {The Philosophy and Science of Predictive Processing},
     date-added = {2019-08-28 10:14:18 +0300},
     date-modified = {2020-03-31 11:07:30 +0200},
@@ -2782,4 +2797,3 @@ Furthermore, this decoding approach shows different properties: First, informati
     title = {NeuralEnsemble: Towards a meta-environment for network modeling and data analysis},
     year = {2009}
 }
-
