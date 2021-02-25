@@ -1,13 +1,3 @@
-@comment{%% This BibTeX bibliography file was created using BibDesk.
-%% http://bibdesk.sourceforge.net/
-
-%% Created for Laurent Perrinet at 2020-12-12 11:55:47 +0100
-
-
-%% Saved with string encoding Unicode (UTF-8)}
-
-@comment{%% This BibTeX bibliography file was created using BibDesk. %% http://bibdesk.sourceforge.net/  %% Created for Laurent Perrinet at 2020-11-30 12:59:00 +0100   %% Saved with string encoding Unicode (UTF-8)}
-
 @article{Adams12,
     abstract = {This paper introduces a model of oculomotor control during the smooth pursuit of occluded visual targets. This model is based upon active inference, in which subjects try to minimise their (proprioceptive) prediction error based upon posterior beliefs about the hidden causes of their (exteroceptive) sensory input. Our model appeals to a single principle -the minimisation of variational free energy - to provide Bayes optimal solutions to the smooth pursuit problem. However, it tries to accommodate the cardinal features of smooth pursuit of partially occluded targets that have been observed empirically in normal subjects and schizophrenia. Specifically, we account for the ability of normal subjects to anticipate periodic target trajectories and emit pre-emptive smooth pursuit eye movements -prior to the emergence of a target from behind an occluder. Furthermore, we show that a single deficit in the postsynaptic gain of prediction error units (encoding the precision of posterior beliefs) can account for several features of smooth pursuit in schizophrenia: namely, a reduction in motor gain and anticipatory eye movements during visual occlusion, a paradoxical improvement in tracking unpredicted deviations from target trajectories and a failure to recognise and exploit regularities in the periodic motion of visual targets. This model will form the basis of subsequent (dynamic causal) models of empirical eye tracking measurements, which we hope to validate, using psychopharmacology and studies of schizophrenia.},
     author = {Adams, Rick A and Perrinet, Laurent U and Friston, Karl},
@@ -787,6 +777,18 @@ This model could shed light on the role of sparsity and feedback modulation in h
     url = {http://dx.doi.org/10.3389/fpsyg.2012.00151},
     volume = {3},
     year = {2012}
+}
+
+@inproceedings{Grimaldi21cosyne,
+    abstract = {We propose a neuromimetic  architecture able to perform online pattern recognition. To achieve this, we extended the existing event-based algorithm from Lagorce et al (2017) which introduced novel spatio-temporal features: time-surfaces. Built from asynchronous events acquired by a neuromorphic camera, these time surfaces allow to code the local dynamics of a visual scene and to create an efficient hierarchical event-based pattern recognition architecture. Inspired by biological findings and the efficient coding hypothesis, our main contribution is to integrate homeostatic regulation to the Hebbian learning rule. Indeed, in order to be optimally informative, average neural activity within a layer should be equally balanced across neurons. We used that principle to regularize neurons within the same layer by setting a gain depending on their past activity and such that they emit spikes with balanced firing rates. The efficiency of this technique was first demonstrated through a robust improvement in spatio-temporal patterns which were learned during the training phase. We validated classification performance with the widely used N-MNIST dataset reaching 87.3% accuracy with homeostasis compared to 72.5% accuracy without homeostasis. Finally, by studying the impact of input jitter on classification highlights resilience of this method. We expect to extend this fully event-driven approach to more naturalistic tasks, notably for ultra-fast object categorization.},
+    author = {Grimaldi, Antoine and Boutin, Victor and Ieng, Sio-Hoi and Perrinet, Laurent U and Benosman, Ryad},
+    booktitle = {Computational and Systems Neuroscience (Cosyne) 2021},
+    date = {2021-02-26},
+    grants = {aprovis3D},
+    keywords = {efficient coding,event-based vision,homeostasis,neuromorphic hardware,online classification},
+    title = {A robust bio-inspired approach to event-driven object recognition},
+    url = {https://laurentperrinet.github.io/publication/grimaldi-21-cosyne/},
+    year = {2021}
 }
 
 @article{Kaplan13,
