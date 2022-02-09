@@ -1,6 +1,6 @@
 default: pdf
 SRC = perrinet_curriculum-vitae
-pdf: $(SRC).pdf
+pdf: $(SRC).pdf $(SRC)-full.pdf $(SRC)-short.pdf perrinet-publications.pdf
 
 LATEXMK = latexmk -pdf -pdflatex=lualatex
 BIBTEX = bibtex -terse
@@ -26,4 +26,3 @@ touch:
 	touch *.tex
 
 .PHONY: clean
-

@@ -1,11 +1,10 @@
-% !TEX root = perrinet_publications.tex
 %!TeX TS-program = Lualatex
 %!TeX encoding = UTF-8 Unicode
 %!TeX spellcheck = fr-FR
 %!BIB TS-program = biber
 % -*- coding: UTF-8; -*-
 % vim: set fenc=utf-8
-\documentclass[11pt,french,a4paper,oneside]{article}%,twoside,draft
+\documentclass[9pt,french,a4paper,oneside]{article}%,twoside,draft
 %============ common ===================
 \usepackage[utf8]{inputenc}%
 \usepackage[french]{babel}%
@@ -56,20 +55,8 @@ Pour évaluation par les sections du Comité national}%
             backref=true,
 %            bibstyle=alphabetic
             ]{biblatex}%
-\addbibresource{~/quantic/blog/perrinet_curriculum-vitae_tex/LaurentPerrinet_publications.bib}
-\addbibresource{~/quantic/blog/perrinet_curriculum-vitae_tex/LaurentPerrinet_Presentations.bib}
-%\usepackage[normalem]{ulem} %for \uline{}
-%\DeclareNameFormat{given-family}{
-%  \ifgiveninits
-%  {\ifthenelse{\equal{\namepartfamily}{Toto}}
-%    {\uline{\namepartfamily\addspace\namepartgiveni\namepartsuffix}}
-%    {\namepartfamily\addspace\namepartgiveni\namepartsuffix}
-%    \ifthenelse{\value{listcount} < \value{liststop}}
-%    {\addcomma}
-%    {\ifthenelse{\ifmorenames}{~et \,al \adddot}}
-%    {}
-%  }
-%}
+\addbibresource{~/metagit/blog/perrinet_curriculum-vitae_tex/LaurentPerrinet_Publications.bib}
+\addbibresource{~/metagit/blog/perrinet_curriculum-vitae_tex/LaurentPerrinet_Presentations.bib}
 % https://tex.stackexchange.com/questions/359311/how-to-underline-name-of-specific-authors-in-biblatex
 \usepackage{xpatch}
 \usepackage[normalem]{ulem}
@@ -105,13 +92,6 @@ Pour évaluation par les sections du Comité national}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% OPTIONAL MACRO FILES
-%\usepackage{fltpage}
-%\usepackage{tikz}
-%%%%%%%%%%%%%%%%%%
-%\usepackage{multicol}
-%\usepackage{nag}
-%============ graphics ===================
-\usepackage{graphicx}
 %============ hyperref ===================
 \usepackage[unicode,linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,%pdfborder={0 0 0}
 ]{hyperref}%
@@ -138,17 +118,9 @@ pdfsubject={\Title}%
 %\makepagestyle{chapter}
 %\makeoddfoot{chapter}{\addRevisionData}{\thepage}{}
 %\makeevenfoot{chapter}{\addRevisionData}{\thepage}{}
-\graphicspath{{./Perrinet19PredictiveProcessing/figures/}}%
-%\graphicspath{{figures/}}%,{./khoei13jpp/figures/},{./bednar/},{./kaplan13/},{./friston/},{../../sci/dyva/lup/Learning/mp_sparsenet/mp_sparsenet/results/20080502T174325}}%
-%%%%%%%%%%%% Her begynner selve dokumentet %%%%%%%%%%%%%%%
-
-% for units
-\usepackage{siunitx}%
-\newcommand{\ms}{\si{\milli\second}}%
-
 \usepackage{geometry}
 \geometry{hscale=0.66,vscale=0.8,centering}
-
+%%%%%%%%%%%% Her begynner selve dokumentet %%%%%%%%%%%%%%%
 \begin{document}
 
 \begin{titlepage}
@@ -180,7 +152,8 @@ pdfsubject={\Title}%
 \end{tabular}
 \vskip .5cm
 \vfill
-{\large 7 janvier 2020}
+{\large 16 Février 2022}\\
+
 \end{center}
 \end{titlepage}
 
@@ -199,7 +172,13 @@ pdfsubject={\Title}%
 %Publications dans des journaux à comité de lecture}
 \begin{enumerate}
 
-\item[A46] \fullcite{BoutinFranciosiniChavaneRuffierPerrinet20}% _LA_
+\item[A51] \fullcite{Benvenuti20}% _LA_
+
+\item[A50] \fullcite{Ladret22}% _LA_
+
+\item[A49] \fullcite{Franciosini21}% _LA_
+
+\item[A48] \fullcite{Grimaldi22pami}% _LA_
 
 \end{enumerate}
 
@@ -207,7 +186,11 @@ pdfsubject={\Title}%
 
 \begin{enumerate}
 
-\item[A45] \years{2020} \fullcite{BoutinFranciosiniRuffierPerrinet20feedback}% _LA_
+\item[A47] \years{2022} \fullcite{Chavane22}% 
+
+\item[A46] \years{2020} \fullcite{BoutinFranciosiniChavaneRuffierPerrinet20}% _LA_
+
+\item[A45] \fullcite{BoutinFranciosiniRuffierPerrinet20feedback}% _LA_
 
 \item[A44] \fullcite{Dauce20} %  _LA_
 
@@ -255,11 +238,9 @@ pdfsubject={\Title}%
 
 \item[A23] \fullcite{Voges12}%  _LA_
 
-\item[A22] \years{2011}  \fullcite{Fleuriet11}
-
+\item[A22] \years{2011} \fullcite{Fleuriet11}
 
 \item[A21] \fullcite{Bogadhi11}
-
 
 \item[A20] \years{2010} \fullcite{Perrinet10shl}% _FA_
 
@@ -355,6 +336,21 @@ Khaled Masmoudi, Marc Antonini, Pierre Kornprobst, Laurent U Perrinet
 \section{Actes de conférences internationales à comité de lecture}%
 %~\citep{Perrinet08spie}
 \begin{etaremune}%enumerate}
+
+% # 2021
+\item \fullcite{Ladret21sfn}
+\item \fullcite{Ladret21crs}
+\item \fullcite{Jeremie21crs}
+\item \fullcite{Grimaldi21crs}
+\item \fullcite{Grimaldi21cosyne}
+\item \fullcite{Grimaldi21cbmi}
+\item \fullcite{Vergani21bernstein}
+% # 2020
+\item \fullcite{Ladret20aes}
+\item \fullcite{Franciosini20sigma}
+\item \fullcite{Franciosini20cosyne}
+\item \fullcite{Dauce20iwai}
+\item \fullcite{Boutin20sigma}
 % # 2019
 \item \fullcite{Ladret19sfn}
 \item \fullcite{Perrinet19nccd}
@@ -495,6 +491,15 @@ Khaled Masmoudi, Marc Antonini, Pierre Kornprobst, Laurent U Perrinet
 
 \begin{etaremune}%enumerate}
 
+\item \fullcite{2022-03-22_SIAM-IS22}
+\item \fullcite{2022-01-12_NeuroCercle}
+\item \fullcite{2021-08-27_DDXL}
+\item \fullcite{2021-06-15_SMB}
+\item \fullcite{2021-05-20_NeuroFrance}
+\item \fullcite{2020-09-25_IRPHE}
+\item \fullcite{2020-09-14_IWAI}
+\item \fullcite{2020-04_UE-neurosciences-computationnelles}
+\item \fullcite{2020-01-20_atelier_sciences_cinema}
 \item \fullcite{2019-07-15_CNS}
 \item \fullcite{2019-05-23_Neurofrance}
 \item \fullcite{2019-04-18_JNLF}
@@ -545,7 +550,7 @@ Khaled Masmoudi, Marc Antonini, Pierre Kornprobst, Laurent U Perrinet
 \section{Cours et actions de diffusion de la culture scientifique}%
 
 \begin{etaremune}%enumerate}
-
+\item \fullcite{Perrinet21hasard}
 \item \fullcite{Perrinet19temps}
 \item \fullcite{Perrinet19illusions}
 \item \fullcite{2019-01-10_PollyMaggoo}
