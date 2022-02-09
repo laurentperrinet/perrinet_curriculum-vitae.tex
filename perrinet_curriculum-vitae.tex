@@ -1,5 +1,3 @@
-%!TEX TS-program = lualatex
-%!TEX encoding = UTF-8 Unicode
 %------------------------------------
 % Dario Taraborelli
 % Typesetting your academic CV in LaTeX
@@ -10,10 +8,12 @@
 % configuration.
 % Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
 %------------------------------------
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
 %------------------------------------
 \newcommand{\Title}{Curriculum Vit\ae}
-\newcommand{\Author}{Laurent U Perrinet}
-\newcommand{\Address}{Researcher in Computational Neuroscience\\ Institut de Neurosciences de la Timone\\
+\newcommand{\Author}{Laurent Perrinet}
+\newcommand{\Address}{Researcher in Computational Neuroscience (DR2 CNRS)\\ Institut de Neurosciences de la Timone\\
 UMR 7289, CNRS / Aix-Marseille Universit{\'e}\\ 27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}%
 \newcommand{\Website}{https://laurentperrinet.github.io}
 \newcommand{\Email}{Laurent.Perrinet@univ-amu.fr}
@@ -22,7 +22,7 @@ UMR 7289, CNRS / Aix-Marseille Universit{\'e}\\ 27, Bd. Jean Moulin, 13385 Marse
 \usepackage{fontspec}
 % DOCUMENT LAYOUT
 \usepackage{geometry}
-\geometry{a4paper, textwidth=13cm, textheight=24.cm, marginparsep=7pt, marginparwidth=3cm}
+\geometry{a4paper, textwidth=13cm, textheight=25cm, marginparsep=7pt, marginparwidth=3cm}
 \setlength\parindent{0in}
 % FONTS
 \usepackage[usenames,dvipsnames]{color}
@@ -69,6 +69,7 @@ pdfsubject={\Title}%
 
 % DOCUMENT
 \begin{document}
+\pagestyle{empty}
 \reversemarginpar
 \textsf{\LARGE \Author}\\[1cm]
 \Address \\[.2cm]
