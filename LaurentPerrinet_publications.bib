@@ -1,15 +1,3 @@
-@comment{%% This BibTeX bibliography file was created using BibDesk.
-%% http://bibdesk.sourceforge.net/
-
-%% Created for Laurent Perrinet at 2022-02-09 11:28:45 +0100
-
-
-%% Saved with string encoding Unicode (UTF-8)}
-
-@comment{%% This BibTeX bibliography file was created using BibDesk. %% http://bibdesk.sourceforge.net/  %% Created for Laurent Perrinet at 2022-01-20 11:19:01 +0100   %% Saved with string encoding Unicode (UTF-8)}
-
-@comment{%% This BibTeX bibliography file was created using BibDesk. %% http://bibdesk.sourceforge.net/  %% Created for Laurent Perrinet at 2022-01-20 09:13:56 +0100    %% Saved with string encoding Unicode (UTF-8)}
-
 @article{Adams12,
     abstract = {This paper introduces a model of oculomotor control during the smooth pursuit of occluded visual targets. This model is based upon active inference, in which subjects try to minimise their (proprioceptive) prediction error based upon posterior beliefs about the hidden causes of their (exteroceptive) sensory input. Our model appeals to a single principle -the minimisation of variational free energy - to provide Bayes optimal solutions to the smooth pursuit problem. However, it tries to accommodate the cardinal features of smooth pursuit of partially occluded targets that have been observed empirically in normal subjects and schizophrenia. Specifically, we account for the ability of normal subjects to anticipate periodic target trajectories and emit pre-emptive smooth pursuit eye movements -prior to the emergence of a target from behind an occluder. Furthermore, we show that a single deficit in the postsynaptic gain of prediction error units (encoding the precision of posterior beliefs) can account for several features of smooth pursuit in schizophrenia: namely, a reduction in motor gain and anticipatory eye movements during visual occlusion, a paradoxical improvement in tracking unpredicted deviations from target trajectories and a failure to recognise and exploit regularities in the periodic motion of visual targets. This model will form the basis of subsequent (dynamic causal) models of empirical eye tracking measurements, which we hope to validate, using psychopharmacology and studies of schizophrenia.},
     author = {Adams, Rick A and Perrinet, Laurent U and Friston, Karl},
@@ -105,7 +93,6 @@
 @inproceedings{Boutin20sigma,
     abstract = {Both neurophysiological and psychophysical experiments have pointed out the crucial role of recurrent and feedback connections to process context-dependent information in the early visual cortex. While numerous models have accounted for feedback effects at either neural or representational level, none of them were able to bind those two levels of analysis. Is it possible to describe feedback effects at both levels using the same model? We answer this question by combining Predictive Coding (PC) and Sparse Coding (SC) into a hierarchical and convolutional framework. In this Sparse Deep Predictive Coding (SDPC) model, the SC component models the internal recurrent processing within each layer, and the PC component describes the interactions between layers using feedforward and feedback connections. Here, we train a 2-layered SDPC on two different databases of images, and we interpret it as a model of the early visual system (V1~&~V2). We first demonstrate that once the training has converged, SDPC exhibits oriented and localized receptive fields in V1 and more complex features in V2. Second, we analyze the effects of feedback on the neural organization beyond the classical receptive field of V1 neurons using interaction maps. These maps are similar to association fields and reflect the Gestalt principle of good continuation. We demonstrate that feedback signals reorganize interaction maps and modulate neural activity to promote contour integration. Third, we demonstrate at the representational level that the SDPC feedback connections are able to overcome noise in input images. Therefore, the SDPC captures the association field principle at the neural level which results in better disambiguation of blurred images at the representational level.},
     author = {Boutin, Victor and Franciosini, Angelo and Chavane, Frédéric Y and Ruffier, Franck and Perrinet, Laurent U},
-    bdsk-url-1 = {https://arxiv.org/abs/1902.07651},
     booktitle = {SIGMA'2020 (Signal, Image, Geometry, Modelling, Approximation)},
     date = {2019-03-03},
     date-added = {2020-01-07 15:45:52 +0100},
@@ -202,7 +189,6 @@ The brain has to solve inverse problems to correctly interpret sensory data and 
 
 @article{BoutinFranciosiniRuffierPerrinet20feedback,
     abstract = {Hierarchical Sparse Coding (HSC) is a powerful model to efficiently represent multi-dimensional, structured data such as images. The simplest solution to solve this computationally hard problem is to decompose it into independent layer-wise subproblems. However, neuroscientific evidence would suggest inter-connecting these subproblems as in the Predictive Coding (PC) theory, which adds top-down connections between consecutive layers. In this study, a new model called 2-Layers Sparse Predictive Coding (2L-SPC) is introduced to assess the impact of this inter-layer feedback connection. In particular, the 2L-SPC is compared with a Hierarchical Lasso (Hi-La) network made out of a sequence of independent Lasso layers. The 2L-SPC and the 2-layers Hi-La networks are trained on 4 different databases and with different sparsity parameters on each layer. First, we show that the overall prediction error generated by 2L-SPC is lower thanks to the feedback mechanism as it transfers prediction error between layers. Second, we demonstrate that the inference stage of the 2L-SPC is faster to converge than for the Hi-La model. Third, we show that the 2L-SPC also accelerates the learning process. Finally, the qualitative analysis of both models dictionaries, supported by their activation probability, show that the 2L-SPC features are more generic and informative.},
-    annote = {https://arxiv.org/abs/2002.00892},
     author = {Boutin, Victor and Franciosini, Angelo and Ruffier, Franck and Perrinet, Laurent U},
     bdsk-url-1 = {https://laurentperrinet.github.io/publication/boutin-franciosini-ruffier-perrinet-20-feedback/},
     date = {2020-02-04},
@@ -919,6 +905,18 @@ This model could shed light on the role of sparsity and feedback modulation in h
     year = {2021}
 }
 
+@article{Jeremie22UltraFastCat,
+    author = {Jérémie, Jean-Nicolas and Perrinet, Laurent U},
+    booktitle = {Champalimaud Research Symposium (CRS21)},
+    date = {2021-10-15},
+    grants = {aprovis3D,anr-anb},
+    keywords = {deep-learning,object categorization,psychophysics},
+    note = {Poster Session II -Fri 15 Oct 13:30---15:30h, Lisbon time},
+    title = {Ultra-fast categorization of images containing animals in vivo and in computo},
+    url = {https://symposium.fchampalimaud.science/Poster-sessions},
+    year = {2021}
+}
+
 @article{Kaplan13,
     abstract = {Predictive coding hypothesizes that the brain explicitly infers upcoming sensory input to establish a coherent representation of the world. Although it is becoming generally accepted, it is not clear on which level spiking neural networks may implement predictive coding and what function their connectivity may have. We present a network model of conductance-based integrate-and-fire neurons inspired by the architecture of retinotopic cortical areas that assumes predictive coding is implemented through network connectivity, namely in the connection delays and in selectiveness for the tuning properties of source and target cells. We show that the applied connection pattern leads to motion-based prediction in an experiment tracking a moving dot. In contrast to our proposed model, a network with random or isotropic connectivity fails to predict the path when the moving dot disappears. Furthermore, we show that a simple linear decoding approach is sufficient to transform neuronal spiking activity into a probabilistic estimate for reading out the target trajectory.},
     author = {Kaplan, Bernhard A and Lansner, Anders and Masson, Guillaume S and Perrinet, Laurent U},
@@ -1498,8 +1496,6 @@ of 1D and 2D motion information.},
 
 @incollection{Montagnini15bicv,
     author = {Montagnini, Anna and Perrinet, Laurent U and Masson, Guillaume S},
-    bdsk-url-1 = {https://arxiv.org/abs/1611.07831},
-    bdsk-url-2 = {https://doi.org/10.1002/9783527680863.ch12},
     booktitle = {Biologically Inspired Computer Vision},
     chapter = {12},
     date = {2015-11},
@@ -2037,7 +2033,6 @@ Humans are able to accurately track a moving object with a combination of saccad
 @inproceedings{Perrinet08spie,
     abstract = {If modern computers are sometimes superior to cognition in some specialized tasks such as playing chess or browsing a large database, they can't beat the efficiency of biological vision for such simple tasks as recognizing a relative or following an object in a complex background. We present in this paper our attempt at outlining the dynamical, parallel and event-based representation for vision in the architecture of the central nervous system. We will illustrate this by showing that in a signal matching framework, a L/LN (linear/non-linear) cascade may efficiently transform a sensory signal into a neural spiking signal and we apply this framework to a model retina. However, this code gets redundant when using an over-complete basis as is necessary for modeling the primary visual cortex: we therefore optimize the efficiency cost by increasing the sparseness of the code. This is implemented by propagating and canceling redundant information using lateral interactions. We compare the efficiency of this representation in terms of compression as the reconstruction quality as a function of the coding length. This will correspond to a modification of the Matching Pursuit algorithm where the ArgMax function is optimized for competition, or Competition Optimized Matching Pursuit (COMP). We will particularly focus on bridging neuroscience and image processing and on the advantages of such an interdisciplinary approach.},
     author = {Perrinet, Laurent U},
-    bdsk-url-1 = {https://arxiv.org/abs/0804.4830},
     booktitle = {Optical and Digital Image Processing Conference 7000 - Proceedings of SPIE Volume 7000, 7 - 11 April 2008},
     date = {2008},
     date-modified = {2020-03-31 11:07:29 +0200},
@@ -2045,9 +2040,9 @@ Humans are able to accurately track a moving object with a combination of saccad
     grants = {facets},
     keywords = {association field,Biologically Inspired Computer vision,coding decoding,inhibition,matching pursuit,sparse coding,sparse hebbian learning,spike},
     number = {1},
+    preprint = {https://arxiv.org/abs/0804.4830},
     publisher = {SPIE},
     title = {Adaptive Sparse Spike Coding : applications of Neuroscience to the compression of natural images},
-    url = {https://arxiv.org/abs/0804.4830},
     volume = {7000},
     year = {2008}
 }
@@ -2105,8 +2100,6 @@ Humans are able to accurately track a moving object with a combination of saccad
     abstract = {Neurons in the input layer of primary visual cortex in primates develop edge-like receptive fields. One approach to understanding the emergence of this response is to state that neural activity has to efficiently represent sensory data with respect to the statistics of natural scenes. Furthermore, it is believed that such an efficient coding is achieved using a competition across neurons so as to generate a sparse representation, that is, where a relatively small number of neurons are simultaneously active. Indeed, different models of sparse coding coupled with Hebbian learning and homeostasis have been proposed that successfully match the observed emergent response. However, the specific role of homeostasis in learning such sparse representations is still largely unknown. By quantitatively assessing the efficiency of the neural representation during learning, we derive a cooperative homeostasis mechanism which optimally tunes the competition between neurons within the sparse coding algorithm. We apply this homeostasis while learning small patches taken from natural images and compare its efficiency with state-of-the-art algorithms. Results show that while different sparse coding algorithms give similar coding results, the homeostasis provides an optimal balance for the representation of natural images within the population of neurons. Competition in sparse coding is optimized when it is fair: By contributing to optimize statistical competition across neurons, homeostasis is crucial in providing a more efficient solution to the emergence of independent components.},
     annotation = {Posted Online March 17, 2010.},
     author = {Perrinet, Laurent U},
-    bdsk-url-1 = {https://arxiv.org/abs/0706.3177},
-    bdsk-url-2 = {https://doi.org/10.1162/neco.2010.05-08-795},
     date = {2010-07-17},
     date-modified = {2020-03-31 11:07:30 +0200},
     doi = {10.1162/neco.2010.05-08-795},
@@ -2118,9 +2111,8 @@ Humans are able to accurately track a moving object with a combination of saccad
     preprint = {https://hal-amu.archives-ouvertes.fr/hal-00156610},
     publisher = {MIT Press},
     title = {Role of homeostasis in learning sparse representations},
-    url = {https://arxiv.org/abs/0706.3177},
+    url = {https://doi.org/10.1162/neco.2010.05-08-795},
     url_code = {https://github.com/bicv/SparseHebbianLearning},
-    url_doi = {https://doi.org/10.1162/neco.2010.05-08-795},
     volume = {22},
     year = {2010}
 }
@@ -2169,15 +2161,14 @@ Humans are able to accurately track a moving object with a combination of saccad
 @article{Perrinet12pred,
     abstract = {In low-level sensory systems, it is still unclear how the noisy information collected locally by neurons may give rise to a coherent global percept. This is well demonstrated for the detection of motion in the aperture problem: as luminance of an elongated line is symmetrical along its axis, tangential velocity is ambiguous when measured locally. Here, we develop the hypothesis that motion-based predictive coding is sufficient to infer global motion. Our implementation is based on a context-dependent diffusion of a probabilistic representation of motion. We observe in simulations a progressive solution to the aperture problem similar to psychophysics and behavior. We demonstrate that this solution is the result of two underlying mechanisms. First, we demonstrate the formation of a tracking behavior favoring temporally coherent features independently of their texture. Second, we observe that incoherent features are explained away while coherent information diffuses progressively to the global scale. Most previous models included ad-hoc mechanisms such as end-stopped cells or a selection layer to track specific luminance-based features. Here, we have proved that motion-based predictive coding, as it is implemented in this functional model, is sufficient to solve the aperture problem. This simpler solution may give insights in the role of prediction underlying a large class of sensory computations.},
     author = {Perrinet, Laurent U and Masson, Guillaume S},
-    bdsk-url-1 = {https://arxiv.org/abs/1208.6471},
     date = {2012},
     date-modified = {2020-03-31 11:07:30 +0200},
     journal = {Neural Computation},
     keywords = {aperture problem,Bayesian model,motion prediction,predictive coding},
     number = {10},
     pages = {2726--50},
+    preprint = {https://arxiv.org/abs/1208.6471},
     title = {Motion-based prediction is sufficient to solve the aperture problem},
-    url = {https://arxiv.org/abs/1208.6471},
     url_pdf = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3472550/},
     volume = {24},
     year = {2012}
@@ -2214,7 +2205,6 @@ Humans are able to accurately track a moving object with a combination of saccad
 @incollection{Perrinet15bicv,
     abstract = {The representation of images in the brain is known to be sparse. That is, as neural activity is recorded in a visual area, for instance the primary visual cortex of primates, only a few neurons are active at a given time with respect to the whole population. It is believed that such a property reflects the efficient match of the representation with the statistics of natural scenes. Applying such a paradigm to computer vision therefore seems a promising approach towards more biomimetic algorithms. Herein, we will describe a biologically-inspired approach to this problem. First, we will describe an unsupervised learning paradigm which is particularly adapted to the efficient coding of image patches. Then, we will outline a complete multi-scale framework (SparseLets) implementing a biologically inspired sparse representation of natural images. Finally, we will propose novel methods for integrating prior information into these algorithms and provide some preliminary experimental results. We will conclude by giving some perspective on applying such algorithms to computer vision. More specifically, we will propose that bio-inspired approaches may be applied to computer vision using predictive coding schemes, sparse models being one simple and efficient instance of such schemes.},
     author = {Perrinet, Laurent U},
-    bdsk-url-1 = {https://arxiv.org/abs/1701.06859},
     booktitle = {Biologically Inspired Computer Vision},
     chapter = {13},
     date = {2015-11},
@@ -2224,7 +2214,7 @@ Humans are able to accurately track a moving object with a combination of saccad
     grants = {brain-scales},
     isbn = {9783527680863},
     keywords = {Biologically Inspired Computer vision,sparse coding},
-    preprint = {https://hal-amu.archives-ouvertes.fr/hal-01444362},
+    preprint = {https://arxiv.org/abs/1701.06859},
     publisher = {Wiley-VCH Verlag GmbH and Co. KGaA},
     title = {Sparse Models for Computer Vision},
     url = {http://onlinelibrary.wiley.com/doi/10.1002/9783527680863.ch14/summary},
@@ -2251,8 +2241,6 @@ Humans are able to accurately track a moving object with a combination of saccad
 @inproceedings{Perrinet16EUVIP,
     abstract = {Natural images follow statistics inherited by the structure of our physical (visual) environment. In particular, a prominent facet of this structure is that images can be described by a relatively sparse number of features. We designed a sparse coding algorithm biologically-inspired by the architecture of the primary visual cortex. We show here that coefficients of this representation exhibit a power-law distribution. For each image, the exponent of this distribution characterizes sparseness and varies from image to image. To investigate the role of this sparseness, we designed a new class of random textured stimuli with a controlled sparseness value inspired by measurements of natural images. Then, we provide with a method to synthesize random textures images with a given sparseness statistics that match that of some class of natural images and provide perspectives for their use in neurophysiology.},
     author = {Perrinet, Laurent U},
-    bdsk-url-1 = {http://ieeexplore.ieee.org/document/7764592/},
-    bdsk-url-2 = {https://doi.org/10.1109/EUVIP.2016.7764592},
     booktitle = {2016 6th European Workshop on Visual Information Processing (EUVIP)},
     date = {2016-10},
     date-modified = {2020-03-31 11:07:30 +0200},
@@ -2264,7 +2252,7 @@ Humans are able to accurately track a moving object with a combination of saccad
     preprint = {https://arxiv.org/abs/1702.02485},
     publisher = {IEEE},
     title = {Biologically-inspired characterization of sparseness in natural images},
-    url = {https://doi.org/10.1109/EUVIP.2016.7764592},
+    url = {http://ieeexplore.ieee.org/document/7764592/},
     url_code = {https://github.com/bicv/Perrinet16EUVIP},
     year = {2016}
 }
@@ -2440,7 +2428,6 @@ Furthermore, this decoding approach shows different properties: First, informati
 
 @article{PerrinetAdamsFriston14,
     abstract = {This paper considers the problem of sensorimotor delays in the optimal control of (smooth) eye movements under uncertainty. Specifically, we consider delays in the visuo-oculomotor loop and their implications for active inference. Active inference uses a generalisation of Kalman filtering to provide Bayes optimal estimates of hidden states and action in generalised coordinates of motion. Representing hidden states in generalised coordinates provides a simple way of compensating for both sensory and oculomotor delays. The efficacy of this scheme is illustrated using neuronal simulations of pursuit initiation responses, with and without compensation. We then consider an extension of the generative model to simulate smooth pursuit eye movements in which the visuo-oculomotor system believes both the target and its centre of gaze are attracted to a (hidden) point moving in the visual field. Finally, the generative model is equipped with a hierarchical structure, so that it can recognise and remember unseen (occluded) trajectories and emit anticipatory responses. These simulations speak to a straightforward and neurobiologically plausible solution to the generic problem of integrating information from different sources with different temporal delays and the particular difficulties encountered when a system, like the oculomotor system, tries to control its environment with delayed signals.},
-    annote = {https://arxiv.org/abs/1610.05564},
     author = {Perrinet, Laurent U and Adams, Rick A and Friston, Karl},
     bdsk-url-1 = {https://hal.archives-ouvertes.fr/hal-01382350},
     bdsk-url-2 = {https://doi.org/10.1007/s00422-014-0620-8},
@@ -2453,7 +2440,7 @@ Furthermore, this decoding approach shows different properties: First, informati
     keywords = {active inference,Bayesian model,Biologically Inspired Computer vision,eye movements,free energy,motion detection},
     number = {6},
     pages = {777--801},
-    preprint = {https://hal-amu.archives-ouvertes.fr/hal-01382350},
+    preprint = {https://arxiv.org/abs/1610.05564},
     publisher = {Springer Berlin Heidelberg},
     title = {Active inference, eye movements and oculomotor delays},
     url = {http://link.springer.com/article/10.1007%2Fs00422-014-0620-8},
