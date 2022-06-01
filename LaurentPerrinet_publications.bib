@@ -887,6 +887,20 @@ This model could shed light on the role of sparsity and feedback modulation in h
     year = {2021}
 }
 
+@inproceedings{Grimaldi22AREADNE,
+    abstract = {The response of a biological neuron depends largely on the precise timing of presynaptic spikes that reach the basal dendritic tree. However, most neuronal models do not take advantage of this minute temporal dimension, especially in exploiting the variety of synaptic delays on the dendritic tree. A notable exception is the polychronization model, a recurrent model of spiking neurons including fixed and random heterosynaptic delays and in which the weights are learned using Spike-Time Dependent Plasticity. The output raster plot displays repeated activations of prototypical spiking motifs called Polychronous Groups. Importantly, these motifs seem to be highly relevant in experimental neuroscience. Here, by extending the model of~[3], we develop a spiking neural network model for the efficient detection of PGs: By defining the generation of the raster plot as a probabilistic combination of PGs, we build and train the network in order to optimize the inversion of this generative model. },
+    author = {Grimaldi, Antoine and Besnainou, Camille and  Ladret, Hugo and Perrinet, Laurent U},
+    booktitle = {Proceedings of AREADNE},
+    date = {2022-06-29},
+    grants = {aprovis3D},
+    location = {Santorini (Greece)},
+    time_end = {2022-06-29T15:30:00},
+    time_start = {2022-06-29T09:00:00},
+    title = {Decoding spiking motifs using neurons with heterosynaptic delays},
+    url = {https://areadne.org/},
+    year = {2022}
+}
+
 @article{Grimaldi22pami,
     abstract = {We propose a neuromimetic architecture able to perform always-on pattern recognition. To achieve this, we extended an existing event-based algorithm [1], which introduced novel spatio-temporal features as a Hierarchy Of Time-Surfaces (HOTS). Built from asynchronous events acquired by a neuromorphic camera, these time surfaces allow to code the local dynamics of a visual scene and to create an efficient event-based pattern recognition architecture. Inspired by neuroscience, we extended this method to increase its performance. Our first contribution was to add a homeostatic gain control on the activity of neurons to improve the learning of spatio-temporal patterns [2]. A second contribution is to draw an analogy between the HOTS algorithm and Spiking Neural Networks (SNN). Following that analogy, our last contribution is to modify the classification layer and remodel the offline pattern categorization method previously used into an online and event-driven one. This classifier uses the spiking output of the network to define novel time surfaces and we then perform online classification with a neuromimetic implementation of a multinomial logistic regression. Not only do these improvements increase consistently the performances of the network, they also make this event-driven pattern recognition algorithm online and bio-realistic. Results were validated on different datasets: DVS barrel [3], Poker-DVS [4] and N-MNIST [5]. We foresee to develop the SNN version of the method and to extend this fully event-driven approach to more naturalistic tasks, notably for always-on, ultra-fast object categorization. },
     author = {Grimaldi, Antoine and Boutin, Victor and Ieng, Sio-Hoi and Benosman, Ryad and Perrinet, Laurent U},
@@ -917,6 +931,22 @@ This model could shed light on the role of sparsity and feedback modulation in h
     title = {Ultra-fast categorization of images containing animals in vivo and in computo},
     url = {https://symposium.fchampalimaud.science/Poster-sessions},
     year = {2021}
+}
+
+@inproceedings{Jeremie22AREADNE,
+    abstract = {Visual search, that is, the simultaneous localization and detection of a visual target of interest, is a vital task. Applied to the case of natural scenes, searching for example to an animal (either a prey, a predator or a partner) constitutes a challenging problem due to large variability over numerous visual dimensions such as shape, pose, size, texture or position. Yet, biological visual systems are able to perform such detection efficiently
+in  briefly flashed scenes and in a very short amount of time.Deep convolutional neuronal networks (CNNs) were shown to be well fitted to the image classification task, providing with human (or even super-human) performance. Previous models also managed to solve the visual search task, by roughly dividing the image into sub-areas. This is at the cost, however, of computer-intensive parallel processing on relatively low-resolution image samples. Taking inspiration from natural vision systems, we develop here a model that builds over the anatomical visual processing pathways observed in mammals, namely the What and the Where pathways. It operates in two steps, one by selecting regions of interest, before knowing their actual visual content, through an ultra-fast/low resolution analysis of the full visual field, and the second providing a detailed categorization over the detailed foveal selected region attained with a saccade.},
+    author = {Jérémie, Jean-Nicolas and Daucé, Emmanuel and Perrinet, Laurent U},
+    booktitle = {Proceedings of AREADNE},
+    date = {2022-06-29},
+    grants = {aprovis3D},
+    keywords = {efficient coding,event-based vision,homeostasis,neuromorphic hardware,online classification},
+    location = {Santorini (Greece)},
+    time_end = {2022-06-29T15:30:00},
+    time_start = {2022-06-29T09:00:00},
+    title = {Ultra-rapid visual search in natural images using active deep learning},
+    url = {https://areadne.org/},
+    year = {2022}
 }
 
 @article{Jeremie22UltraFastCat,
@@ -2570,6 +2600,20 @@ Furthermore, this decoding approach shows different properties: First, informati
     title = {Modeling of simple cells through a sparse overcomplete gabor wavelet representation based on local inhibition and facilitation},
     volume = {34},
     year = {2005}
+}
+
+@inproceedings{Rentzeperis22AREADNE,
+    abstract = {Experimental evidence suggests that activity in sensory cortices is sparse in that only few neurons out of a large pool that could respond to sensed stimuli, are active at a time. Generative learning models that aim to replicate sensory systems could deviate from sparse activity patterns when representing noisy signals. We ask: are there biologically plausible implementations that will maintain sparse activations for different levels of noise while representing the underlying signal? A family of generative algorithms modelling sensory systems represent a stimulus as a linear sum of an overcomplete dictionary of vectors with their corresponding coefficients taking the role of activations. Olshausen and Field [1] showed that a learning algorithm that is set to reconstruct natural images with sparse activations develops vectors with properties, found in the receptive fields of neurons in V1, i.e. they are localized, band-pass, and oriented.},
+    author = {Ilias Rentzeperis and Luca Calatroni and Perrinet, Laurent U and Dario Prandi},
+    booktitle = {Proceedings of AREADNE},
+    date = {2022-06-29},
+    grants = {anr-runbinvase},
+    location = {Santorini (Greece)},
+    time_end = {2022-06-29T15:30:00},
+    time_start = {2022-06-29T09:00:00},
+    title = {Which sparsity problem does the brain solve?},
+    url = {https://areadne.org/},
+    year = {2022}
 }
 
 @inproceedings{Rudiger14cosyne,
