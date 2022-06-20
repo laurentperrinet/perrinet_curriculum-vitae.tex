@@ -1,4 +1,4 @@
-default: pdf
+default: push
 SRC = perrinet_curriculum-vitae
 pdf: $(SRC).pdf $(SRC)-full.pdf $(SRC)-short.pdf perrinet_publications.pdf
 
@@ -7,6 +7,10 @@ BIBTEX = bibtex -terse
 
 $(SRC).pdf: $(SRC).tex
 	$(LATEXMK) $(SRC).tex
+
+
+push:
+	git commit -m "Build website" -a ; git push origin main
 
 # macros
 %.pdf: %.tex
