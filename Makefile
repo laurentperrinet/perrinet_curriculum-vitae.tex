@@ -10,7 +10,7 @@ $(SRC).pdf: $(SRC).tex
 
 
 push:
-	git commit -m "Build website" -a ; git push origin main
+	git commit -m "Build website" -a ; git push
 
 # macros
 %.pdf: %.tex
