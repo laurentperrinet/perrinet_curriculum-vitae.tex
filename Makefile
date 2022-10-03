@@ -1,4 +1,5 @@
 default: push
+all: push
 SRC = perrinet_curriculum-vitae
 pdf: $(SRC).pdf $(SRC)-full.pdf $(SRC)-short.pdf perrinet_publications.pdf
 
