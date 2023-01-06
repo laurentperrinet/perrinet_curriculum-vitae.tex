@@ -16,7 +16,7 @@ push:
 # macros
 %.pdf: %.tex
 	$(LATEXMK) $<
-	
+
 
 %.pdf: %.svg
 	$(INKSCAPE) --without-gui $< --export-pdf=$@
@@ -26,7 +26,7 @@ push:
 
 # cleaning macro
 clean:
-	rm -f *.dvi *.fls *.ilg *.ind *idx *.bcf *.run.xml *.dvi *.ps *.out *.log *.aux *.bbl *.blg  *.fdb_latexmk *.snm *.nav *.toc *.info *.synctex.gz* $(SRC).pdf  *-nup.pdf
+	rm -f *.dvi *.fls *.ilg *.ind *idx *.bcf *.run.xml *.dvi *.ps *.out *.log *.aux *.bbl *.blg  *.fdb_latexmk *.snm *.nav *.toc *.info *.synctex.gz*
 
 touch:
 	touch *.tex
