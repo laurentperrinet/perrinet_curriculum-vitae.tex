@@ -892,6 +892,7 @@ This model could shed light on the role of sparsity and feedback modulation in h
     year = {2021}
 }
 
+
 @inproceedings{Grimaldi21cosyne,
     abstract = {We propose a neuromimetic  architecture able to perform online pattern recognition. To achieve this, we extended the existing event-based algorithm from Lagorce et al (2017) which introduced novel spatio-temporal features: time-surfaces. Built from asynchronous events acquired by a neuromorphic camera, these time surfaces allow to code the local dynamics of a visual scene and to create an efficient hierarchical event-based pattern recognition architecture. Inspired by biological findings and the efficient coding hypothesis, our main contribution is to integrate homeostatic regulation to the Hebbian learning rule. Indeed, in order to be optimally informative, average neural activity within a layer should be equally balanced across neurons. We used that principle to regularize neurons within the same layer by setting a gain depending on their past activity and such that they emit spikes with balanced firing rates. The efficiency of this technique was first demonstrated through a robust improvement in spatio-temporal patterns which were learned during the training phase. We validated classification performance with the widely used N-MNIST dataset reaching 87.3 percent accuracy with homeostasis compared to 72.5 percent accuracy without homeostasis. Finally, by studying the impact of input jitter on classification highlights resilience of this method. We expect to extend this fully event-driven approach to more naturalistic tasks, notably for ultra-fast object categorization.},
     author = {Grimaldi, Antoine and Boutin, Victor and Ieng, Sio-Hoi and Perrinet, Laurent U and Benosman, Ryad},
@@ -1430,6 +1431,18 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
     time_start = {2022-07-11T14:00:00},
     title = {Recurrent cortical connectivity in the primary visual cortex supports robust encoding of natural sensory inputs},
     year = {2022}
+}
+
+
+@inproceedings{Ladret23cosyne,
+    abstract = {Our daily endeavors occur in a complex visual environment, whose intrinsic variability shapes the way we integrate information to make decisions. By processing thousands of parallel sensory inputs, our brain is theoretically able to compute the uncertainty of its environment, which would allow it to perform Bayesian integration of its internal representations and its new sensory inputs to drive optimal inference. While there is convincing evidence that humans do compute this sensory uncertainty to guide their behavior, the actual neurobiological and computational principles on which uncertainty computations rely are still poorly understood. Here, we generated naturalistic stimuli of controlled uncertainty and performed a model-based analysis of their electrophysiological correlates in the primary visual cortex. Firstly, we report two layer-specific neuronal responses : infragranular layer neurons were vulnerable to increments of uncertainty, contrarily to supragranular neurons who were resilient, to the point of sometimes reducing uncertainty from the input. Secondly, we used neural decoding to show that these two responses have two different functional population roles: vulnerable neurons encode only the sensory feature (here, orientation) of the input, while resilient neurons co-encode both the sensory feature and its uncertainty. Finally, we implemented a recurrent leaky integrate-and-fire neural network to mechanistically demonstrate that these different types of responses to uncertainty can be explained by different types of recurrent connectivity between cortical neurons. Overall, we provide neurobiological and computational evidences which pinpoint recurrent interactions as the neural substrate of computations on sensory uncertainty. This fits theoretical considerations on canonical microcircuit in the cortex, potentially establishing uncertainty computations as a new general role for local recurrent cortical connectivity.},
+    author = {Ladret, Hugo and Cortes, Nelson and Ikan, Lamyae and Chavane, Frédéric and Casanova, Christian and Perrinet, Laurent U},
+    booktitle = {Computational and Systems Neuroscience (Cosyne) 2023},
+    date = {2023-03-09},
+    keywords = {decoding,orientation,precision,predictive coding,V1},
+    title = {Resilience to sensory uncertainty in the primary visual cortex},
+    url = {https://www.world-wide.org/cosyne-23/resilience-sensory-uncertainty-primary-88600879/},
+    year = {2023}
 }
 
 @article{Ladret23,
