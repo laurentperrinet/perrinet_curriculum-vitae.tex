@@ -9,8 +9,7 @@ BIBTEX = bibtex -terse
 $(SRC).pdf: $(SRC).tex
 	$(LATEXMK) $(SRC).tex
 
-
-push:
+push: pdf
 	git commit -m "Build website" -a ; git push
 
 # macros
