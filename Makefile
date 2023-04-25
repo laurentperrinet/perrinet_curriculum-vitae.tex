@@ -16,7 +16,6 @@ push: pdf
 %.pdf: %.tex
 	$(LATEXMK) $<
 
-
 %.pdf: %.svg
 	$(INKSCAPE) --without-gui $< --export-pdf=$@
 
