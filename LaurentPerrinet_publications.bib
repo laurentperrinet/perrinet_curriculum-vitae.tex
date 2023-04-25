@@ -977,6 +977,16 @@ This model could shed light on the role of sparsity and feedback modulation in h
     year = {2022}
 }
 
+@article{Perrinet23ICANN,
+    abstract = {Recently, there has been growing interest in the hypothesis that information can be carried within neural activity by precise spiking motifs. As a result, there have been several recent proposals for algorithms to detect such motifs in the Spiking Unit Activity (SUA) of populations of neurons. In this study, we introduce a detection model as an inversion of a generative model of raster plot synthesis. From this model, an optimal detection procedure is derived. This takes the form of a logistic regression coupled with a temporal convolution. Since this model is differentiable, we derive a supervised learning method in the form of gradient descent on the loss function of an auto-encoder model. We evaluate the ability of this model to detect spiking motifs in synthetic data. This learning method is able to recover the synthetically generated spiking motifs, and we plan to extend this method to neurobiological data as well.},
+    author = {Perrinet, Laurent U},
+    grants = {polychronies},
+    journal = {Submitted to ICANN},
+    title = {Accurate detection of spiking motifs in multi-unit raster plots},
+    url = {https://laurentperrinet.github.io/publication/perrinet-23-icann/},
+    year = {2023}
+}
+
 @article{Grimaldi22polychronies,
     abstract = {Why do neurons communicate through spikes? By definition, spikes are all-or-none neural events which occur at continuous times. In other words, spikes are on one side binary, existing or not without further details, and on the other can occur at any asynchronous time, without the need for a centralized clock. This stands in stark contrast to the analog representation of values and the discretized timing classically used in digital processing and at the base of modern-day neural networks. As neural systems almost systematically use this so-called event-based representation in the living world, a better understanding of this phenomenon remains a fundamental challenge in neurobiology in order to better interpret the profusion of recorded data. With the growing need for intelligent embedded systems, it also emerges as a new computing paradigm to enable the efficient operation of a new class of sensors and event-based computers, called neuromorphic, which could enable significant gains in computation time and energy consumption, a major societal issue in the era of the digital economy and global warming. In this review paper, we provide evidence from biology, theory and engineering that the precise timing of spikes plays a crucial role in our understanding of the efficiency of neural networks.},
     author = {Grimaldi, Antoine and Gruel, Amélie and Besnainou, Camille and Jérémie, Jean-Nicolas and Martinet, Jean and Perrinet, Laurent U},
@@ -1457,13 +1467,14 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
     url = {https://www.world-wide.org/cosyne-23/resilience-sensory-uncertainty-primary-88600879/},
     year = {2023}
 }
-@inproceedings{Ladret23iclr,
+@inproceedings{Ladret23ICLR,
     abstract = {Aleatoric uncertainty characterizes the variability of features found in natural images, and echoes the epistemic uncertainty ubiquitously found in computer vision models. We explore this ”uncertainty in, uncertainty out” relationship by generating convolutional sparse coding dictionaries with parametric epistemic uncertainty. This improves sparseness, resilience and reconstruction of natural images by providing the model a way to explicitly represent the aleatoric uncertainty of its input. We demonstrate how hierarchical processing can make use of this scheme by training a deep convolutional neural network to classify a sparse-coded CIFAR10 dataset, showing that encoding uncertainty in a sparse code is as efficient as using conventional images, with additional beneficial computational properties. Overall, this work empirically demonstrates the advantage of partitioning epistemic uncertainty in sparse coding algorithms.},
     author = {Ladret, Hugo and Perrinet, Laurent U},
     booktitle = {ICLR 2023 SNN Workshop},
     date = {2023-05-05},
     keywords = {sparse, coding, convolutional, natural, images, uncertainty},
     title = {Convolutional Sparse Coding is improved by heterogeneous uncertainty modeling},
+    url = {https://laurentperrinet.github.io/publication/ladret-23-iclr/},
     year = {2023}
 }
 
@@ -2779,7 +2790,7 @@ Furthermore, this decoding approach shows different properties: First, informati
 }
 
 @article{Rentzeperis23,
-  title={Beyond $$\backslash$ell\_1 $ sparse coding in V1},
+  title={Beyond $\ell_1$ sparse coding in {V1}},
   author={Rentzeperis, Ilias and Calatroni, Luca and Perrinet, Laurent U and Prandi, Dario},
   journal={arXiv preprint arXiv:2301.10002},
   grants = {anr-runbinvase},
