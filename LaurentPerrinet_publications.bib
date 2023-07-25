@@ -356,15 +356,14 @@ The brain has to solve inverse problems to correctly interpret sensory data and 
 	abstract = {Convolutional Neural Networks have been considered the go-to option for object recognition in computer vision for the last couple of years. However, their invariance to object's translations is still deemed as a weak point and remains limited to small translations only via their max-pooling layers. One bio-inspired approach considers the What/Where pathway separation in Mammals to overcome this limitation. This approach works as a nature-inspired attention mechanism, another classical approach of which is Spatial Transformers. These allow an adaptive endto-end learning of different classes of spatial transformations throughout training. In this work, we overview Spatial Transformers as an attention-only mechanism and compare them with the What/Where model. We show that the use of attention restricted or ``Foveated'' Spatial Transformer Networks, coupled alongside a curriculum learning training scheme and an efficient log-polar visual space entry, provides better performance when compared to the What/Where model, all this without the need for any extra supervision whatsoever.},
 	author = {Dabane, Ghassan and Perrinet, Laurent U and Dauc{\'e}, Emmanuel},
 	booktitle = {IJCNN 2022 : International Joint Conference on Neural Networks},
-	doi = {10.36227/techrxiv.16550391.v1},
+	doi = {10.36227/techrxiv.16550391},
 	grants = {anr-anr},
 	shorttitle = {What You See Is What You Transform},
 	title = {What You See Is What You Transform: Foveated Spatial Transformers as a Bio-Inspired Attention Mechanism},
 	url = {https://www.techrxiv.org/articles/preprint/What_You_See_Is_What_You_Transform_Foveated_Spatial_Transformers_as_a_bio-inspired_attention_mechanism/16550391/1},
 	urldate = {2022-05-11},
 	year = {2022},
-	bdsk-url-1 = {https://www.techrxiv.org/articles/preprint/What_You_See_Is_What_You_Transform_Foveated_Spatial_Transformers_as_a_bio-inspired_attention_mechanism/16550391/1},
-	bdsk-url-2 = {https://doi.org/10.36227/techrxiv.16550391.v1}}
+	}
 
 @inproceedings{Damasse14gdr,
 	author = {Damasse, Jean-Bernard and Madelain, Laurent and Perrinet, Laurent U and Montagnini, Anna},
@@ -919,16 +918,14 @@ This model could shed light on the role of sparsity and feedback modulation in h
 @article{Grimaldi23,
 	abstract = {We propose a neuromimetic architecture able to perform always-on pattern recognition. To achieve this, we extended an existing event-based algorithm [1], which introduced novel spatio-temporal features as a Hierarchy Of Time-Surfaces (HOTS). Built from asynchronous events acquired by a neuromorphic camera, these time surfaces allow to code the local dynamics of a visual scene and to create an efficient event-based pattern recognition architecture. Inspired by neuroscience, we extended this method to increase its performance. Our first contribution was to add a homeostatic gain control on the activity of neurons to improve the learning of spatio-temporal patterns [2]. A second contribution is to draw an analogy between the HOTS algorithm and Spiking Neural Networks (SNN). Following that analogy, our last contribution is to modify the classification layer and remodel the offline pattern categorization method previously used into an online and event-driven one. This classifier uses the spiking output of the network to define novel time surfaces and we then perform online classification with a neuromimetic implementation of a multinomial logistic regression. Not only do these improvements increase consistently the performances of the network, they also make this event-driven pattern recognition algorithm online and bio-realistic. Results were validated on different datasets: DVS barrel [3], Poker-DVS [4] and N-MNIST [5]. We foresee to develop the SNN version of the method and to extend this fully event-driven approach to more naturalistic tasks, notably for always-on, ultra-fast object categorization. },
 	author = {Grimaldi, Antoine and Boutin, Victor and Ieng, Sio-Hoi and Benosman, Ryad and Perrinet, Laurent U},
-	doi = {10.36227/techrxiv.18003077.v1},
+	doi = {10.36227/techrxiv.18003077},
 	grants = {aprovis3D},
 	journal = {TechRxiv preprint},
 	keywords = {efficient coding,event-based vision,homeostasis,neuromorphic hardware,online classification},
-	publisher = {TechRxiv},
 	title = {A Robust Event-Driven Approach to Always-on Object Recognition},
-	url = {https://www.techrxiv.org/articles/preprint/A_robust_event-driven_approach_to_always-on_object_recognition/18003077/1},
-	year = {2023},
-	bdsk-url-1 = {https://www.techrxiv.org/articles/preprint/A_robust_event-driven_approach_to_always-on_object_recognition/18003077/1},
-	bdsk-url-2 = {https://doi.org/10.36227/techrxiv.18003077.v1}}
+	url = {https://www.techrxiv.org/articles/preprint/A_robust_event-driven_approach_to_always-on_object_recognition/18003077},
+	year = {2023}
+	}
 
 @inproceedings{Grimaldi22Bernstein,
 	abstract = {The spiking response of a biological neuron depends on the precise timing of afferent spikes. This temporal aspect of the neuronal code is essential in understanding information processing in neurobiology. In this model, raster plot analysis showed repeated activation of specific spiking motifs, which exhibit a precise temporal sequence of neural activations. Our first contribution is to develop a model for the efficient detection of temporal spiking motifs based on a layer of neurons with hetero-synaptic delays. Indeed, the variety of synaptic delays on the dendritic tree allows synchronizing synaptic inputs as they reach the basal dendritic tree. Second, we propose a bio-plausible unsupervised learning rule on both weights and delays through the derivation of a loss function which depends on the membrane potential of the spiking neuron and a sparseness regularization. We demonstrate on synthetic data that such a layer of spiking neurons is able to learn different repeating spatio-temporal motifs embedded in the spike train. Then, we test the robustness of the detection accuracy of the model by adding Poisson noise and compare it to a layer of Leaky-Integrate and Fire neurons trained with STDP. Results show a large improvement in performances when adding temporal delays for computations and a great increase in robustness to noise. We show that using synaptic delays for neuronal computations highly increases the representational capacities of a single neuron and its resilience to noise. .},
@@ -1377,7 +1374,7 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
 	bdsk-url-1 = {https://laurentperrinet.github.io/publication/ladret-22-fens/}}
 
 @article{Ladret23,
-    abstract = {Our daily endeavors occur in a complex visual environment, whose intrinsic variability challenges the way we integrate information to make decisions. By processing myriads of parallel sensory inputs, our brain is theoretically able to compute the variance of its environment, a cue which is known to guide our behavior. Yet, the neurobiological and computational basis of such variance computations are still poorly understood. Here, we quantified the dynamics of sensory variance modulations of cat primary visual cortex neurons. We report two archetypal neuronal responses, one of which is resilient to changes in variance and can co-encode the sensory feature and its variance, significantly improving the population encoding of orientation. The existence of these variance-specific responses could be accounted for by a model of intracortical recurrent connectivity. We thus propose that local recurrent circuits process uncertainty as a generic computation, advancing our understanding of how the brain handles naturalistic inputs.},
+    abstract = {Our daily endeavors occur in a complex visual environment, whose intrinsic variability challenges the way we integrate information to make decisions. By processing myriads of parallel sensory inputs, our brain is theoretically able to compute the variance of its environment, a cue known to guide our behavior. Yet, the neurobiological and computational basis of such variance computations are still poorly understood. Here, we quantify the dynamics of sensory variance modulations of cat primary visual cortex neurons. We report two archetypal neuronal responses, one of which is resilient to changes in variance and co-encodes the sensory feature and its variance, improving the population encoding of orientation. The existence of these variance-specific responses can be accounted for by a model of intracortical recurrent connectivity. We thus propose that local recurrent circuits process uncertainty as a generic computation, advancing our understanding of how the brain handles naturalistic inputs.},
     author = {Ladret, Hugo and Cortes, Nelson and Ikan, Lamyae and Chavane, Frédéric and Casanova, Christian and Perrinet, Laurent U},
     date = {2023-06-06},
     date-modified = {2022-01-20 11:18:55 +0100},
@@ -1386,7 +1383,7 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
     keywords = {decoding,orientation,precision,predictive coding,V1},
     note = {preprint: https://www.biorxiv.org/content/10.1101/2021.03.30.437692},
     url = {https://laurentperrinet.github.io/publication/ladret-23/},
-    title = {Resilience to sensory variance in the primary visual cortex},
+    title = {Cortical recurrence supports resilience to sensory variance in the primary visual cortex},
     year = {2023}
 }
 
