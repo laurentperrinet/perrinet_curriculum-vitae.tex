@@ -997,18 +997,6 @@ This model could shed light on the role of sparsity and feedback modulation in h
     year = {2023}
 }
 
-@inproceedings{Nunes23ICCV,
-    abstract = {Event cameras asynchronously report brightness changes with a temporal resolution in the order of microseconds, which makes them inherently suitable to address problems that involve rapid motion perception, such as ventral landing and fast obstacle avoidance. These problems are typically addressed by estimating a single global time-to-contact (TTC) measure, which explicitly assumes that the surface/obstacle is planar and fronto-parallel. We relax this assumption by proposing an incremental event-based method to estimate the TTC that jointly estimates the (up-to scale) inverse depth and global motion using a single event camera. The proposed method is reliable and fast while asynchronously maintaining a TTC map (TTCM), which provides per-pixel TTC estimates. As a side product, the proposed method can also estimate per-event optical flow. We achieve state-of-the-art performances on TTC estimation in terms of accuracy and runtime per event while achieving competitive performance on optical flow estimation.},
-    author = {Urbano Nunes and Perrinet, Laurent U and Ieng, Sio-Hoi},
-    date = {2023-10-06},
-    grants = {anr-anr},
-    booktitle = {International Conference on Computer Vision 2023 (ICCV2023)},
-    keywords = {time-to-contact,event-based vision,neuromorphic hardware},
-    title = {Time-to-Contact Map by Joint Estimation of Up-to-Scale Inverse Depth and Global Motion using a Single Event Camera},
-    url = {https://laurentperrinet.github.io/publication/nunes-23-iccv/},
-    year = {2023}
-}
-
 @article{Grimaldi23BC,
     author = {Grimaldi, Antoine and Perrinet, Laurent U},
     grants = {aprovis3D,anr-anr,polychronies},
@@ -1035,8 +1023,8 @@ This model could shed light on the role of sparsity and feedback modulation in h
 @article{Gruel23BC,
     author = {Gruel, Amélie and Hareb, Dalia and Grimaldi, Antoine and Martinet, Jean and Perrinet, Laurent U and Linares-Barranco, Bernabé and Serrano-Gotarredona, Teresa},
     journal = {Biological Cybernetics},
-    title = {Stakes of Neuromorphic Foveation: a promising future for embedded event cameras},
     preprint = {https://www.researchsquare.com/article/rs-2120721/v1},
+    title = {Stakes of Neuromorphic Foveation: a promising future for embedded event cameras},
     year = {2023}
 }
 
@@ -1061,7 +1049,7 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
     booktitle = {Proceedings of AREADNE},
     date = {2022-06-29},
     grants = {aprovis3D},
-    keywords = {efficient coding,event-based vision,homeostasis,neuromorphic hardware,online classification},
+    keywords = {efficient coding,localization,online classification,ultra-fast categorization,visual search},
     location = {Santorini (Greece)},
     time_end = {2022-06-29T15:30:00},
     time_start = {2022-06-29T09:00:00},
@@ -1076,6 +1064,7 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
     booktitle = {Proceedings of the FENS Forum 2022},
     date = {2022-07-10},
     grants = {anr-anr},
+    keywords = {efficient coding,localization,online classification,retinotopy,ultra-fast categorization,visual search},
     location = {Paris (France)},
     note = {Poster Session 02 - Section: Machine Learning for Neuroscience and Psychiatry (ID 529)},
     number = {S02-528},
@@ -1091,8 +1080,19 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
     bdsk-url-1 = {https://laurentperrinet.github.io/publication/jeremie-23-ccn},
     grants = {anr-anr},
     journal = {Computational Cognitive Neuroscience Society Meeting 2023},
+    keywords = {efficient coding,localization,online classification,retinotopy,ultra-fast categorization,visual search},
     title = {Retinotopy improves the categorisation and localisation of visual objects in CNNs},
     url = {https://laurentperrinet.github.io/publication/jeremie-23-ccn},
+    year = {2023}
+}
+
+@article{Jeremie23ICANN,
+    author = {Jérémie, Jean-Nicolas and Daucé, Emmanuel and Perrinet, Laurent U},
+    grants = {anr-anr},
+    journal = {32nd International Conference on Artificial Neural Networks (ICANN 2023)},
+    keywords = {efficient coding,localization,online classification,retinotopy,ultra-fast categorization,visual search},
+    title = {Retinotopy improves the categorisation and localisation of visual objects in CNNs},
+    url = {https://laurentperrinet.github.io/publication/jeremie-23-icann},
     year = {2023}
 }
 
@@ -1105,6 +1105,7 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
     doi = {10.3390/vision7020029},
     grants = {aprovis3D,anr-anr},
     journal = {Vision},
+    keywords = {classification,deep learning,efficient coding,psychophysics,ultra-fast categorization},
     langid = {english},
     preprint = {http://arxiv.org/abs/2205.03635},
     primaryclass = {cs, q-bio},
@@ -1810,6 +1811,18 @@ of 1D and 2D motion information.},
     url = {http://dx.doi.org/10.1007/978-3-642-41827-3_27},
     volume = {8259},
     year = {2013}
+}
+
+@inproceedings{Nunes23ICCV,
+    abstract = {Event cameras asynchronously report brightness changes with a temporal resolution in the order of microseconds, which makes them inherently suitable to address problems that involve rapid motion perception, such as ventral landing and fast obstacle avoidance. These problems are typically addressed by estimating a single global time-to-contact (TTC) measure, which explicitly assumes that the surface/obstacle is planar and fronto-parallel. We relax this assumption by proposing an incremental event-based method to estimate the TTC that jointly estimates the (up-to scale) inverse depth and global motion using a single event camera. The proposed method is reliable and fast while asynchronously maintaining a TTC map (TTCM), which provides per-pixel TTC estimates. As a side product, the proposed method can also estimate per-event optical flow. We achieve state-of-the-art performances on TTC estimation in terms of accuracy and runtime per event while achieving competitive performance on optical flow estimation.},
+    author = {Urbano Nunes and Perrinet, Laurent U and Ieng, Sio-Hoi},
+    booktitle = {International Conference on Computer Vision 2023 (ICCV2023)},
+    date = {2023-10-06},
+    grants = {anr-anr},
+    keywords = {event-based vision,neuromorphic hardware,time-to-contact},
+    title = {Time-to-Contact Map by Joint Estimation of Up-to-Scale Inverse Depth and Global Motion using a Single Event Camera},
+    url = {https://laurentperrinet.github.io/publication/nunes-23-iccv/},
+    year = {2023}
 }
 
 @inproceedings{Pasturel17gdr,
