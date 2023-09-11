@@ -6,7 +6,7 @@ pdf: $(SRC).pdf $(SRC)-full.pdf $(SRC)-short.pdf perrinet_publications.pdf
 LATEXMK = latexmk -pdf -pdflatex=lualatex
 BIBTEX = bibtex -terse
 
-$(SRC).pdf: $(SRC).tex
+$(SRC).pdf: $(SRC).tex  LaurentPerrinet_publications.bib LaurentPerrinet_talks.bib
 	$(LATEXMK) $(SRC).tex
 
 push: pdf LaurentPerrinet_publications.bib LaurentPerrinet_talks.bib
