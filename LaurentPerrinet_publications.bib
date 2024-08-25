@@ -434,8 +434,7 @@ The brain has to solve inverse problems to correctly interpret sensory data and 
 
 @inproceedings{Damasse16ecvp,
     author = {Damasse, Jean-Bernard and Montagnini, Anna and Perrinet, Laurent U},
-    bdsk-url-1 = {https://laurentperrinet.github.io/publication/damasse-16-ecvp},
-    booktitle = {Proceedings of ECVP},
+    booktitle = {European Conference on Visual Perception},
     date = {2016},
     date-modified = {2020-03-31 11:07:30 +0200},
     grants = {anr-rem},
@@ -655,14 +654,13 @@ The brain has to solve inverse problems to correctly interpret sensory data and 
 @inproceedings{Fischer05,
     abstract = {Low-level perceptual computations may be understood in terms of efficient codes (Simoncelli and Olshausen, 2001, Annual Review of Neuroscience 24 1193-216). Following this argument, we explore models of representation for natural static images as a way to understand the processing of information in the primary visual cortex. This representation is here based on a generative linear model of the synthesis of images using an over-complete multi-resolution dictionary of edges. This transform is implemented using log-Gabor filters and permits an exact reconstruction of any image. However, this linear representation is redundant and since to any image may correspond different representations, we explore more efficient representations of the image. The problem is stated as an ill-posed inverse problem and we compare first different known strategies by computing the efficiency of the solutions given by Matching Pursuit (Perrinet, 2004, IEEE Trans. Neural Networks 15 1164-75) and sparse edge coding (Fischer, in press, Trans. Image Processing) with classical representation methods such as JPEG. This comparison allows us to provide a synthesized approach using a probabilistic representation which would progressively construct the neural representation by using lateral cooperations. We propose an algorithm which dynamically diffuses information to correlated filters so as to yield a progressively disambiguated representation. This approach takes advantage of the computational properties of spiking neurons such as Integrate-and-Fire neurons and provides an efficient yet simple model for the representation of natural images. This representation is directly linked with the edge content of natural images and we show applications of this method to edge extraction, denoising and compression. We also show that this dynamical approach fits with neuro-physiological observations and may explain the non-linear interactions between neighboring neurons which may be observed in the cortex.},
     author = {Fischer, Sylvain and Redondo, Rafael and Perrinet, Laurent U and Cristóbal, Gabriel},
-    booktitle = {Perception},
+    booktitle = {European Conference on Visual Perception},
     date = {2005},
     date-modified = {2022-01-20 09:13:26 +0100},
     editor = {Carmona, Ricardo A. and Linan-Cembrano, Gustavo},
     grants = {facets},
     keywords = {Biologically Inspired Computer vision,matching pursuit},
     pages = {241},
-    series = {ECVP},
     title = {Efficient representation of natural images using local cooperation},
     volume = {34},
     year = {2005}
@@ -877,6 +875,27 @@ This model could shed light on the role of sparsity and feedback modulation in h
     url = {http://dx.doi.org/10.3389/fpsyg.2012.00151},
     volume = {3},
     year = {2012}
+}
+
+@inproceedings{Gekas24ecvp,
+    abstract = {Motion Clouds are a generative model for naturalistic visual stimulation that offer full parametric control and more naturalism than the
+widely used alternatives of Random Dot Kinematograms (RDKs) or luminance gratings. We previously released an 3D FFT-based
+generation algorithm (Sanz-Leon et al., J Neurophysiol, 2012). Here, we present a novel implementation of motion clouds that uses an
+Auto-Regressive formulation so that any number of frames can be generated quickly with parameters changed in near real time, as
+needed in closed loop experiments. We demonstrate a version of the proposed toolbox that will be available online to illustrate the level
+of control available. With a graphic user interface, researchers can use interactive sliders to adjust motion cloud parameters like central
+frequency, orientations and bandwidths to get an intuitive feel for the parametric changes. We provide functions that can be easily
+integrated with psychophysics task tools like Psychtoolbox. Motion clouds can be used to generate trials of stand-alone moving
+luminance textures or added to other stimuli like images or videos as dynamic noise to disrupt visual processing. The toolbox can be run
+using GPUs to speed up generation to pseudo real-time for large stimulus arrays of about 1024 by 1024 pixels at 100Hz. We argue that
+this tool can enhance visual perception experiments in a range of contexts and would like it to be open to extensive testing, use and
+further development by the psychophysics, computational modelling, functional imaging and neurophysiology communities.},
+    author = {Gekas, Nikos and Meso, Andrew Isaac and Vacher, Jonathan and Perrinet, Laurent Uand Mamassian, Pascal  and Masson, Guillaume S},
+    booktitle = {European Conference on Visual Perception},
+    title = {An open-source vision-science tool for the auto-regressive generation of dynamic stochastic textures Motion Clouds},
+    url = {https://laurentperrinet.github.io/publication/gekas-24-ecvp/},
+    url_pdf = {https://ecvp2024.abdn.ac.uk/wp-content/uploads/sites/23/2024/08/ECVP2024_Abstract_Book.pdf},
+    year = {2024}
 }
 
 @inproceedings{Grimaldi21cbmi,
@@ -1139,12 +1158,12 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
 
 @article{Jeremie24,
     author = {Jérémie, Jean-Nicolas and Daucé, Emmanuel and Perrinet, Laurent U},
+    date = {2023-08-07},
     grants = {anr-anr},
     journal = {Submitted},
     keywords = {Convolutional Neural Networks,Foveated vision,Transfer learning,visual categorization},
     preprint = {https://arxiv.org/abs/2402.15480},
     title = {Retinotopy in CNN's implements Efficient Visual Search},
-    date = {2023-08-07},
     year = {2024}
 }
 
@@ -1152,12 +1171,12 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
     abstract = {While foveated vision, a trait shared by many animals including humans, is a major contributor to biological visual performance, it has been underutilized in machine learning applications. This study investigates whether retinotopic mapping, a critical component of foveated vision, can enhance image categorization and localization performance when integrated into deep convolutional neural networks (CNN's). Retinotopic mapping was used to transform the inputs of standard off-the-shelf CNN's which were then retrained on the Imagenet task. Surprisingly, the networks with retinotopically-mapped inputs achieved a comparable performance in classification. Furthermore, the networks demonstrated improved classification localization when the foveated center of the transform was moved on the whole image. This replicates a crucial ability of the human visual system that is absent in typical CNN's. These findings suggest that retinotopic mapping may be fundamental to significant preattentive visual processes, in particular the retinotopic version seems to be the best option when applying one of these networks to a visual search task.},
     author = {Jérémie, Jean-Nicolas and Daucé, Emmanuel and Perrinet, Laurent U},
     booktitle = {Computational Cognitive Neuroscience Society Meeting (CCN) 2024},
+    date = {2023-08-08},
     grants = {anr-anr},
     keywords = {Convolutional Neural Networks,Foveated vision,Transfer learning,visual categorization},
     location = {Boston (USA)},
     title = {Retinotopy in CNN's implements Efficient Visual Search},
     url = {https://2024.ccneuro.org/poster/?id=293},
-    date = {2023-08-08},
     year = {2024}
 }
 
@@ -1223,14 +1242,12 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
 
 @inproceedings{Khoei11ecvp,
     author = {Khoei, Mina A and Perrinet, Laurent U and Bogadhi, Amarender and Montagnini, Anna and Masson, Guillaume S},
-    bdsk-url-1 = {https://laurentperrinet.github.io/publication/khoei-11-ecvp/},
-    booktitle = {Perception},
+    booktitle = {European Conference on Visual Perception},
     date-added = {2019-02-25 23:26:17 +0100},
     date-modified = {2020-03-31 11:07:30 +0200},
     editor = {Carmona, Ricardo A. and Linan-Cembrano, Gustavo},
     grants = {facets,facets-itn},
     keywords = {bayesian model,motion prediction},
-    series = {ECVP},
     title = {Role of motion inertia in dynamic motion integration for smooth pursuit},
     url = {https://laurentperrinet.github.io/publication/khoei-11-ecvp/},
     volume = {34},
@@ -1587,7 +1604,7 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
 @inproceedings{Mansour16ecvp,
     author = {Mansour Pour, Kiana and Perrinet, Laurent U and Masson, Guillaume S and Montagnini, Anna},
     bdsk-url-1 = {https://laurentperrinet.github.io/publication/mansour-16-ecvp},
-    booktitle = {Proceedings of ECVP},
+    booktitle = {European Conference on Visual Perception},
     date = {2016},
     date-modified = {2020-03-31 11:07:30 +0200},
     grants = {pace-itn},
@@ -1613,7 +1630,6 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
 
 @inproceedings{Mansour16sfn,
     author = {Mansour Pour, Kiana and Perrinet, Laurent U and Masson, Guillaume S and Montagnini, Anna},
-    bdsk-url-1 = {https://laurentperrinet.github.io/publication/mansour-16-ecvp},
     booktitle = {Proceedings of the Society for Neuroscience conference},
     date = {2016},
     date-modified = {2020-03-31 11:07:30 +0200},
@@ -1621,21 +1637,20 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
     keywords = {eye movements,motion detection,motion-clouds},
     pages = {2P045},
     title = {Voluntary tracking the moving clouds : Effects of speed variability on human smooth pursuit},
-    url = {https://laurentperrinet.github.io/publication/mansour-16-ecvp},
+    url = {https://laurentperrinet.github.io/publication/mansour-16-sfn},
     year = {2016}
 }
 
 @inproceedings{Mansour17ecvp,
-    annote = {Meeting abstract presented at [[http://www.ecvp.org/2017/assets/ecvp2017_programme_web_2408.pdf|ECVP 2017]]},
     author = {Mansour Pour, Kiana and Perrinet, Laurent U and Masson, Guillaume S and Montagnini, Anna},
-    bdsk-url-1 = {https://laurentperrinet.github.io/publication/mansour-17-ecvp/},
-    booktitle = {Proceedings of ECVP},
+    booktitle = {European Conference on Visual Perception},
     date-added = {2019-02-25 23:38:13 +0100},
     date-modified = {2020-03-31 11:07:30 +0200},
     grants = {pace-itn},
     keywords = {eye movements,motion detection,motion-clouds},
     title = {How the dynamics of human smooth pursuit is influenced by speed uncertainty},
     url = {https://laurentperrinet.github.io/publication/mansour-17-ecvp/},
+    url_pdf = {http://www.ecvp.org/2017/assets/ecvp2017_programme_web_2408.pdf},
     year = {2017}
 }
 
@@ -1792,7 +1807,7 @@ of 1D and 2D motion information.},
 @inproceedings{Montagnini07a,
     abstract = {When the visual information about an object's motion differs at the local level, the visuomotor system needs to integrate information across time to solve this ambiguity and converge to the final motion solution. For an oblique line moving horizontally, edge-related motion cues differ from terminator-related information, the latter being coherent with the line's global motion. We have previously shown that ocular tracking of this kind of stimuli is transiently biased toward the edge-orthogonal direction, before converging to the global motion direction. Here, we model the dynamic convergence to the global-motion solution as a recursive update of inferential knowledge in the velocity space. We assume that motion estimation is based on a prior distribution and two independent likelihood functions representing edge-related and terminator-related information. Importantly, the shape of the Bayesian functions is constrained by smooth-pursuit eye-movement data. Model predictions about the dynamic convergence to the correct motion solution are compared to human smooth-pursuit recordings when varying different stimulus parameters (speed, contrast).},
     author = {Montagnini, Anna and Mamassian, Pascal and Perrinet, Laurent U and Castet, Eric and Masson, Guillaume S},
-    booktitle = {Perception 36 ECVP Abstract Supplement},
+    booktitle = {European Conference on Visual Perception},
     date = {2007},
     date-modified = {2022-01-20 09:13:40 +0100},
     grants = {facets-itn},
@@ -1853,8 +1868,7 @@ of 1D and 2D motion information.},
 
 @inproceedings{Montagnini16ecvp,
     author = {Montagnini, Anna and Damasse, Jean-Bernard and Perrinet, Laurent U and Masson, Guillaume S},
-    bdsk-url-1 = {https://laurentperrinet.github.io/publication/montagnini-16-ecvp},
-    booktitle = {Proceedings of ECVP},
+    booktitle = {European Conference on Visual Perception},
     date = {2016},
     date-modified = {2020-03-31 11:07:30 +0200},
     grants = {anr-rem},
@@ -2185,14 +2199,13 @@ Humans are able to accurately track a moving object with a combination of saccad
 @inproceedings{Perrinet05a,
     abstract = {The integration of information is essential to measure the exact 2D motion of a surface from both local ambiguous 1D motion produced by elongated edges and local non-ambiguous 2D motion from features such as corners, end-points or texture elements. The dynamics of this motion integration shows a complex time course which can be read from tracking eye movements: local 1D motion signals are extracted first and then pooled to initiate the ocular responses before that 2D motion signals are taken into account to refine the tracking direction until it matches the surface motion direction. The nature of these 1D and 2D motion computations is still unclear. Previously, we have shown that the late, 2D-driven response components to either plaids or barber-poles have very similar latencies over a large range of contrast, suggesting a shared mechanism. However, they showed different contrast response functions with these different motion stimuli, suggesting different motion processing. We designed a two-pathways Bayesian model of motion integration and showed that this family of contrast response functions can be predicted from the probability distributions of 1D and 2D motion signals for each type of stimulus. Indeed, this formulation may explain contrast response functions that could not be explained by a simple bayesian model (Weiss et al., 2002 em Nature Neuroscience bf 5 , 598--604) and gives a quantitative argument to study how local information with different relative ambiguities values may be pooled to provide an integrated response of the system. Finally, we formulate how different spatial information may be pooled and we draw the analogy of this method with methods using the partial derivative equations. This simple model correctly explains some non-linear interactions between neighboring neurons selective to motion direction which are observed in short-latency ocular following and neuro-physiological data.},
     author = {Perrinet, Laurent U and Barthélemy, Frédéric V and Castet, Eric and Masson, Guillaume S},
-    booktitle = {Perception},
+    booktitle = {European Conference on Visual Perception},
     date = {2005},
     date-modified = {2022-01-20 09:13:26 +0100},
     editor = {Carmona, Ricardo A. and Linan-Cembrano, Gustavo},
     grants = {facets},
     keywords = {Bayesian model,motion detection},
     pages = {38},
-    series = {ECVP},
     title = {Dynamics of motion representation in short-latency ocular following: A two-pathways Bayesian model},
     volume = {34},
     year = {2005}
@@ -2961,14 +2974,13 @@ Furthermore, this decoding approach shows different properties: First, informati
 @inproceedings{Redondo05,
     abstract = {We present a biologically plausible model of simple cortical cells as 1) a linear transform representing edges and 2) a non-linear iterative stage of inhibition and facilitation between neighboring coefficients. The linear transform is a complex log-Gabor wavelet transform which is overcomplete (i.e. there are more coefficients than pixels in the image) and has exact reconstruction. The inhibition consists in diminishing down the coefficients which are not at a local-maxima along the direction normal to the edge filter orientation, whereas the facilitation enhances the collinear and co-aligned local-maximum coefficients. At each iteration and after the inhibition and facilitation stages, the reconstructed error is subtracted in the transform domain for keeping an exact reconstruction. Such process concentrates the signal energy on a few coefficients situated along the edges of the objects, yielding a sparse representation. The rationale for such procedure is: (1) th e overcompleteness offers flexibility for activity reassignment; (2) images can be coded by sparse Gabor coefficients located on object edges; (3) image contours produce aligned and collinear local-maxima in the transform domain; (4) the inhibition/facilitation processes are able to extract the contours. The sparse Gabor coefficients are mostly connected each other and located along object contours. Such layout makes chain coding suitable for compression purposes. Specially adapted to Gabor wavelets features, our chain coding represents every chain by its end-points (head and tail) and the elementary movements necessary to walk along the chain from head to tail. Moreover it predicts the module and phase of each Gabor coefficient according to the previous chain coefficient. As a result, redundancy of the transform domain is further reduced. Used for compression, the scheme limits particularly the high-frequency artifacts. The model performs also efficiently in tasks the Human Visual System is supposed to deal with, as for instance edge extraction and image denoising.},
     author = {Redondo, Rafael and Fischer, Sylvain and Perrinet, Laurent U and Cristóbal, Gabriel},
-    booktitle = {Perception},
+    booktitle = {European Conference on Visual Perception},
     date = {2005-08-01},
     date-modified = {2022-01-20 09:13:26 +0100},
     editor = {Carmona, Ricardo A. and Linan-Cembrano, Gustavo},
     grants = {facets},
     keywords = {log-gabor},
     pages = {238},
-    series = {ECVP},
     title = {Modeling of simple cells through a sparse overcomplete gabor wavelet representation based on local inhibition and facilitation},
     volume = {34},
     year = {2005}
@@ -3439,14 +3451,13 @@ Furthermore, this decoding approach shows different properties: First, informati
 
 @inproceedings{Wohrer06,
     author = {Wohrer, Adrien and Masson, Guillaume S and Perrinet, Laurent U and Kornprobst, Pierre and Vieville, Thierry},
-    booktitle = {Perception},
+    booktitle = {European Conference on Visual Perception},
     date = {2006},
     date-modified = {2022-01-20 09:13:26 +0100},
     editor = {Carmona, Ricardo A. and Linan-Cembrano, Gustavo},
     grants = {facets},
     keywords = {retina},
     pages = {67},
-    series = {ECVP, 29th European Conference on Visual Perception},
     title = {Contrast sensitivity adaptation in a virtual spiking retina and its adequation with mammalians retinas},
     volume = {35},
     year = {2006}
