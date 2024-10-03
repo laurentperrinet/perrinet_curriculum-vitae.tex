@@ -1029,24 +1029,6 @@ further development by the psychophysics, computational modelling, functional im
     year = {2022}
 }
 
-@article{Grimaldi24,
-    abstract = {We propose a neuromimetic architecture able to perform always-on pattern recognition. To achieve this, we extended an existing event-based algorithm [1], which introduced novel spatio-temporal features as a Hierarchy Of Time-Surfaces (HOTS). Built from asynchronous events acquired by a neuromorphic camera, these time surfaces allow to code the local dynamics of a visual scene and to create an efficient event-based pattern recognition architecture. Inspired by neuroscience, we extended this method to increase its performance. Our first contribution was to add a homeostatic gain control on the activity of neurons to improve the learning of spatio-temporal patterns [2]. A second contribution is to draw an analogy between the HOTS algorithm and Spiking Neural Networks (SNN). Following that analogy, our last contribution is to modify the classification layer and remodel the offline pattern categorization method previously used into an online and event-driven one. This classifier uses the spiking output of the network to define novel time surfaces and we then perform online classification with a neuromimetic implementation of a multinomial logistic regression. Not only do these improvements increase consistently the performances of the network, they also make this event-driven pattern recognition algorithm online and bio-realistic. Results were validated on different datasets: DVS barrel [3], Poker-DVS [4] and N-MNIST [5]. We foresee to develop the SNN version of the method and to extend this fully event-driven approach to more naturalistic tasks, notably for always-on, ultra-fast object categorization. },
-    author = {Grimaldi, Antoine and Boutin, Victor and Ieng, Sio-Hoi and Benosman, Ryad and Perrinet, Laurent U},
-    doi = {10.1016/j.neunet.2024.106415},
-    url_hal = {https://hal.science/hal-04694717},
-    date = {2024-10-01},
-    grants = {aprovis3D},
-    journal = {Neural Networks},
-    volume = 178, 
-    month = oct,
-    pages = {106415},
-    keywords = {efficient coding,event-based vision,homeostasis,neuromorphic hardware,online classification},
-    title = {A Robust Event-Driven Approach to Always-on Object Recognition},
-    url = {https://laurentperrinet.github.io/publication/grimaldi-24/},
-    url_code = {https://github.com/AntoineGrimaldi/hotsline},
-    year = {2024}
-}
-
 @article{Grimaldi23BC,
     author = {Grimaldi, Antoine and Perrinet, Laurent U},
     bdsk-url-1 = {https://laurentperrinet.github.io/publication/grimaldi-23-bc/},
@@ -1072,6 +1054,24 @@ further development by the psychophysics, computational modelling, functional im
     title = {Learning heterogeneous delays of spiking neurons for motion detection},
     url = {https://gdr-vision-2023.sciencesconf.org/browse?forward-action=index&forward-controller=browse&docid=442297&lang=en},
     year = {2023}
+}
+
+@article{Grimaldi24,
+    abstract = {We propose a neuromimetic architecture able to perform always-on pattern recognition. To achieve this, we extended an existing event-based algorithm [1], which introduced novel spatio-temporal features as a Hierarchy Of Time-Surfaces (HOTS). Built from asynchronous events acquired by a neuromorphic camera, these time surfaces allow to code the local dynamics of a visual scene and to create an efficient event-based pattern recognition architecture. Inspired by neuroscience, we extended this method to increase its performance. Our first contribution was to add a homeostatic gain control on the activity of neurons to improve the learning of spatio-temporal patterns [2]. A second contribution is to draw an analogy between the HOTS algorithm and Spiking Neural Networks (SNN). Following that analogy, our last contribution is to modify the classification layer and remodel the offline pattern categorization method previously used into an online and event-driven one. This classifier uses the spiking output of the network to define novel time surfaces and we then perform online classification with a neuromimetic implementation of a multinomial logistic regression. Not only do these improvements increase consistently the performances of the network, they also make this event-driven pattern recognition algorithm online and bio-realistic. Results were validated on different datasets: DVS barrel [3], Poker-DVS [4] and N-MNIST [5]. We foresee to develop the SNN version of the method and to extend this fully event-driven approach to more naturalistic tasks, notably for always-on, ultra-fast object categorization. },
+    author = {Grimaldi, Antoine and Boutin, Victor and Ieng, Sio-Hoi and Benosman, Ryad and Perrinet, Laurent U},
+    date = {2024-10-01},
+    doi = {10.1016/j.neunet.2024.106415},
+    grants = {aprovis3D},
+    journal = {Neural Networks},
+    keywords = {efficient coding,event-based vision,homeostasis,neuromorphic hardware,online classification},
+    month = {October},
+    pages = {106415},
+    title = {A Robust Event-Driven Approach to Always-on Object Recognition},
+    url = {https://laurentperrinet.github.io/publication/grimaldi-24/},
+    url_code = {https://github.com/AntoineGrimaldi/hotsline},
+    url_hal = {https://hal.science/hal-04694717},
+    volume = {178},
+    year = {2024}
 }
 
 @article{Gruel23BC,
@@ -1173,17 +1173,16 @@ in  briefly flashed scenes and in a very short amount of time.Deep convolutional
 }
 
 @article{Jeremie24,
- author = {Jérémie, Jean-Nicolas and Daucé, Emmanuel and Perrinet, Laurent U},
- date = {2023-08-07},
- grants = {anr-anr},
- journal = {Submitted},
- keywords = {Convolutional Neural Networks,Foveated vision,Transfer learning,visual categorization},
- preprint = {https://arxiv.org/abs/2402.15480},
- doi = {10.48550/arXiv.2402.15480},
- title = {Retinotopic Mapping Enhances the Robustness of Convolutional Neural Networks},
- year = {2024}
+    author = {Jérémie, Jean-Nicolas and Daucé, Emmanuel and Perrinet, Laurent U},
+    date = {2023-08-07},
+    doi = {10.48550/arXiv.2402.15480},
+    grants = {anr-anr},
+    journal = {Submitted},
+    keywords = {Convolutional Neural Networks,Foveated vision,Transfer learning,visual categorization},
+    preprint = {https://arxiv.org/abs/2402.15480},
+    title = {Retinotopic Mapping Enhances the Robustness of Convolutional Neural Networks},
+    year = {2024}
 }
-
 
 @inproceedings{Jeremie24CCN,
     abstract = {While foveated vision, a trait shared by many animals including humans, is a major contributor to biological visual performance, it has been underutilized in machine learning applications. This study investigates whether retinotopic mapping, a critical component of foveated vision, can enhance image categorization and localization performance when integrated into deep convolutional neural networks (CNN's). Retinotopic mapping was used to transform the inputs of standard off-the-shelf CNN's which were then retrained on the Imagenet task. Surprisingly, the networks with retinotopically-mapped inputs achieved a comparable performance in classification. Furthermore, the networks demonstrated improved classification localization when the foveated center of the transform was moved on the whole image. This replicates a crucial ability of the human visual system that is absent in typical CNN's. These findings suggest that retinotopic mapping may be fundamental to significant preattentive visual processes, in particular the retinotopic version seems to be the best option when applying one of these networks to a visual search task.},
