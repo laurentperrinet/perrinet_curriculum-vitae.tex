@@ -2,61 +2,57 @@
 %!TEX encoding = UTF-8 Unicode
 %------------------------------------
 % Dario Taraborelli
-% Typesetting your academic CV in LaTeX
+% Mise en page de votre CV académique en LaTeX
 %
-% URL: http://nitens.org/taraborelli/cvtex
-% DISCLAIMER: This template is provided for free and without any guarantee
-% that it will correctly compile on your system if you have a non-standard
-% configuration.
-% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+% URL : http://nitens.org/taraborelli/cvtex
+% AVERTISSEMENT : Ce modèle est fourni gratuitement et sans garantie qu'il compilera correctement sur votre système si vous avez une configuration non standard.
+% Certains droits réservés : http://creativecommons.org/licenses/by-sa/3.0/
 %------------------------------------
 %------------------------------------
 \newcommand{\Title}{Curriculum Vit\ae}
 \newcommand{\Author}{Laurent Perrinet}
-\newcommand{\Address}{Researcher in Computational Neuroscience (DR2 CNRS)\\ Institut de Neurosciences de la Timone\\
-UMR 7289, CNRS / Aix-Marseille Universit{\'e}\\ 27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}%
+\newcommand{\Address}{Chercheur en neurosciences computationnelles (DR2 CNRS)\\ Institut de Neurosciences de la Timone\\
+UMR 7289, CNRS / Aix-Marseille Université\\ 27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}%
 \newcommand{\Website}{https://laurentperrinet.github.io}
 \newcommand{\Email}{Laurent.Perrinet@univ-amu.fr}
 %------------------------------------
-\documentclass[11pt, a4paper]{article}
+\documentclass[11pt, a4paper, french]{article}
 \usepackage{fontspec}
-% DOCUMENT LAYOUT
+% MISE EN PAGE DU DOCUMENT
 \usepackage{geometry}
 \geometry{a4paper, textwidth=13cm, textheight=25cm, marginparsep=7pt, marginparwidth=3cm}
 \setlength\parindent{0in}
-% FONTS
+% POLICES
 \usepackage[usenames,dvipsnames]{color}
 %\usepackage{xunicode}
 \usepackage{xltxtra}
-\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\defaultfontfeatures{Mapping=tex-text} % convertit les caractères spéciaux LaTeX (``guillemets'' --- tirets, etc.) en unicode
 %\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
 %\setmonofont[Scale=0.8]{Calibri}
 %\setsansfont[Scale=0.9]{Optima Regular}
-% ---- CUSTOM COMMANDS
+% ---- COMMANDES PERSONNALISÉES
 \chardef\&="E050
 \newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
 \newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
 \newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
-% ---- CUSTOM AMPERSAND
+% ---- ESPERLUETTE PERSONNALISÉE
 %\newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
 \newcommand{\amper}{{\selectfont\itshape\&}}
-% ---- MARGIN YEARS
+% ---- ANNÉES EN MARGE
 \usepackage{marginnote}
 %\newcommand{\amper{}}{\chardef\amper="E0BD }
 \newcommand{\years}[1]{\marginnote{\scriptsize #1}}
 \renewcommand*{\raggedleftmarginnote}{}
 \setlength{\marginparsep}{7pt}
 \reversemarginpar
-
-% HEADINGS
+% EN-TÊTES
 \usepackage{sectsty}
 \usepackage[normalem]{ulem}
 \sectionfont{\sffamily\mdseries\large\underline}
 \subsectionfont{\rmfamily\mdseries\scshape\normalsize}
 \subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
-
-% PDF SETUP
-% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+% CONFIGURATION PDF
+% ---- REMPLIR ICI LE TITRE DU DOCUMENT ET L'AUTEUR
 \usepackage[bookmarks, colorlinks, breaklinks]{hyperref}  %dvipdfm,
 \hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,
 pdftitle={\Title},%
@@ -66,60 +62,53 @@ pdfsubject={\Title}%
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
 % DOCUMENT
 \begin{document}
 \pagestyle{empty}
 \reversemarginpar
 \textsf{\Large \Author}\\[1cm]
 \Address \\[.2cm]
-%Phone: \texttt{609-734-8000}\\
-%Fax: \texttt{609-924-8399}\\[.2cm]
-%email: \href{mailto:\Email}{\Email}\\
-\textsc{url}: \href{\Website}{\Website}\\
+%Téléphone : \texttt{609-734-8000}\\
+%Fax : \texttt{609-924-8399}\\[.2cm]
+%Email : \href{mailto:\Email}{\Email}\\
+\textsc{url} : \href{\Website}{\Website}\\
 %\vfill
-\section*{Research interests}
-My research explores the theoretical and empirical foundations of neural adaptation, demonstrating how structural and functional properties co-evolve to optimally process the statistical regularities of ecological contexts.
+\section*{Intérêts de recherche}
+Mes recherches examinent les bases théoriques et empiriques de l'adaptation neurale, en me concentrant sur la manière dont les propriétés structurelles et fonctionnelles co-évoluent pour traiter de manière optimale les régularités statistiques des environnements naturels.
 %\vfill
-%Born:  February 23rd, 1973---Bordeaux, France\\
-%Nationality:  French
-
+%Né : 23 février 1973 --- Bordeaux, France\\
+%Nationalité : Française
 %%%\hrule
-%\section*{Current position}
-%\noindent\years{since 2004}\emph{Researcher (CR1)}, Institut de Neurosciences de la Timone (INT).
-
+%\section*{Poste actuel}
+%\noindent\years{depuis 2004}\emph{Chercheur (CR1)}, Institut de Neurosciences de la Timone (INT).
 %%\hrule
-\section*{Areas of specialization}
-Spatio-temporal inference in low-level sensory areas. %\\
-Unsupervised learning in topographic maps. %\\
-Predictive processes and active perception.
-
+\section*{Domaines de spécialisation}
+Inférence spatio-temporelle dans les aires sensorielles de bas niveau. %\\
+Apprentissage non supervisé dans les cartes topographiques. %\\
+Processus prédictifs et perception active.
 %%%\hrule
-%\section*{Appointments held}
-% 
-%\noindent\years{2010--12}Visiting Scholar, UCL (London, UK). Karl Friston's theoretical neurobiology group.\\
-%\noindent\years{1999}Research Scholar, USAFB (Rome, NY) / University of San Diego in California.\\
-%\years{1997}Research Scholar, Jet Propulsion Laboratory (Nasa), Pasadena, California. Department of Terrestrial Science, Imaging Radar Laboratory\\
-%\years{9/1995-6/96}Engineer at Alcatel, Vienna (Austria). Department of Voice Processing Systems.\\
+%\section*{Postes occupés}
 %
-
+%\noindent\years{2010--12}Chercheur invité, UCL (Londres, Royaume-Uni). Groupe de neurobiologie théorique de Karl Friston.\\
+%\noindent\years{1999}Chercheur invité, USAFB (Rome, NY) / Université de San Diego en Californie.\\
+%\years{1997}Chercheur invité, Jet Propulsion Laboratory (NASA), Pasadena, Californie. Département des Sciences Terrestres, Laboratoire d'Imagerie Radar\\
+%\years{9/1995-6/96}Ingénieur chez Alcatel, Vienne (Autriche). Département des Systèmes de Traitement de la Voix.\\
+%
 %\hrule
-\section*{Education}
-\noindent\years{2014}\textsc{HDR} Aix-Marseille Université
+\section*{Formation}
 
-\noindent\years{1999-2003}\textsc{PhD} in Cognitive Neuroscience, ONERA/DTIM, Toulouse (France)
+\noindent\years{2014}\textsc{Habilitation à Diriger des Recherches} Aix-Marseille Université
 
-\years{1993 - 1998}\textsc{MSc} in Engineering  {\sc Supaéro} (Toulouse, France), one of the leading French Engineering Schools ("Grandes Ecoles"). Specialization in stochastic models for signal and image processing.
-% \years{10/1999-2/2003}\textsc{Master} in Cognitive Sciences, ONERA/DTIM, Toulouse (France)
+\noindent\years{1999-2003}\textsc{Doctorat} en neurosciences cognitives, ONERA/DTIM, Toulouse (France)
+
+\years{1993 - 1998}\textsc{Diplôme d'ingénieur} {\sc Supaéro} (Toulouse, France).
+
+% \years{10/1999-2/2003}\textsc{Master} en sciences cognitives, ONERA/DTIM, Toulouse (France)
 %
 %%\hrule
-%\section*{Grants, honors \amper{} awards}
-
-%\noindent\years{1921}Nobel Prize in Physics, Nobel Foundation
-
-\section*{Selected publications}% \amper{} talks}
-
-%\subsection*{Journal articles}
+%\section*{Subventions, distinctions et récompenses}
+%\noindent\years{1921}Prix Nobel de Physique, Fondation Nobel
+\section*{Publications sélectionnées}% \amper{} conférences}
 
 \noindent\years{2024} Antoine Grimaldi, Laurent U Perrinet. ``Learning heterogeneous delays in a layer of spiking neurons for fast motion detection.'' {\bf Biological Cybernetics}.
 
@@ -137,7 +126,7 @@ Predictive processes and active perception.
 
 \noindent\years{2012}Karl Friston, Rick A. Adams, Laurent Perrinet and Michael Breakspear,  ``Perceptions as Hypotheses: Saccades as Experiments'', {\bf Front in Psychology}.
 
-\noindent\years{2012}Claudio Simoncini, Laurent Perrinet, Anna Montagnini, Pascal Mamassian and Guillaume Masson, ``More is not always better: dissociation between perception and action'', {\bf Nature Neuroscience}. %  explained by adaptive gain control
+%\noindent\years{2012}Claudio Simoncini, Laurent Perrinet, Anna Montagnini, Pascal Mamassian and Guillaume Masson, ``More is not always better: dissociation between perception and action'', {\bf Nature Neuroscience}. %  explained by adaptive gain control
 
 %\noindent\years{2012}Paula S. Leon, Ivo Vanzetta, Guillaume S. Masson and Laurent Perrinet, ``Motion Clouds: Model-based stimulus synthesis of natural-like random textures for the study of motion perception'', {\bf Journal of Neurophysiology}.%, 107(11):3217--3226.
 %
@@ -155,33 +144,7 @@ Predictive processes and active perception.
 %\noindent\years{2004}Laurent Perrinet, “Feature detection using spikes : the greedy approach", {\bf Journal of Physiology, Paris}.\\
 
 \noindent\years{2004}Laurent Perrinet, Manuel Samuelides and Simon Thorpe, ``Coding static natural images using spiking event times : do neurons cooperate?",  {\bf IEEE Transactions on Neural Networks}.%, 15(5):1164--75.%
-%\end{itemize}
-%\subsection*{Book chapter}
 
-%\noindent\years{2007}Laurent Perrinet (2007) “Dynamical neural networks: modeling low-level vision at short latencies".  In \emph{Topics in Dynamical Neural Networks: From Large Scale Neural Networks to Motor Control and Vision}: volume 142 of {\bf The European Physical Journal (Special Topics)}.  Springer Berlin / Heidelberg.%, mar 2007, pages 163--225.  \doi{10.1140/epjst/e2007-00061-7}. %
-%\subsection*{Book}
-%\noindent\years{2015}Gabriel Cristobal, Laurent Perrinet and Matthias S Keil, editors. ``Biologically Inspired Computer Vision.'' {\bf Wiley-VCH} % Verlag GmbH and Co. KGaA, 7 oct. 2015. isbn : 9783527680863.
-%doi : 10.1002/9783527680863. %url : http://onlinelibrary. wiley.com/book/10.1002/9783527680863
-%
-%\subsection*{Talks}
-%
-%\noindent\years{2008}Laurent Perrinet (2008), “Adaptive sparse spike coding : applications of neuroscience to the compression of natural images." In \emph{Optical and Digital Image Processing Conference 7000 -  Proceedings of SPIE Volume 7000, April 2008}, pages 15 -- S4\\
-
-%\vspace{1cm}
-%\vfill{}
-%\hrulefill
-%
-%% FILL IN THE FULL URL TO YOUR CV
-%\begin{center}
-%%{\scriptsize  Last updated: \today\- •\-
-%%% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
-%%Typeset in \href{http://nitens.org/taraborelli/cvtex}{
-%%% ---- FILL IN THE FULL URL TO YOUR CV HERE
-%%\href{http://nitens.org/taraborelli/cvtex}{http://nitens.org/taraborelli/cvtex}}
-%
-%%{\footnotesize \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex}{Last updated: \today .}
-%%}
+{\footnotesize \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex}{Dernière mise à jour : \today},  \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex/blob/master/perrinet_curriculum-vitae-full.pdf}{Version complète}.
 %\end{center}
-
-
 \end{document}
