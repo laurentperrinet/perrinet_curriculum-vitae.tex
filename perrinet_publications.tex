@@ -11,18 +11,19 @@
 \usepackage[french]{babel}%
 \usepackage{csquotes}%
 \usepackage{etaremune}%
-\usepackage[final]{pdfpages}%
+\usepackage{lmodern}
+% \usepackage[final]{pdfpages}%
 %% --- unit formatting ---
-\usepackage{microtype}	% Better typography \tolerance 1414
-\hbadness 1414
-\emergencystretch 1.5em
-\hfuzz 0.3pt
-\widowpenalty=10000
-\vfuzz \hfuzz
-\raggedbottom
+% \usepackage{microtype}	% Better typography \tolerance 1414
+% \hbadness 1414
+% \emergencystretch 1.5em
+% \hfuzz 0.3pt
+% \widowpenalty=10000
+% \vfuzz \hfuzz
+% \raggedbottom
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{amsmath,amsfonts,amsthm}			% Math packages
-\usepackage{bm}%This package defines commands to access bold math symbols
+% \usepackage{amsmath,amsfonts,amsthm}			% Math packages
+% \usepackage{bm}%This package defines commands to access bold math symbols
 \usepackage{graphicx}					% Enable pdflatex
 %============ front-matter ===================
 \newcommand{\BookTitle}{Centre National de la Recherche Scientifique}
@@ -31,7 +32,6 @@ Liste complète des publications
 }%
 \newcommand{\SubTitle}{%
 %Pour évaluation par les sections du Comité national22U
-
 }%
 \newcommand{\Author}{Laurent U~Perrinet}%
 \newcommand{\Team}{\'Equipe NEural OPerations in TOpographies (NeOpTo)}%
@@ -176,17 +176,19 @@ pdfsubject={\Title}%
 \begin{enumerate}
 % \item[A59] \fullcite{}% _FA_
 
+\item[A61] 
+  \fullcite{Jeremie25}% _LA_
+  
 \item[A60] 
   \fullcite{Benvenuti22}%
-
-\item[A59] 
-  \fullcite{Jeremie25}% _LA_
-
 \end{enumerate}
 
 \section{Articles de revues internationales à comité de lecture}%
 
 \begin{enumerate}
+  \item[A59] 
+    \fullcite{Meso25}
+
 \item[A58] 
   \years{2025} 
   \fullcite{Gunasekaran25}% 
