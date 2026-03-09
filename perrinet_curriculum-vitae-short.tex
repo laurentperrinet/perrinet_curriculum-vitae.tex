@@ -1,15 +1,11 @@
-%! TEX TS-program = lualatex
-%! TEX encoding = UTF-8 Unicode
+%! TEX program = lualatex
+%! TeX encoding = UTF-8 Unicode
+%! TeX spellcheck = fr-FR
+%! BIB TS-program = biber
+% -*- coding: UTF-8; -*-
 %------------------------------------
-% Dario Taraborelli
-% Typesetting your academic CV in LaTeX
-%
-% URL: http://nitens.org/taraborelli/cvtex
-% DISCLAIMER: This template is provided for free and without any guarantee
-% that it will correctly compile on your system if you have a non-standard
-% configuration.
-% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
-%------------------------------------
+
+
 %------------------------------------
 \newcommand{\Title}{Curriculum Vit\ae}
 \newcommand{\Author}{Laurent Perrinet}
@@ -26,38 +22,28 @@ UMR 7289, CNRS / Aix-Marseille Universit{\'e}\\ 27, Bd. Jean Moulin, 13385 Marse
 \setlength\parindent{0in}
 % FONTS
 \usepackage[usenames,dvipsnames]{color}
-%\usepackage{xunicode}
 \usepackage{xltxtra}
-\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
-%\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
-%\setmonofont[Scale=0.8]{Calibri}
-%\setsansfont[Scale=0.9]{Optima Regular}
+\defaultfontfeatures{Mapping=tex-text}
 % ---- CUSTOM COMMANDS
 \chardef\&="E050
 \newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
 \newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
 \newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
-% ---- CUSTOM AMPERSAND
-%\newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
 \newcommand{\amper}{{\selectfont\itshape\&}}
 % ---- MARGIN YEARS
 \usepackage{marginnote}
-%\newcommand{\amper{}}{\chardef\amper="E0BD }
 \newcommand{\years}[1]{\marginnote{\scriptsize #1}}
 \renewcommand*{\raggedleftmarginnote}{}
 \setlength{\marginparsep}{7pt}
 \reversemarginpar
-
 % HEADINGS
 \usepackage{sectsty}
 \usepackage[normalem]{ulem}
 \sectionfont{\sffamily\mdseries\large\underline}
 \subsectionfont{\rmfamily\mdseries\scshape\normalsize}
 \subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
-
 % PDF SETUP
-% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
-\usepackage[bookmarks, colorlinks, breaklinks]{hyperref}  %dvipdfm,
+\usepackage[bookmarks, colorlinks, breaklinks]{hyperref}
 \hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,
 pdftitle={\Title},%
 pdfauthor={\Author < \Email > \Address - \Website},%
@@ -73,115 +59,77 @@ pdfsubject={\Title}%
 \reversemarginpar
 \textsf{\Large \Author}\\[1cm]
 \Address \\[.2cm]
-%Phone: \texttt{609-734-8000}\\
-%Fax: \texttt{609-924-8399}\\[.2cm]
-%email: \href{mailto:\Email}{\Email}\\
 \textsc{url}: \href{\Website}{\Website}\\
-%\vfill
+
 \section*{Research interests}
-My research explores the theoretical and empirical foundations of neural adaptation, demonstrating how structural and functional properties co-evolve to optimally process the statistical regularities of ecological contexts.
-%\vfill
-%Born:  February 23rd, 1973---Bordeaux, France\\
-%Nationality:  French
+My research program aims to elucidate the relationship between neural structure and sensory function: how do the topographic organization of neurons and the spiking nature of neural signals enable sensory systems to optimally adapt to the statistical regularities of natural scenes, through predictive processing mechanisms? This work opens the way to novel neuromorphic algorithms with high energy efficiency.
 
-%%%\hrule
-%\section*{Current position}
-%\noindent\years{since 2004}\emph{Researcher (CR1)}, Institut de Neurosciences de la Timone (INT).
-
-%%\hrule
 \section*{Areas of specialization}
-Spatio-temporal inference in low-level sensory areas. %\\
-Unsupervised learning in topographic maps. %\\
-Predictive processes and active perception.
+Spatio-temporal inference in low-level sensory areas.\\
+Unsupervised learning in topographic maps.\\
+Predictive coding, sparse representations and active perception.
 
-%%%\hrule
-%\section*{Appointments held}
-% 
-%\noindent\years{2010--12}Visiting Scholar, UCL (London, UK). Karl Friston's theoretical neurobiology group.\\
-%\noindent\years{1999}Research Scholar, USAFB (Rome, NY) / University of San Diego in California.\\
-%\years{1997}Research Scholar, Jet Propulsion Laboratory (Nasa), Pasadena, California. Department of Terrestrial Science, Imaging Radar Laboratory\\
-%\years{9/1995-6/96}Engineer at Alcatel, Vienna (Austria). Department of Voice Processing Systems.\\
-%
-
-%\hrule
 \section*{Education}
-\noindent\years{2014}\textsc{HDR} Aix-Marseille Université
 
-\noindent\years{1999-2003}\textsc{PhD} in Cognitive Neuroscience, ONERA/DTIM, Toulouse (France)
+\noindent\years{2017}\textsc{Habilitation à Diriger des Recherches} (HDR), Aix-Marseille Université. Title: ``Predictive coding in visuo-motor transformations''.
 
-\years{1993 - 1998}\textsc{MSc} in Engineering  {\sc Supaéro} (Toulouse, France), one of the leading French Engineering Schools ("Grandes Ecoles"). Specialization in stochastic models for signal and image processing.
-% \years{10/1999-2/2003}\textsc{Master} in Cognitive Sciences, ONERA/DTIM, Toulouse (France)
-%
-%%\hrule
-%\section*{Grants, honors \amper{} awards}
+\noindent\years{1999--2003}\textsc{PhD} in Cognitive Science, ONERA/DTIM \& Université Paul Sabatier, Toulouse (France). Highest distinction with jury congratulations.
 
-%\noindent\years{1921}Nobel Prize in Physics, Nobel Foundation
+\noindent\years{1993--1998}\textsc{MSc} in Engineering, {\sc Supaéro} (Toulouse, France). Specialization in stochastic models for signal and image processing.
 
-\section*{Selected publications}% \amper{} talks}
+\section*{Professional experience}
 
-%\subsection*{Journal articles}
+\noindent\years{2020--\ldots}\textsc{Research Director} (DR2, CID51), Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université, Marseille.
 
-\noindent\years{2024} Antoine Grimaldi, Laurent U Perrinet. ``Learning heterogeneous delays in a layer of spiking neurons for fast motion detection.'' {\bf Biological Cybernetics}.
+\noindent\years{2004--2020}\textsc{Research Scientist} (CR2 then CR1), INCM then INT, CNRS, Marseille.
 
-\noindent\years{2023}Hugo Ladret, Nelson Cortes, Lamyae Ikan, Frédéric Chavane, Christian Casanova, Laurent U Perrinet. ``Cortical recurrence supports resilience to sensory variance in the primary visual cortex.'' {\bf Nature Communications Biology}.
+\noindent\years{2010--2012}\textsc{Long-term visit}, Karl Friston's theoretical neurobiology group, Wellcome Trust Centre for Neuroimaging, University College London, UK.
 
-\noindent\years{2021}Victor Boutin, Angelo Franciosini, Franck Ruffier, Frédéric Chavane and Laurent U Perrinet. ``Sparse Deep Predictive Coding captures contour integration capabilities of the early visual system.'' {\bf PLoS Computational Biology}.
+\noindent\years{2004}\textsc{Post-doctoral fellow}, Redwood Neuroscience Institute, San Francisco, USA. Supervisor: Bruno Olshausen.
 
-\noindent\years{2020}Chloé Pasturel, Anna Montagnini and Laurent Perrinet. ``Humans adapt their anticipatory eye movements to the volatility of visual motion properties.'' {\bf PLoS Computational Biology}.
+\section*{Supervision}
 
-% \noindent\years{2019}Sandrine Chemla, Alexandre Reynaud, Matteo diVolo, Yann Zerlaut, Laurent Perrinet, Alain Destexhe and Frédéric Chavane.  ``Suppressive waves disambiguate the representation of long-range apparent motion in awake monkey V1.'' {\bf Journal of Neuroscience}.
+\noindent 6 PhD theses directed (completed), 4 co-directed (completed), 5 current PhD students (3 as principal supervisor, 2 co-supervised), 5 post-docs supervised. Reviewer for 18 PhD defenses.
 
-%\noindent\years{2017}Mina A Khoei, Guillaume S Masson and Laurent Perrinet. ``The flash-lag effect as a motion-based predictive shift.'' {\bf PLoS Computational Biology}.
+\section*{Selected grants}
 
-%\noindent\years{2015}Jonathan Vacher, Andrew Isaac Meso, Laurent Perrinet and Gabriel Peyré. ``Biologically Inspired Dynamic Textures for Probing Motion Perception.'' {\bf Advances in Neural Information Processing Systems}.
+\noindent\years{2023--2027} \textit{Emergences} -- Near-physics emerging models for embedded AI (PEPR France 2030).
 
-\noindent\years{2012}Karl Friston, Rick A. Adams, Laurent Perrinet and Michael Breakspear,  ``Perceptions as Hypotheses: Saccades as Experiments'', {\bf Front in Psychology}.
+\noindent\years{2021--2025} PI: ANR \textit{AgileNeuRobot} (ANR-20-CE23-0021) -- Agile bio-mimetic aerial robots for real-world flight, 435\,k€.
 
-\noindent\years{2012}Claudio Simoncini, Laurent Perrinet, Anna Montagnini, Pascal Mamassian and Guillaume Masson, ``More is not always better: dissociation between perception and action'', {\bf Nature Neuroscience}. %  explained by adaptive gain control
+\noindent\years{2022--2025} PI: \textit{Polychronies} (A*MIDEX AMX-21-RID-025) -- Spatio-temporal spike motifs, 100\,k€.
 
-%\noindent\years{2012}Paula S. Leon, Ivo Vanzetta, Guillaume S. Masson and Laurent Perrinet, ``Motion Clouds: Model-based stimulus synthesis of natural-like random textures for the study of motion perception'', {\bf Journal of Neurophysiology}.%, 107(11):3217--3226.
-%
-%\noindent\years{2012}Laurent~Perrinet and Guillaume~S. Masson, ``Motion-based prediction is sufficient to solve the aperture problem", {\bf Neural Computation}. \\ %
-%\noindent\years{2011}Guillaume~S. Masson  and Laurent~Perrinet, ``The behavioral receptive field underlying motion integration for primate tracking eye movements", {\bf Neuroscience and biobehavioral reviews}. \\ %
+\noindent\years{2021--2026} Collaborator: ANR \textit{PRIOSENS} (2021--2025), ANR \textit{ACES} (2022--2026), ANR \textit{RubinVase} (2021--2024).
 
-\noindent\years{2010}Laurent~Perrinet, ``Role of homeostasis in learning sparse representations", {\bf Neural Computation}.%, 22\penalty0 (7). \\ %
+\section*{Selected publications}
 
-%\noindent\years{2007}Frederic Barthelemy, Laurent~Perrinet, Eric Castet, and  Guillaume~S. Masson, ``Dynamics of distributed {1{D}} and {2{D}} motion representations for short-latency ocular following", {\bf Vision {R}esearch}.\\%, 48\penalty0 (4):\penalty0 501--22. \\%\newblock \doi{10.1016/j.visres.2007.10.020}.\\
+\noindent\years{2025} Andrew Isaac Meso, Jonathan Vacher, Nikos Gekas, Pascal Mamassian, Laurent U Perrinet, Guillaume S Masson. ``DynTex: A Real-Time Generative Model of Dynamic Naturalistic Luminance Textures.'' {\bf Journal of Vision}.
 
-%\noindent\years{2007}Laurent~Perrinet and Guillaume~S. Masson, ``Modeling spatial integration in the ocular following response using a  probabilistic framework", {\bf Journal of {P}hysiology ({P}aris)}.\\%
+\noindent\years{2025} Skye Gunasekaran \emph{et al.}, Laurent Perrinet. ``A Predictive Approach to Enhance Time-Series Forecasting.'' {\bf Nature Communications}.
 
-%\noindent\years{2007}Sylvain Fischer, Rafael Redondo, Laurent~Perrinet, and Gabriel  Crist{\'o}bal, ``Sparse approximation of images inspired from the functional architecture of the primary visual areas'' {\bf EURASIP Journal on Advances in Signal Processing},  (1):122.\\
+\noindent\years{2024} Antoine Grimaldi, Victor Boutin, Sio-Hoi Ieng, Ryad Benosman, Laurent U Perrinet. ``A Robust Event-Driven Approach to Always-on Object Recognition.'' {\bf Neural Networks}.
 
-%\noindent\years{2004}Laurent Perrinet, “Feature detection using spikes : the greedy approach", {\bf Journal of Physiology, Paris}.\\
+\noindent\years{2023} Hugo Ladret, Nelson Cortes, Lamyae Ikan, Frédéric Chavane, Christian Casanova, Laurent U Perrinet. ``Cortical recurrence supports resilience to sensory variance in the primary visual cortex.'' {\bf Nature Communications Biology}.
 
-\noindent\years{2004}Laurent Perrinet, Manuel Samuelides and Simon Thorpe, ``Coding static natural images using spiking event times : do neurons cooperate?",  {\bf IEEE Transactions on Neural Networks}.%, 15(5):1164--75.%
-%\end{itemize}
-%\subsection*{Book chapter}
+\noindent\years{2022} Frédéric Chavane, Laurent U Perrinet, James Rankin. ``Revisiting Horizontal Connectivity Rules in V1: From like-to-like towards like-to-All.'' {\bf Brain Structure and Function}.
 
-%\noindent\years{2007}Laurent Perrinet (2007) “Dynamical neural networks: modeling low-level vision at short latencies".  In \emph{Topics in Dynamical Neural Networks: From Large Scale Neural Networks to Motor Control and Vision}: volume 142 of {\bf The European Physical Journal (Special Topics)}.  Springer Berlin / Heidelberg.%, mar 2007, pages 163--225.  \doi{10.1140/epjst/e2007-00061-7}. %
-%\subsection*{Book}
-%\noindent\years{2015}Gabriel Cristobal, Laurent Perrinet and Matthias S Keil, editors. ``Biologically Inspired Computer Vision.'' {\bf Wiley-VCH} % Verlag GmbH and Co. KGaA, 7 oct. 2015. isbn : 9783527680863.
-%doi : 10.1002/9783527680863. %url : http://onlinelibrary. wiley.com/book/10.1002/9783527680863
-%
-%\subsection*{Talks}
-%
-%\noindent\years{2008}Laurent Perrinet (2008), “Adaptive sparse spike coding : applications of neuroscience to the compression of natural images." In \emph{Optical and Digital Image Processing Conference 7000 -  Proceedings of SPIE Volume 7000, April 2008}, pages 15 -- S4\\
+\noindent\years{2021} Victor Boutin, Angelo Franciosini, Franck Ruffier, Frédéric Chavane, Laurent U Perrinet. ``Sparse Deep Predictive Coding captures contour integration capabilities of the early visual system.'' {\bf PLoS Computational Biology}.
 
-%\vspace{1cm}
-%\vfill{}
-%\hrulefill
-%
-%% FILL IN THE FULL URL TO YOUR CV
-%\begin{center}
-%%{\scriptsize  Last updated: \today\- •\-
-%%% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
-%%Typeset in \href{http://nitens.org/taraborelli/cvtex}{
-%%% ---- FILL IN THE FULL URL TO YOUR CV HERE
-%%\href{http://nitens.org/taraborelli/cvtex}{http://nitens.org/taraborelli/cvtex}}
-%
-%%{\footnotesize \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex}{Last updated: \today .}
-%%}
-%\end{center}
+\noindent\years{2020} Chloé Pasturel, Anna Montagnini, Laurent U Perrinet. ``Humans adapt their anticipatory eye movements to the volatility of visual motion properties.'' {\bf PLoS Computational Biology}.
 
+\noindent\years{2014} Laurent U Perrinet, Rick A Adams, Karl Friston. ``Active inference, eye movements and oculomotor delays.'' {\bf Biological Cybernetics}.
+
+\noindent\years{2012} Karl Friston, Rick A Adams, Laurent U Perrinet, Michael Breakspear. ``Perceptions as Hypotheses: Saccades as Experiments.'' {\bf Frontiers in Psychology}.
+
+\noindent\years{2012} Claudio Simoncini, Laurent U Perrinet, Anna Montagnini, Pascal Mamassian, Guillaume S Masson. ``More is not always better: dissociation between perception and action explained by adaptive gain control.'' {\bf Nature Neuroscience}.
+
+\noindent\years{2010} Laurent Perrinet. ``Role of homeostasis in learning sparse representations.'' {\bf Neural Computation}.
+
+\noindent\years{2004} Laurent Perrinet, Manuel Samuelides, Simon Thorpe. ``Coding static natural images using spiking event times: do neurons cooperate?'' {\bf IEEE Transactions on Neural Networks}.
+
+\medskip
+\noindent{\footnotesize Bibliometric indices (March 2026): 63 peer-reviewed journal articles, $>$4200 citations, h$=$30, i10$=$61. \href{https://scholar.google.com/citations?user=TVyUV38AAAAJ}{Google Scholar}.}
+
+{\footnotesize \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex}{Last updated: \today} --- \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex/blob/master/perrinet_curriculum-vitae-full.pdf}{Full version}.}
 
 \end{document}
