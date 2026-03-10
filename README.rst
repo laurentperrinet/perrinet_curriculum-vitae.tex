@@ -5,6 +5,12 @@ Laurent Perrinet est un chercheur qui étudie le fonctionnement du cerveau. Il s
 Cela pourrait notamment aider à mieux comprendre ce qui se passe entre deux battements de paupières : comment le cerveau perçoit une image, la traite et décide d'une action comme bouger les yeux.
 Actuellement, Laurent Perrinet mène ses recherches à l'Institut de Neurosciences de la Timone(France), une unité mixte de recherche (CNRS / Aix-Marseille Université).
 
+biosketch :fr: institutionnel
+-----------------------------
+
+Laurent Perrinet est chercheur en neurosciences au CNRS, à l'Institut de Neurosciences de la Timone à Marseille. Il s'intéresse à une question fondamentale : comment notre cerveau parvient-il à construire une image cohérente du monde à partir d'informations visuelles fragmentées et incertaines ?
+Pour y répondre, il développe des modèles informatiques inspirés du fonctionnement du cerveau. Ces modèles reproduisent la façon dont les neurones communiquent par de brèves impulsions électriques, et cherchent à expliquer pourquoi la vision biologique est à la fois si rapide et si efficace énergétiquement. Les algorithmes qui en résultent ouvrent des pistes concrètes pour une intelligence artificielle plus sobre et plus robuste.
+
 biosketch :en: grand public
 ---------------------------
 
