@@ -68,6 +68,10 @@ Curriculum Vit\ae\ détaillé
             backref=true,
 %            bibstyle=alphabetic
             ]{biblatex}%
+% Champs de liens secondaires des entrées, alignés sur le blog laurentperrinet.github.io
+% (générés depuis le bloc links: du front matter des index.md)
+\DeclareDatamodelFields[editertype=field, datatype=uri, type=entry]{%
+    url_hal, url_code, url_slides, url_video, url_venue, url_pdf, url_dataset, url_event}
 \addbibresource{LaurentPerrinet_publications.bib}
 \addbibresource{LaurentPerrinet_talks.bib}
 %\usepackage[normalem]{ulem} %for \uline{}
@@ -84,6 +88,37 @@ Curriculum Vit\ae\ détaillé
 %}
 % https://tex.stackexchange.com/questions/359311/how-to-underline-name-of-specific-authors-in-biblatex
 \usepackage{xpatch}
+
+%%%% Liens secondaires affichés en fin d'entrée bibliographique (HAL, code, …)
+\DefineBibliographyStrings{english}{%
+    urlhal      = {HAL},
+    urlcode     = {code},
+    urlslides   = {slides},
+    urlvideo    = {vid\'eo},
+    urlvenue    = {lieu},
+    urlpdf      = {pdf},
+    urldataset = {donn\'ees},
+    eventurl    = {colloque},
+}
+\DeclareFieldFormat{url_hal}{\bibstring{urlhal}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_code}{\bibstring{urlcode}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_slides}{\bibstring{urlslides}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_video}{\bibstring{urlvideo}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_venue}{\bibstring{urlvenue}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_pdf}{\bibstring{urlpdf}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_dataset}{\bibstring{urldataset}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_event}{\bibstring{eventurl}\addcolon\space\url{#1}}
+\newbibmacro*{secondarylinks}{%
+    \iffieldundef{url_hal}{}{\newunit\newblock\printfield{url_hal}}%
+    \iffieldundef{url_code}{}{\newunit\newblock\printfield{url_code}}%
+    \iffieldundef{url_slides}{}{\newunit\newblock\printfield{url_slides}}%
+    \iffieldundef{url_video}{}{\newunit\newblock\printfield{url_video}}%
+    \iffieldundef{url_venue}{}{\newunit\newblock\printfield{url_venue}}%
+    \iffieldundef{url_pdf}{}{\newunit\newblock\printfield{url_pdf}}%
+    \iffieldundef{url_dataset}{}{\newunit\newblock\printfield{url_dataset}}%
+    \iffieldundef{url_event}{}{\newunit\newblock\printfield{url_event}}%
+}
+\xpatchbibmacro{finentry}{\finentry}{\finentry\newunit\usebibmacro{secondarylinks}}{}{}
 \usepackage[normalem]{ulem}
 
 \newbox\savenamebox
