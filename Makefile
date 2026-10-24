@@ -1,7 +1,7 @@
 default: pdf 
 all: pdf
 SRC = perrinet_curriculum-vitae
-pdf: $(SRC).pdf $(SRC)-full.pdf $(SRC)-short.pdf perrinet_publications.pdf
+pdf: $(SRC).pdf $(SRC)-full_fr.pdf $(SRC)-full_en.pdf $(SRC)-short.pdf $(SRC)-short_fr.pdf perrinet_publications.pdf
 
 LATEXMK = latexmk -pdf -pdflatex=lualatex
 BIBTEX = bibtex -terse
@@ -12,7 +12,7 @@ $(SRC).pdf: $(SRC).tex $(BIB)
 
 # the generic rule below only depends on the .tex file: declare the .bib files
 # these documents cite, otherwise editing a reference never triggers a rebuild
-$(SRC)-full.pdf perrinet_publications.pdf: $(BIB)
+$(SRC)-full_fr.pdf $(SRC)-full_en.pdf $(SRC)-short.pdf $(SRC)-short_fr.pdf perrinet_publications.pdf: $(BIB)
 
 push: pdf $(BIB)
 	git commit -m "Build website" -a ; git push
