@@ -5,11 +5,16 @@ pdf: $(SRC).pdf $(SRC)-full.pdf $(SRC)-short.pdf perrinet_publications.pdf
 
 LATEXMK = latexmk -pdf -pdflatex=lualatex
 BIBTEX = bibtex -terse
+BIB = LaurentPerrinet_publications.bib LaurentPerrinet_talks.bib
 
-$(SRC).pdf: $(SRC).tex  LaurentPerrinet_publications.bib LaurentPerrinet_talks.bib
+$(SRC).pdf: $(SRC).tex $(BIB)
 	$(LATEXMK) $(SRC).tex
 
-push: pdf LaurentPerrinet_publications.bib LaurentPerrinet_talks.bib
+# the generic rule below only depends on the .tex file: declare the .bib files
+# these documents cite, otherwise editing a reference never triggers a rebuild
+$(SRC)-full.pdf perrinet_publications.pdf: $(BIB)
+
+push: pdf $(BIB)
 	git commit -m "Build website" -a ; git push
 
 # macros
@@ -24,9 +29,9 @@ push: pdf LaurentPerrinet_publications.bib LaurentPerrinet_talks.bib
 
 # cleaning macro
 clean:
-	rm -f *.dvi *.fls *.ilg *.ind *idx *.bcf *.run.xml *.dvi *.ps *.out *.log *.aux *.bbl *.blg  *.fdb_latexmk *.snm *.nav *.toc *.info *.synctex.gz*
+	rm -f *.dvi *.fls *.ilg *.ind *.idx *.bcf *.run.xml *.dvi *.ps *.out *.log *.aux *.bbl *.blg  *.fdb_latexmk *.snm *.nav *.toc *.info *.synctex.gz*
 
 touch:
 	touch *.tex
 
-.PHONY: clean
+.PHONY: default all pdf push clean touch
