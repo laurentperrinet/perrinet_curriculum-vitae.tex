@@ -1,18 +1,15 @@
 default: pdf 
 all: pdf
 SRC = perrinet_curriculum-vitae
-pdf: $(SRC).pdf $(SRC)-full_fr.pdf $(SRC)-full_en.pdf $(SRC)-short_en.pdf $(SRC)-short_fr.pdf perrinet_publications.pdf
+pdf: $(SRC)-full_fr.pdf $(SRC)-full_en.pdf $(SRC)-short_en.pdf $(SRC)-short_fr.pdf perrinet_publications_fr.pdf perrinet_publications_en.pdf
 
 LATEXMK = latexmk -pdf -pdflatex=lualatex
 BIBTEX = bibtex -terse
 BIB = LaurentPerrinet_publications.bib LaurentPerrinet_talks.bib
 
-$(SRC).pdf: $(SRC).tex $(BIB)
-	$(LATEXMK) $(SRC).tex
-
 # the generic rule below only depends on the .tex file: declare the .bib files
 # these documents cite, otherwise editing a reference never triggers a rebuild
-$(SRC)-full_fr.pdf $(SRC)-full_en.pdf $(SRC)-short_en.pdf $(SRC)-short_fr.pdf perrinet_publications.pdf: $(BIB)
+$(SRC)-full_fr.pdf $(SRC)-full_en.pdf $(SRC)-short_en.pdf $(SRC)-short_fr.pdf perrinet_publications_fr.pdf perrinet_publications_en.pdf: $(BIB)
 
 push: pdf $(BIB)
 	git commit -m "Build website" -a ; git push

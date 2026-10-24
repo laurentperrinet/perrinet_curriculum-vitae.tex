@@ -12,6 +12,10 @@
 \usepackage{csquotes}%
 \usepackage{etaremune}%
 \usepackage{lmodern}
+\usepackage{enumitem}
+% room for labels such as A65: the default \labelwidth is narrower than the label,
+% so the label would run into the text of the entry
+\setlist[enumerate]{leftmargin=3.4em,labelwidth=2.8em,labelsep=0.6em,align=left}
 % \usepackage[final]{pdfpages}%
 %% --- unit formatting ---
 % \usepackage{microtype}	% Better typography \tolerance 1414
@@ -68,10 +72,11 @@ Liste complète des publications
 \usepackage{xpatch}
 
 %%%% Liens secondaires affichés en fin d'entrée bibliographique (HAL, code, …)
-\DefineBibliographyStrings{english}{%
+\NewBibliographyString{urlhal,urlcode,urlslides,urlvideo,urlvenue,urlpdf,urldataset,eventurl}
+\DefineBibliographyStrings{french}{%
     urlhal     = {HAL},
     urlcode    = {code},
-    urlslides  = {slides},
+    urlslides  = {diapositives},
     urlvideo   = {vid\'eo},
     urlvenue   = {lieu},
     urlpdf     = {pdf},
@@ -104,9 +109,6 @@ Liste complète des publications
 \setcounter{biburlnumpenalty}{100}
 \setcounter{biburlucpenalty}{100}
 \setcounter{biburllcpenalty}{100}
-\setcounter{biburlnumskip}{0}
-\setcounter{biburlucskip}{0}
-\setcounter{biburllcskip}{0}
 % lets TeX stretch inter-word spaces on a third pass instead of overflowing
 \emergencystretch=8em
 
@@ -142,7 +144,9 @@ Liste complète des publications
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% OPTIONAL MACRO FILES
 %============ hyperref ===================
-\usepackage[unicode,linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,%pdfborder={0 0 0}
+\usepackage{xcolor}
+\definecolor{linkblue}{rgb}{0,0,0.55}% dark blue for all links (classic Netscape look)
+\usepackage[unicode,colorlinks,linkcolor=linkblue,citecolor=linkblue,filecolor=black,urlcolor=linkblue,
 ]{hyperref}%
 \hypersetup{%
 unicode = true, %

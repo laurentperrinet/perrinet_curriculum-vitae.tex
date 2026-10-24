@@ -16,8 +16,7 @@ Ce dépôt contient les sources LaTeX (compilées avec `lualatex` via `latexmk`)
 
 * **CV court** : [version française](perrinet_curriculum-vitae-short_fr.pdf) ([source](perrinet_curriculum-vitae-short_fr.tex)) · [English version](perrinet_curriculum-vitae-short_en.pdf) ([source](perrinet_curriculum-vitae-short_en.tex))
 * **CV détaillé** : [version française](perrinet_curriculum-vitae-full_fr.pdf) ([source](perrinet_curriculum-vitae-full_fr.tex)) · [English version](perrinet_curriculum-vitae-full_en.pdf) ([source](perrinet_curriculum-vitae-full_en.tex))
-* **CV résumé (en anglais)** : [PDF](perrinet_curriculum-vitae.pdf) ([source](perrinet_curriculum-vitae.tex))
-* **Liste complète des publications** : [PDF](perrinet_publications.pdf) ([source](perrinet_publications.tex))
+* **Liste complète des publications** : [version française](perrinet_publications_fr.pdf) ([source](perrinet_publications_fr.tex)) · [English version](perrinet_publications_en.pdf) ([source](perrinet_publications_en.tex))
 * **Bases bibliographiques** (BibTeX) : [publications](LaurentPerrinet_publications.bib) · [communications](LaurentPerrinet_talks.bib)
 
 ### Compilation
@@ -49,8 +48,7 @@ This repository holds the LaTeX sources (built with `lualatex` through `latexmk`
 
 * **Short CV**: [English version](perrinet_curriculum-vitae-short_en.pdf) ([source](perrinet_curriculum-vitae-short_en.tex)) · [version française](perrinet_curriculum-vitae-short_fr.pdf) ([source](perrinet_curriculum-vitae-short_fr.tex))
 * **Detailed CV**: [English version](perrinet_curriculum-vitae-full_en.pdf) ([source](perrinet_curriculum-vitae-full_en.tex)) · [version française](perrinet_curriculum-vitae-full_fr.pdf) ([source](perrinet_curriculum-vitae-full_fr.tex))
-* **Summary CV** (English): [PDF](perrinet_curriculum-vitae.pdf) ([source](perrinet_curriculum-vitae.tex))
-* **Complete list of publications** (in French): [PDF](perrinet_publications.pdf) ([source](perrinet_publications.tex))
+* **Complete list of publications**: [English version](perrinet_publications_en.pdf) ([source](perrinet_publications_en.tex)) · [version française](perrinet_publications_fr.pdf) ([source](perrinet_publications_fr.tex))
 * **Bibliographic databases** (BibTeX): [publications](LaurentPerrinet_publications.bib) · [talks](LaurentPerrinet_talks.bib)
 
 ### Building
