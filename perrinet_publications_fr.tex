@@ -99,6 +99,17 @@ Liste complète des publications
 \xpatchbibmacro{finentry}{\finentry}{\finentry\newunit\usebibmacro{secondarylinks}}{}{}
 \usepackage[normalem]{ulem}
 
+%%%% Line breaking of long URLs and DOIs in the bibliography:
+%%%% allow breaks after digits and letters (default penalties forbid them almost entirely)
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburllcpenalty}{100}
+\setcounter{biburlnumskip}{0}
+\setcounter{biburlucskip}{0}
+\setcounter{biburllcskip}{0}
+% lets TeX stretch inter-word spaces on a third pass instead of overflowing
+\emergencystretch=8em
+
 \newbox\savenamebox
 
 %\newbibmacro*{name:bbold}[2]{%

@@ -46,6 +46,29 @@ pdfsubject={\Title}%
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+% ---- PUBLICATIONS SÉLECTIONNÉES, MISES EN FORME DEPUIS LE FICHIER BIB
+\usepackage[backend=biber, bibencoding=utf8, style=authoryear, sorting=none,
+            maxbibnames=7, minbibnames=7, uniquename=false, uniquelist=false,
+            giveninits=true]{biblatex}
+\addbibresource{LaurentPerrinet_publications.bib}
+\DeclareNameAlias{author}{given-family}
+\renewcommand*{\multinamedelim}{\addcomma\space}
+\renewcommand*{\finalnamedelim}{\addcomma\space}
+% année en marge, auteurs, titre (guillemets du style), revue en gras (sans volume ni pages)
+% un même pilote pour tous les types usuels ; le titre de la revue ou, à défaut, celui du livre ou du congrès
+\DeclareFieldFormat[article,inproceedings,incollection,inbook,book,misc,online,report,thesis,unpublished]{title}{\mkbibquote{#1\adddot}}
+% DOI cliquable, en petit, à la fin de l'entrée (omis si le champ est absent)
+\DeclareFieldFormat{doi}{{\footnotesize doi\addcolon\space\href{https://doi.org/#1}{\nolinkurl{#1}}}}
+\newbibmacro*{shortentry}{%
+  \years{\printfield{year}}%
+  \printnames{author}\addperiod\space
+  \printfield{title}\space
+  {\bf\iffieldundef{journaltitle}{\printfield{booktitle}}{\printfield{journaltitle}}}\addperiod
+  \iffieldundef{doi}{}{\space\printfield{doi}}%
+  \finentry\par}
+\newcommand*{\declareshortdriver}[1]{\DeclareBibliographyDriver{#1}{\usebibmacro{shortentry}}}
+\forcsvlist{\declareshortdriver}{article,inproceedings,incollection,inbook,book,misc,online,report,thesis,unpublished}
+\defbibenvironment{shortlist}{}{}{\noindent}
 % DOCUMENT
 \begin{document}
 \pagestyle{empty}
@@ -96,33 +119,21 @@ Processus prédictifs, codage parcimonieux et perception active.
 
 \section*{Publications sélectionnées}
 
-\noindent\years{2025} Andrew Isaac Meso, Jonathan Vacher, Nikos Gekas, Pascal Mamassian, Laurent U Perrinet, Guillaume S Masson. ``DynTex: A Real-Time Generative Model of Dynamic Naturalistic Luminance Textures.'' {\bf Journal of Vision}.
-
-\noindent\years{2025} Skye Gunasekaran \emph{et al.}, Laurent Perrinet. ``A Predictive Approach to Enhance Time-Series Forecasting.'' {\bf Nature Communications}.
-
-\noindent\years{2024} Antoine Grimaldi, Laurent U Perrinet. ``A Robust Event-Driven Approach to Always-on Object Recognition.'' {\bf Neural Networks}.
-
-\noindent\years{2023} Hugo Ladret, Nelson Cortes, Lamyae Ikan, Frédéric Chavane, Christian Casanova, Laurent U Perrinet. ``Cortical recurrence supports resilience to sensory variance in the primary visual cortex.'' {\bf Nature Communications Biology}.
-
-\noindent\years{2022} Frédéric Chavane, Laurent U Perrinet, James Rankin. ``Revisiting Horizontal Connectivity Rules in V1: From like-to-like towards like-to-All.'' {\bf Brain Structure and Function}.
-
-\noindent\years{2021} Victor Boutin, Angelo Franciosini, Franck Ruffier, Frédéric Chavane, Laurent U Perrinet. ``Sparse Deep Predictive Coding captures contour integration capabilities of the early visual system.'' {\bf PLoS Computational Biology}.
-
-\noindent\years{2020} Chloé Pasturel, Anna Montagnini, Laurent U Perrinet. ``Humans adapt their anticipatory eye movements to the volatility of visual motion properties.'' {\bf PLoS Computational Biology}.
-
-\noindent\years{2014} Laurent U Perrinet, Rick A Adams, Karl Friston. ``Active inference, eye movements and oculomotor delays.'' {\bf Biological Cybernetics}.
-
-\noindent\years{2012} Karl Friston, Rick A Adams, Laurent U Perrinet, Michael Breakspear. ``Perceptions as Hypotheses: Saccades as Experiments.'' {\bf Frontiers in Psychology}.
-
-\noindent\years{2012} Claudio Simoncini, Laurent U Perrinet, Anna Montagnini, Pascal Mamassian, Guillaume S Masson. ``More is not always better: dissociation between perception and action explained by adaptive gain control.'' {\bf Nature Neuroscience}.
-
-\noindent\years{2010} Laurent Perrinet. ``Role of homeostasis in learning sparse representations.'' {\bf Neural Computation}.
-
-\noindent\years{2004} Laurent Perrinet, Manuel Samuelides, Simon Thorpe. ``Coding static natural images using spiking event times: do neurons cooperate?'' {\bf IEEE Transactions on Neural Networks}.
+\nocite{Perrinet26,
+        Jeremie25,
+        Gunasekaran25,
+        Grimaldi23BC,
+        Ladret23,
+        BoutinFranciosiniChavaneRuffierPerrinet20,
+        PasturelMontagniniPerrinet20,
+        PerrinetAdamsFriston14,
+        Friston12,
+        Simoncini12,
+        Perrinet10shl,
+        Perrinet03ieee}
+\printbibliography[heading=none, env=shortlist]
 
 \medskip
-\noindent{\footnotesize Indices bibliométriques~: \href{https://scholar.google.com/citations?user=TVyUV38AAAAJ}{Google Scholar} (octobre 2026)~: 63 articles dans des revues à comité de lecture, $>$4400 citations, h$=$30, i10$=$64~; \href{https://openalex.org/authors/A5010769763}{OpenAlex} (octobre 2026)~: 233 documents, $>$2500 citations, h$=$26, i10$=$54.}
-
-{\footnotesize \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex}{Dernière mise à jour~: \today} --- Lien vers une \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex/blob/master/perrinet_curriculum-vitae-full.pdf}{version détaillée du CV}.}
+\noindent{\footnotesize Indices bibliométriques~: 63 articles dans des revues à comité de lecture, \href{https://scholar.google.com/citations?user=TVyUV38AAAAJ}{Google Scholar}~: $>$4400 citations, h$=$30, i10$=$64~; \href{https://openalex.org/authors/A5010769763}{OpenAlex}~: 233 documents, $>$2500 citations, h$=$26, i10$=$54.} {\footnotesize \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex}{Dernière mise à jour~: \today} --- Lien vers une \href{https://github.com/laurentperrinet/perrinet_curriculum-vitae.tex/blob/master/perrinet_curriculum-vitae-full_fr.pdf}{version détaillée du CV}.}
 
 \end{document}

@@ -1,0 +1,791 @@
+%! TeX TS-program = lualatex
+%! TeX encoding = UTF-8 Unicode
+%! TeX spellcheck = en-GB
+%! BIB TS-program = biber
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+\documentclass[english,a4paper,oneside]{article}%,twoside,draft
+%============ common ===================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}%
+\usepackage[british]{babel}%
+\usepackage{csquotes}%
+\usepackage{etaremune}%
+\usepackage{lmodern}
+% \usepackage[final]{pdfpages}%
+%% --- unit formatting ---
+% \usepackage{microtype}	% Better typography \tolerance 1414
+% \hbadness 1414
+% \emergencystretch 1.5em
+% \hfuzz 0.3pt
+% \widowpenalty=10000
+% \vfuzz \hfuzz
+% \raggedbottom
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{amsmath,amsfonts,amsthm}			% Math packages
+% \usepackage{bm}%This package defines commands to access bold math symbols
+\usepackage{graphicx}					% Enable pdflatex
+%============ front-matter ===================
+\newcommand{\BookTitle}{Centre National de la Recherche Scientifique}
+\newcommand{\Title}{%
+Complete list of publications
+}%
+\newcommand{\SubTitle}{%
+%Pour évaluation par les sections du Comité national22U
+}%
+\newcommand{\Author}{Laurent U~Perrinet}%
+\newcommand{\Team}{Team NEural OPerations in TOpographies (NeOpTo)}%
+\newcommand{\Institute}{Institut de Neurosciences de la Timone}%
+\newcommand{\InstituteUMR}{UMR 7289, CNRS / Aix-Marseille University}%
+\newcommand{\Address}{27, Bd. Jean Moulin, 13385 Marseille Cedex 5, France}
+\newcommand{\Website}{https://laurentperrinet.github.io/}
+\newcommand{\Email}{Laurent.Perrinet@univ-amu.fr}
+%%%%%%%%%%%%%%%%%%
+%BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%
+\usepackage[natbib=true,
+			bibencoding=utf8,
+%			encoding=utf8,
+			maxcitenames=10,
+			maxnames=10,
+			%minnames=3,
+			maxbibnames=10,
+            sortcites=true,
+            block=space,
+            backend=biber,
+%            doi=false,isbn=false,url=false,
+            citestyle=alphabetic,%authoryear-comp,
+            backref=true,
+%            bibstyle=alphabetic
+            ]{biblatex}%
+% Champs de liens secondaires des entrées, alignés sur le blog laurentperrinet.github.io
+% (générés depuis le bloc links: du front matter des index.md)
+\DeclareDatamodelFields[editertype=field, datatype=uri, type=entry]{%
+    url_hal, url_code, url_slides, url_video, url_venue, url_pdf, url_dataset, url_event}
+\addbibresource{LaurentPerrinet_publications.bib}
+\addbibresource{LaurentPerrinet_talks.bib}
+% https://tex.stackexchange.com/questions/359311/how-to-underline-name-of-specific-authors-in-biblatex
+\usepackage{xpatch}
+
+%%%% Liens secondaires affichés en fin d'entrée bibliographique (HAL, code, …)
+\DefineBibliographyStrings{english}{%
+    urlhal     = {HAL},
+    urlcode    = {code},
+    urlslides  = {slides},
+    urlvideo   = {video},
+    urlvenue   = {venue},
+    urlpdf     = {pdf},
+    urldataset = {dataset},
+    eventurl   = {event},
+}
+\DeclareFieldFormat{url_hal}{\bibstring{urlhal}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_code}{\bibstring{urlcode}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_slides}{\bibstring{urlslides}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_video}{\bibstring{urlvideo}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_venue}{\bibstring{urlvenue}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_pdf}{\bibstring{urlpdf}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_dataset}{\bibstring{urldataset}\addcolon\space\url{#1}}
+\DeclareFieldFormat{url_event}{\bibstring{eventurl}\addcolon\space\url{#1}}
+\newbibmacro*{secondarylinks}{%
+    \iffieldundef{url_hal}{}{\newunit\newblock\printfield{url_hal}}%
+    \iffieldundef{url_code}{}{\newunit\newblock\printfield{url_code}}%
+    \iffieldundef{url_slides}{}{\newunit\newblock\printfield{url_slides}}%
+    \iffieldundef{url_video}{}{\newunit\newblock\printfield{url_video}}%
+    \iffieldundef{url_venue}{}{\newunit\newblock\printfield{url_venue}}%
+    \iffieldundef{url_pdf}{}{\newunit\newblock\printfield{url_pdf}}%
+    \iffieldundef{url_dataset}{}{\newunit\newblock\printfield{url_dataset}}%
+    \iffieldundef{url_event}{}{\newunit\newblock\printfield{url_event}}%
+}
+\xpatchbibmacro{finentry}{\finentry}{\finentry\newunit\usebibmacro{secondarylinks}}{}{}
+\usepackage[normalem]{ulem}
+
+%%%% Line breaking of long URLs and DOIs in the bibliography:
+%%%% allow breaks after digits and letters (default penalties forbid them almost entirely)
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburllcpenalty}{100}
+\setcounter{biburlnumskip}{0}
+\setcounter{biburlucskip}{0}
+\setcounter{biburllcskip}{0}
+% lets TeX stretch inter-word spaces on a third pass instead of overflowing
+\emergencystretch=8em
+
+\newbox\savenamebox
+
+%\newbibmacro*{name:bbold}[2]{%
+%  \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+%  \dolistloop{\boldnames}%
+%}
+\newbibmacro*{name:bbold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\newbibmacro*{name:ebold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\egroup\uline{\usebox\savenamebox}\listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\xpatchbibmacro{name:given-family}{\usebibmacro{name:delim}{#2#3#1}}{\usebibmacro{name:delim}{#2#3#1}\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+
+%\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+\xapptobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:given-family}{\usebibmacro{name:ebold}{#1}{#2}\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+\newcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}{
+  {8fa031352aa34db95f5c1022358042a3}, % InBold
+  {01b588ba4e4ad753feae6c81709fc04b}} % Highlight
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OPTIONAL MACRO FILES
+%============ hyperref ===================
+\usepackage[unicode,linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,%pdfborder={0 0 0}
+]{hyperref}%
+\hypersetup{%
+unicode = true, %
+pdftitle={\Title},%
+pdfauthor={\Author < \Email > - \Institute, \InstituteUMR , \Address - \Website},%
+pdfsubject={\Title}%
+}%
+%\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue}
+%\hyphenpenalty=5000
+%\tolerance=1000
+%% DOCUMENT LAYOUT
+%\usepackage{geometry}
+%\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+%\setlength\parindent{0in}
+%% ---- MARGIN YEARS
+\newcommand{\years}[1]{\marginpar{\textit{\scriptsize #1}}}
+\providecommand{\natexlab}[1]{#1}
+%\providecommand{\url}[1]{\texttt{#1}}
+%\expandafter\ifx\csname urlstyle\endcsname\relax
+ \providecommand{\doi}[1]{doi: #1}%\else
+%  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+%\makepagestyle{chapter}
+%\makeoddfoot{chapter}{\addRevisionData}{\thepage}{}
+%\makeevenfoot{chapter}{\addRevisionData}{\thepage}{}
+\usepackage{geometry}
+\geometry{hscale=0.66,vscale=0.8,centering}
+%%%%%%%%%%%% Her begynner selve dokumentet %%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+%\vskip 2cm
+\emph{\Large \BookTitle }%
+\vskip 2cm
+{\Huge \Title}
+\vskip 1cm
+{\Large Laurent U~\textsc{Perrinet}}
+\vskip 1cm
+\emph{\Large \SubTitle } %\\%
+%\begin{tabular}[t]{ccc}
+%\includegraphics[height=2.5cm]{logo_cnrs-UAM.png} &%\includegraphics[]{}
+%\includegraphics[height=2.5cm]{logo_int.png} %& %
+%%	\includegraphics[height=2.5cm]{U2_logo.pdf}
+%\end{tabular}
+\vskip 1cm
+\includegraphics[width=1.\textwidth]{logotypes/troislogos.png}
+\vskip 1cm
+\begin{tabular}[t]{|c|}
+\hline
+\Team \\\hline
+\Institute \\ \InstituteUMR \\\hline
+\Address \\\hline
+\url{\Website}\\\hline
+\url{\Email}\\\hline
+\end{tabular}
+\vskip .5cm
+\vfill
+{\large \today}\\
+
+\end{center}
+\end{titlepage}
+
+%%%%%%%%%%%% Endyet daag koepf dokumentet %%%%%%%%%%%%%%%
+
+%\chapter{Complete list of publications}
+%\label{chap:publis}%
+
+% TODO : La Section recommande d’indiquer, à la suite de chaque publication, l’impact facteur et/ou le quartile de la revue dans la base de données indexée.
+
+%\section{Liste des publications}
+%%
+%Vous présenterez la liste de vos publications scientifiques depuis les 5 ou 10 derniers semestres (distincte de la liste exhaustive de vos publications, mise à jour et transmise en fichier séparé) selon l?une des deux listes suivantes :
+
+\section{Journal articles under review}%
+%Publications dans des journaux à comité de lecture}
+\begin{enumerate}
+% \item[A59] \fullcite{}% _FA_
+\item[A65] 
+\fullcite{Benvenuti22}%
+
+\item[A64] 
+  \fullcite{Perrinet26}% _LA_
+
+\item[A63] 
+  \fullcite{Dallain26}% _LA_
+
+\end{enumerate}
+
+\section{Peer-reviewed international journal articles}%
+
+\begin{enumerate}
+  
+\years{2026} 
+
+  \item[A62] 
+  \fullcite{Mairot26}% _LA_
+
+  \item[A61] 
+  \fullcite{Kronlandmartinet26}% _LA_
+
+\item[A60] 
+\fullcite{Jeremie25}% _LA_
+
+\item[A59] 
+\years{2025} 
+  \fullcite{Meso25}
+
+\item[A58] 
+  \fullcite{Gunasekaran25}% 
+  
+\item[A57] 
+  \years{2024} 
+  \fullcite{Grimaldi24}% _LA_
+  
+\item[A56] 
+  \fullcite{Ladret24sparse}% _LA_
+
+\item[A55] 
+\years{2023} 
+  \fullcite{Rentzeperis23}
+  
+\item[A54] 
+  \fullcite{Gruel23BC}% _LA_
+  
+\item[A53] 
+  \fullcite{Grimaldi23BC}% _LA_
+  
+\item[A52] 
+  \fullcite{Ladret23}% _LA_
+
+\item[A51] 
+  \fullcite{Jeremie23UltraFastCat}% _LA_
+  
+\item[A50] 
+\years{2022} 
+  \fullcite{Grimaldi22polychronies}% _LA_
+
+\item[A49] \fullcite{Franciosini21}% _LA_
+
+\item[A48] \fullcite{Barthelemy22}% _LA_
+
+\item[A47] \fullcite{Chavane22}%
+
+\item[A46] \years{2021} \fullcite{BoutinFranciosiniChavaneRuffierPerrinet20}% _LA_
+
+\item[A45] \years{2020} \fullcite{BoutinFranciosiniRuffierPerrinet20feedback}% _LA_
+
+\item[A44] \fullcite{Dauce20} %  _LA_
+
+\item[A43] \fullcite{PasturelMontagniniPerrinet20}%  _LA_
+
+\item[A42] \years{2019}\fullcite{Perrinet19hulk}% _FA_
+
+\item[A41] \fullcite{Ravello19}%
+
+\item[A40] \fullcite{Chemla19}
+
+\item[A39] \years{2018} \fullcite{Damasse18}
+
+\item[A38] \fullcite{Vacher16}
+
+\item[A37] \years{2017} \fullcite{KhoeiMassonPerrinet17}%%  _LA_
+
+\item[A36] \years{2016} \fullcite{Kremkow16}%
+
+\item[A36] \years{2015} \fullcite{Taouali16}% %  _LA_
+
+\item[A35] \fullcite{Vacher15nips}%
+
+\item[A34] \fullcite{PerrinetBednar15}% _FA_
+
+\item[A33] \years{2013} \fullcite{PerrinetAdamsFriston14}% _FA_
+
+\item[A32] \years{2013} \fullcite{Khoei13jpp}%%  _LA_
+
+\item[A31] \fullcite{Kaplan13}%
+
+\item[A30] \fullcite{Nava13}%
+
+\item[A29] \years{2012} \fullcite{Simoncini12}%
+
+\item[A28] \fullcite{Perrinet12pred}% _FA_
+
+\item[A27] \fullcite{Sanz12} % %  _LA_
+
+\item[A26] \fullcite{Friston12}
+
+\item[A25] \fullcite{Adams12} %
+
+\item[A24] \fullcite{Masson12}%  _LA_
+
+\item[A23] \fullcite{Voges12}%  _LA_
+
+\item[A22] \years{2011} \fullcite{Fleuriet11}
+
+\item[A21] \fullcite{Bogadhi11}
+
+\item[A20] \years{2010} \fullcite{Perrinet10shl}% _FA_
+
+\item[A19] \fullcite{Dauce10}%  _LA_
+
+\item[A18] \fullcite{Voges10jpp}%  _LA_
+
+\item[A17] \fullcite{Kremkow10jcns}
+
+\item[A16] %\fullcite{Kremkow10jcns}
+Khaled Masmoudi, Marc Antonini, Pierre Kornprobst, Laurent U Perrinet
+\newblock A novel bio-inspired static image compression scheme for noisy data transmission over low-bandwidth channels.
+\newblock \emph{Acoustics Speech and Signal Processing (ICASSP)}, 2010.
+
+\item[A15]\years{2008} \fullcite{Davison08}
+
+
+\item[A14] \fullcite{Perrinet08spie}% _FA_
+
+\item[A13] \fullcite{Barthelemy08}
+
+
+\item[A12] \years{2007} \fullcite{Fischer07cv}
+
+\item[A11] \fullcite{Fischer07}
+
+\item[A10] \fullcite{Montagnini07}
+
+\item[A9] \fullcite{Perrinet07neurocomp}% _FA_
+
+\item[A8] \years{2004}~\fullcite{Perrinet04}% _FA_
+
+\item[A7] \fullcite{Perrinet04tauc}
+\item[A6] \fullcite{Perrinet03ieee}% _FA_
+
+
+\item[A5] \years{2003}~\fullcite{Perrinet03}% _FA_
+
+
+\item[A4] \years{2002}~\fullcite{Perrinet02sparse}% _FA_
+
+\item[A3] \fullcite{Perrinet01}% _FA_
+
+\item[A2] \fullcite{Delorme01}
+
+\item[A1] \fullcite{Perrinet02stdp} %  _FA_
+
+\end{enumerate}
+
+
+\section{Peer-reviewed book chapters}%
+\begin{enumerate}
+%
+\item[C6] \fullcite{Perrinet20}% _FA_
+
+\item[C5] \fullcite{Montagnini15bicv}
+
+\item[C4] \fullcite{Perrinet15bicv}% _FA_
+
+\item[C3] \fullcite{CristobalPerrinetKeil15bicv_chap1}
+
+\item[C2] \fullcite{Cessac07a}
+
+\item[C1] \fullcite{Perrinet07}% _FA_
+%Laurent~U. Perrinet.
+%\newblock Dynamical neural networks: modeling low-level vision at short
+%  latencies.
+%\newblock In \emph{Topics in Dynamical Neural Networks: From Large Scale Neural
+%  Networks to Motor Control and Vision}, volume 142 of \emph{The European
+%  Physical Journal (Special Topics)}, pages 163--225. Springer Verlag, Berlin /
+%  Heidelberg, mar 2007.
+
+%\item[1] { Laurent~U. Perrinet.}
+%\newblock { Dynamical neural networks: modelling low-level vision at short latencies.}
+%\newblock \emph{EPJ Special Topics "Topics in Dynamical Neural Networks: From Large Scale Neural Networks to Motor Control and Vision". Volume 142, pages 163--225.  mar 2007.}.
+%%
+ \end{enumerate}
+
+\section{Theses, projects and books}%
+
+\begin{enumerate}
+
+\item[B6] \fullcite{Perrinet20dr}
+
+\item[B5] \fullcite{CristobalPerrinetKeil15bicv}
+
+\item[B4] \fullcite{Perrinet14hdr}
+
+\item[B3] \fullcite{Perrinet08neurocomp}
+
+\item[B2] \fullcite{Cessac07}
+
+\item[B1] \fullcite{Perrinet03these}
+ \end{enumerate}
+ 
+ \section{Supervised PhD theses}%
+ 
+ 
+ \begin{enumerate}
+ 
+ \item[T9] \fullcite{Jeremie25thesis}
+ 
+ \item[T8] \fullcite{Grimaldi24thesis}
+ 
+ \item[T7] \fullcite{Ladret24thesis}
+ 
+ \item[T6] \fullcite{Gruel23thesis}
+ 
+ \item[T5] \fullcite{Franciosini21thesis}
+
+ \item[T4] \fullcite{MansourPour19thesis}
+ 
+ \item[T3] \fullcite{Damasse18thesis}
+
+ \item[T2] \fullcite{Khoei14thesis}
+ 
+ \item[T1] \fullcite{Kremkow09thesis}
+  \end{enumerate}
+ 
+ 
+\section{Peer-reviewed international conference proceedings}%
+%~\citep{Perrinet08spie}
+\begin{etaremune} % reversed enumerate
+
+  % # 2026
+  \item \fullcite{Gleyo26snufa}% _LA_
+  \item \fullcite{Perrinet26ICANN}% _FA_ _LA_
+  \item \fullcite{Grimaldi26FENS}% 
+  \item \fullcite{Laine26AREADNE}% 
+  \item \fullcite{Perrinet26airov}% _FA_ _LA_
+  \item \fullcite{Choplin26BCI}% 
+
+% # 2025
+\item \fullcite{Kronlandmartinet25snufa}% 
+\item \fullcite{Laine25cns}% 
+\item \fullcite{Choplin25CCN}% 
+\item \fullcite{Jeremie25CCN}% 
+\item \fullcite{Grimaldi25cosyne}% 
+  
+% # 2024
+\item \fullcite{Gekas24ecvp}% 
+\item \fullcite{Jeremie24CCN}% _LA_
+\item \fullcite{Cortes24FENS}% _LA_
+\item \fullcite{Jeremie24FENS}% _LA_
+\item \fullcite{Fois24FENS}% _LA_
+\item \fullcite{Perrinet24FENS}% _FA_ _LA_
+ 
+% # 2023
+\item \fullcite{Perrinet23ICANN}% _FA_ _LA_
+\item \fullcite{Jeremie23ICANN}% _FA_ _LA_
+\item \fullcite{Nunes23ICCV}% 
+\item \fullcite{Jeremie23CCN}% _LA_
+\item \fullcite{Ladret23ICLR}
+\item \fullcite{Grimaldi23GDR}
+\item \fullcite{Ladret23cosyne}
+
+% # 2022
+% \item \fullcite{Ladret21sfn}
+\item \fullcite{Grimaldi22ICIP}% _LA_
+\item \fullcite{Grimaldi22FENS}% _LA_
+\item \fullcite{Ladret22FENS}% _LA_
+\item \fullcite{Jeremie22FENS}% _LA_
+\item \fullcite{Dabane22}% 
+\item \fullcite{Ladret22AREADNE}% _LA_
+\item \fullcite{Rentzeperis22AREADNE}% _LA_
+\item \fullcite{Jeremie22AREADNE}% _LA_
+\item \fullcite{Grimaldi22AREADNE}% _LA_
+
+% # 2021
+\item \fullcite{Ladret21sfn}
+\item \fullcite{Ladret21crs}
+\item \fullcite{Jeremie21crs}
+\item \fullcite{Grimaldi21crs}
+\item \fullcite{Grimaldi21cosyne}
+\item \fullcite{Grimaldi21cbmi}
+\item \fullcite{Vergani21bernstein}
+
+% # 2020
+\item \fullcite{Ladret20aes}
+\item \fullcite{Franciosini20sigma}
+\item \fullcite{Franciosini20cosyne}
+\item \fullcite{Dauce20iwai}
+\item \fullcite{Boutin20sigma}
+
+% # 2019
+\item \fullcite{Ladret19sfn}
+\item \fullcite{Perrinet19nccd} % _FA_
+\item \fullcite{BoutinFranciosiniChavaneRuffierPerrinet19sfn}
+\item \fullcite{FranciosiniPerrinet19cns}
+\item \fullcite{FranciosiniPerrinet19neurofrance}
+\item \fullcite{BoutinFranciosiniRuffierPerrinet19GdrRobotics}
+
+% # 2018
+\item \fullcite{BoutinFranciosiniRuffierPerrinet18DoctoralDay}
+\item \fullcite{BoutinFranciosiniRuffierPerrinet18itwist}
+\item \fullcite{DupeyrouxBoutinSerresPerrinetViollet18}
+\item \fullcite{FranciosiniPerrinet18cs}
+\item \fullcite{Ladret18gdr}
+\item \fullcite{Mansour18vss}
+\item \fullcite{Pasturel18}
+\item \fullcite{Pasturel18anemo}
+\item \fullcite{Pasturel18grenoble}
+\item \fullcite{Perrinet18gdr}
+
+% # 2017
+\item \fullcite{BoutinFranciosiniRuffierPerrinet17DoctoralDay}
+\item \fullcite{BoutinRuffierPerrinet17neurofrance}
+\item \fullcite{BoutinRuffierPerrinet17spars}
+\item \fullcite{Mansour17ecvp}
+\item \fullcite{Mansour17gdr}
+\item \fullcite{Pasturel17gdr}
+\item \fullcite{Perrinet17gdr} 
+\item \fullcite{Damasse17vss}
+
+%\item \fullcite{}
+%\item \fullcite{}
+\item \fullcite{Perrinet16EUVIP}
+\item \fullcite{Mansour16sfn}
+\item \fullcite{Mansour16gdr}
+\item \fullcite{Damasse16ecvp}
+\item \fullcite{Mansour16ecvp}
+\item \fullcite{Damasse16vss}
+\item \fullcite{Montagnini16ecvp}
+\item \fullcite{Perrinet16networks}
+\item \fullcite{Taouali16areadne}
+
+\item \fullcite{Ravello15}
+\item \fullcite{Vacher15icms}
+\item \fullcite{Perrinet15eusipco}
+\item \fullcite{Montagnini15sfn}
+\item \fullcite{Taouali15vss}
+\item \fullcite{Damasse15vss}
+\item \fullcite{Danion15sfn}
+\item \fullcite{Taouali15icmns}
+
+\item \fullcite{Vacher14ihp}
+\item \fullcite{Rudiger14cosyne}%
+\item \fullcite{PerrinetBednar14vss}
+\item \fullcite{Simoncini14vss}
+\item \fullcite{KaplanKhoei14}
+\item \fullcite{Khoei14vss}
+\item \fullcite{Taouali14neurocomp}
+\item \fullcite{Taouali14areadne}
+
+\item \fullcite{Meso14vss}
+\item \fullcite{Khoei13cns}
+\item \fullcite{Perrinet13cns}
+\item \fullcite{Meso13vss}%
+\item \fullcite{Perrinet13jffos}%
+\item \fullcite{Simoncini13vss}
+
+\item \fullcite{Perrinet12areadne}
+\item \fullcite{Masson12areadne}
+\item \fullcite{Khoei12sfn}
+\item \fullcite{Simoncini12coding}
+\item \fullcite{Simoncini12vss}
+
+\item \fullcite{Simoncini11Pattern}
+\item \fullcite{Simoncini11vss}
+\item \fullcite{Perrinet11sfn}
+
+\item \fullcite{Simoncini10vss}
+\item \fullcite{Perrinet10tauc}
+\item \fullcite{Perrinet10areadne}
+\item \fullcite{Bogadhi10vss}
+\item \fullcite{Voges10neurocomp}
+
+
+\item \fullcite{Perrinet09vss}
+\item \fullcite{Perrinet09cosyne}
+\item \fullcite{Voges09cosyne}
+\item \fullcite{Voges09gns}
+\item \fullcite{Kremkow09gns}
+\item \fullcite{Yger09gns}
+
+\item \fullcite{Kremkow08sfn}
+\item \fullcite{Voges08neurocomp}
+\item \fullcite{Voges08}
+\item \fullcite{Kremkow08neurocomp}
+\item \fullcite{Perrinet08a}
+\item \fullcite{Perrinet08areadne}
+\item \fullcite{Perrinet08}
+
+\item \fullcite{Davison07cns}
+\item \fullcite{Kremkow07cns}
+\item \fullcite{Montagnini07a}
+\item \fullcite{Montagnini07b}
+\item \fullcite{Perrinet07cns}
+\item \fullcite{Perrinet07mipm}
+
+\item \fullcite{Perrinet06ciotat}
+\item \fullcite{Perrinet06cns}
+\item \fullcite{Perrinet06neurocomp}
+\item \fullcite{Perrinet06fab}
+\item \fullcite{Perrinet06fens}
+\item \fullcite{Montagnini06neurocomp}
+\item \fullcite{Wohrer06}
+
+\item \fullcite{Perrinet05}
+\item \fullcite{Perrinet05a}
+\item \fullcite{Fischer05a}
+\item \fullcite{Fischer05}
+\item \fullcite{Redondo05}
+
+\item \fullcite{Perrinet02nsi}
+\item \fullcite{Perrinet02esann}
+
+\item \fullcite{Perrinet00}
+
+\end{etaremune}% 
+
+
+\section{Seminars and conferences with oral or poster presentations}% 
+
+\begin{etaremune}%enumerate}
+  \item \fullcite{2026-11-26-neurodays}
+  \item \fullcite{2026-11-09-forum-numerica}
+  \item \fullcite{2026-11-03-grenoble}
+  \item \fullcite{2026-09-18-int}
+  \item \fullcite{2026-04-16-cerco}
+  \item \fullcite{2026-02-10-biomplus}
+  \item \fullcite{2026-02-03-ai-and-neuroscience-day}
+  \item \fullcite{2026-01-29-emergences}
+  \item \fullcite{2025-12-12_main}
+  \item \fullcite{2025-12-02_symposium-masters}
+  \item \fullcite{2025-10-16-flash-lag-effect}
+  \item \fullcite{2025-04-18-vibration-apparences}
+  \item \fullcite{2025-02-14-supaero}
+  \item \fullcite{2025-02-11-neuromath}
+  \item \fullcite{2025-01-08-brain-seminar}
+  \item \fullcite{2024-11-18-biomim}
+  \item \fullcite{2024-09-09-agileneurobot-anr}
+  \item \fullcite{2024-03-27-emergences}
+  \item \fullcite{2024-02-05-udem}
+  \item \fullcite{2023-12-01-biocomp}
+  \item \fullcite{2023-12-14-jraf} 
+  \item \fullcite{2023-11-07_SNUFA} 
+  \item \fullcite{2023-09-27_ICANN} 
+  \item \fullcite{2023-09-08_fresnel}
+  \item \fullcite{2023-01-23_game-theory-and-the-brain}
+  \item \fullcite{2022-06-19_NeuroVision-heterogeneous}
+  \item \fullcite{2022-06-19_NeuroVision-retinotopic}
+  \item \fullcite{2022-06-14_MIR-symposium}
+  \item \fullcite{2022-05-19_CENTURI-day}
+  \item \fullcite{2022-03-22_SIAM-IS22}
+  \item \fullcite{2022-01-12_NeuroCercle}
+  \item \fullcite{2021-08-27_DDXL}
+  \item \fullcite{2021-06-15_SMB}
+  \item \fullcite{2021-05-20_NeuroFrance}
+  \item \fullcite{2020-09-25_IRPHE}
+  \item \fullcite{2020-09-14_IWAI}
+  \item \fullcite{2020-04_UE-neurosciences-computationnelles}
+  \item \fullcite{2020-01-20_atelier_sciences_cinema}
+  \item \fullcite{2019-07-15_CNS} 
+  \item \fullcite{2019-05-23_Neurofrance}
+  \item \fullcite{2019-04-18_JNLF}
+  \item \fullcite{2019-04-05_BBCP_causal_kickoff}
+  \item \fullcite{2019-03-25_HDR_RobinBaures}
+  \item \fullcite{2019-01-18_LACONEU}
+  \item \fullcite{2018-04-05_BCP_talk}
+  \item \fullcite{2017-01-18_LACONEU}
+  \item \fullcite{2017-06-28_Telluride}
+  \item \fullcite{2016-07-07_EDP-proba}
+  \item \fullcite{2016-10-13_LAW}
+  \item \fullcite{2016-11-03_SIGMA}
+  \item \fullcite{2016-10-26_FillatreBarlaudPerrinet16EUVIP}
+  \item \fullcite{2016-10-26_Perrinet16EUVIP}
+  \item \fullcite{2016-11-03_gdr} 
+  \item \fullcite{2015-11-05_Chile}
+  \item \fullcite{2015-10-07_GDR-BioComp}
+  \item \fullcite{2014-01-10_INTFest}
+  \item \fullcite{2014-03-20_Manchester}
+  \item \fullcite{2014-04-25_kaplan-beijing}
+  \item \fullcite{2013-03-21_Marseille}
+  \item \fullcite{2013-07-05_Cerco}
+  \item \fullcite{2013-11-26_BrainScalesDemos}
+  \item \fullcite{2012-01-12_VisionAtUcl}
+  \item \fullcite{2012-01-24_Edinburgh}
+  \item \fullcite{2012-01-27_FIL}
+  \item \fullcite{2012-03-22_Juelich}
+  \item \fullcite{2012-03-23_Juelich}
+  \item \fullcite{2012-05-10_itwist} 
+  \item \fullcite{2011-07-02_NeuroMedTalk}
+  \item \fullcite{2011-09-28_ermites}
+  \item \fullcite{2011-10-05_BrainScalesESS}
+  \item \fullcite{2011-11-15_sfn}
+  \item \fullcite{2010-01-08_facets}
+  \item \fullcite{2010-12-17_TaucTalk}
+  \item \fullcite{2009-04-01_INT}
+  \item \fullcite{2009-07-18_Kremkow09cnstalk}
+  \item \fullcite{2009-11-30_vss}
+  \item \fullcite{2008-02-01_toledo}
+  \item \fullcite{2008-04-01_incm}
+  \item \fullcite{2008-06-01_Ulm}
+  \item \fullcite{2007-09-01_mipm}
+  \item \fullcite{2007-12-01_rankprize}
+  \item \fullcite{2006-01-01_neurocomp}
+\end{etaremune}%
+
+\section{Courses and science outreach activities}%
+
+\begin{etaremune}%enumerate}
+  \item \fullcite{2026-04-11-intelligence-du-regard}
+  \item \fullcite{2026-03-24_phd-program-spiking-neural-nets}
+  \item \fullcite{2026-03-05_ue-natural-cognition}
+  \item \fullcite{2026-01-19_art-and-science}
+  \item \fullcite{2025-06-12_explore-conference-immersive}
+  \item \fullcite{2025-06-10_explore-cine-sciences}
+  \item \fullcite{2025-05-26_master-M4NC}
+  \item \fullcite{2025-03-11_phd-program-sparse-representations}
+  \item \fullcite{Ladret24joconde}
+  \item \fullcite{Perrinet24yeux}
+  \item \fullcite{Perrinet23formes-et-perception}
+  \item \fullcite{2024-05-13_master-M4NC}
+  \item \fullcite{2024-04-17_phd-program-sparse-representations}
+  \item \fullcite{2024-04-10_UE-neurosciences-computationnelles}
+  \item \fullcite{2023-05-10_phd-program_neurosciences-computationnelles}
+  \item \fullcite{2023-04-05_UE-neurosciences-computationnelles}
+  \item \fullcite{2023-04-03_master-M4NC}
+  \item \fullcite{2022-03-23_UE-neurosciences-computationnelles}
+  \item \fullcite{Perrinet21hasard}
+  \item \fullcite{Perrinet19temps}
+  \item \fullcite{Perrinet19illusions}
+  \item \fullcite{2019-01-10_PollyMaggoo}
+  \item \fullcite{2019-01-14_LACONEU}
+  \item \fullcite{2019-01-16_LACONEU}
+  \item \fullcite{2019-01-17_LACONEU}
+  \item \fullcite{2019-04-03_a_course_on_vision_and_modelization}
+  \item \fullcite{2018-01-25_meetup-neuronautes}
+  \item \fullcite{2018-02-01_BCP_INVIBE_fest}
+  \item \fullcite{2018-03-26_cours-NeuroComp_FEP}
+  \item \fullcite{2018-10-10_PollyMaggoo}
+  \item \fullcite{2018-10-11_BioMorphisme}
+  \item \fullcite{2017-01-19_LACONEU}
+  \item \fullcite{2017-01-20_LACONEU}
+  \item \fullcite{2017-06-30_Telluride}
+  \item \fullcite{2017-11-15_ColloqueMaster}
+  \item \fullcite{2017-11-17_FestivalInterferences}
+  \item \fullcite{2017-11-24_NeurosciencesRobotique}
+  \item \fullcite{2016-04-25_PollyMaggoo}
+  \item \fullcite{2016-04-28_Mejanes}
+  \item \fullcite{2016-11-20_PollyMaggoo}
+  \item \fullcite{2010-04-14_OndesParalleles}
+  \item \fullcite{Perrinet10DocSciences}
+  \item \fullcite{2009-11-24_IntelligenceMecanique}
+\end{etaremune}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document} %
