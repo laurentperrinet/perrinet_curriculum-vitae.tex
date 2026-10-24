@@ -29,7 +29,7 @@ push: pdf $(BIB)
 
 # cleaning macro
 clean:
-	rm -f *.dvi *.fls *.ilg *.ind *.idx *.bcf *.run.xml *.dvi *.ps *.out *.log *.aux *.bbl *.blg  *.fdb_latexmk *.snm *.nav *.toc *.info *.synctex.gz*
+	rm -f *.dvi *.fls *.ilg *.ind *.idx *.bcf *.run.xml *.dvi *.ps *.out *.log *.aux *.bbl *.blg  *.fdb_latexmk *.snm *.nav *.toc *.info *.synctex.gz* *.bbl-SAVE-ERROR
 
 touch:
 	touch *.tex
