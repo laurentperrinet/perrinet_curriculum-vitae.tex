@@ -4,7 +4,6 @@ SRC = perrinet_curriculum-vitae
 pdf: $(SRC)-full_fr.pdf $(SRC)-full_en.pdf $(SRC)-short_en.pdf $(SRC)-short_fr.pdf perrinet_publications_fr.pdf perrinet_publications_en.pdf
 
 LATEXMK = latexmk -pdf -pdflatex=lualatex
-BIBTEX = bibtex -terse
 BIB = LaurentPerrinet_publications.bib LaurentPerrinet_talks.bib
 
 # the generic rule below only depends on the .tex file: declare the .bib files
@@ -14,15 +13,8 @@ $(SRC)-full_fr.pdf $(SRC)-full_en.pdf $(SRC)-short_en.pdf $(SRC)-short_fr.pdf pe
 push: pdf $(BIB)
 	git commit -m "Build website" -a ; git push
 
-# macros
 %.pdf: %.tex
 	$(LATEXMK) $<
-
-%.pdf: %.svg
-	$(INKSCAPE) --without-gui $< --export-pdf=$@
-
-%.png: %.svg
-	$(INKSCAPE) --without-gui $< --export-png=$@ -d 450
 
 # cleaning macro
 clean:

@@ -18,12 +18,6 @@ UMR 7289, CNRS / Aix-Marseille Université\\ 27, Bd. Jean Moulin, 13385 Marseill
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text}
-% ---- COMMANDES PERSONNALISÉES
-\chardef\&="E050
-\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
-\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
-\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
-\newcommand{\amper}{{\selectfont\itshape\&}}
 % ---- ANNÉES EN MARGE
 \usepackage{marginnote}
 \newcommand{\years}[1]{\marginnote{\scriptsize #1}}
@@ -37,15 +31,13 @@ UMR 7289, CNRS / Aix-Marseille Université\\ 27, Bd. Jean Moulin, 13385 Marseill
 \subsectionfont{\rmfamily\mdseries\scshape\normalsize}
 \subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
 % CONFIGURATION PDF
+\definecolor{linkblue}{rgb}{0,0,0.55}% dark blue for all links (classic Netscape look)
 \usepackage[bookmarks, colorlinks, breaklinks]{hyperref}
-\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,
+\hypersetup{linkcolor=linkblue,citecolor=linkblue,filecolor=black,urlcolor=linkblue,
 pdftitle={\Title},%
 pdfauthor={\Author < \Email > \Address - \Website},%
 pdfsubject={\Title}%
 }%
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 % ---- PUBLICATIONS SÉLECTIONNÉES, MISES EN FORME DEPUIS LE FICHIER BIB
 \usepackage[backend=biber, bibencoding=utf8, style=authoryear, sorting=none,
             maxbibnames=7, minbibnames=7, uniquename=false, uniquelist=false,

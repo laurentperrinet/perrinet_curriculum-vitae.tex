@@ -1,6 +1,6 @@
 %! TEX program = lualatex
 %! TeX encoding = UTF-8 Unicode
-%! TeX spellcheck = fr-FR
+%! TeX spellcheck = en-GB
 %! BIB TS-program = biber
 % -*- coding: UTF-8; -*-
 %------------------------------------
@@ -24,12 +24,6 @@ UMR 7289, CNRS / Aix-Marseille Universit{\'e}\\ 27, Bd. Jean Moulin, 13385 Marse
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text}
-% ---- CUSTOM COMMANDS
-\chardef\&="E050
-\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
-\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
-\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
-\newcommand{\amper}{{\selectfont\itshape\&}}
 % ---- MARGIN YEARS
 \usepackage{marginnote}
 \newcommand{\years}[1]{\marginnote{\scriptsize #1}}
@@ -43,15 +37,13 @@ UMR 7289, CNRS / Aix-Marseille Universit{\'e}\\ 27, Bd. Jean Moulin, 13385 Marse
 \subsectionfont{\rmfamily\mdseries\scshape\normalsize}
 \subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
 % PDF SETUP
+\definecolor{linkblue}{rgb}{0,0,0.55}% dark blue for all links (classic Netscape look)
 \usepackage[bookmarks, colorlinks, breaklinks]{hyperref}
-\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue,
+\hypersetup{linkcolor=linkblue,citecolor=linkblue,filecolor=black,urlcolor=linkblue,
 pdftitle={\Title},%
 pdfauthor={\Author < \Email > \Address - \Website},%
 pdfsubject={\Title}%
 }%
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 % ---- SELECTED PUBLICATIONS, FORMATTED FROM THE BIB FILE
 \usepackage[backend=biber, bibencoding=utf8, style=authoryear, sorting=none,
