@@ -31,8 +31,8 @@ Actuellement, Laurent Perrinet mène ses recherches à l'Institut de Neuroscienc
 
 ### Biosketch institutionnel
 
-Laurent Perrinet est chercheur en neurosciences au CNRS, à l'Institut de Neurosciences de la Timone à Marseille. Il s'intéresse à une question fondamentale : comment notre cerveau parvient-il à construire une image cohérente du monde à partir d'informations visuelles fragmentées et incertaines ?
-Pour y répondre, il développe des modèles informatiques inspirés du fonctionnement du cerveau. Ces modèles reproduisent la façon dont les neurones communiquent par de brèves impulsions électriques, et cherchent à expliquer pourquoi la vision biologique est à la fois si rapide et si efficace énergétiquement. Les algorithmes qui en résultent ouvrent des pistes concrètes pour une intelligence artificielle plus sobre et plus robuste.
+Laurent Perrinet est chercheur en neurosciences computationnelles, directeur de recherche du CNRS à l'Institut de Neurosciences de la Timone à Marseille. Il s'intéresse à une question fondamentale : comment une information visuelle fragmentée et incertaine, échantillonnée de façon non uniforme par la rétine, devient-elle une perception cohérente puis une décision d'action, comme une saccade qui pointe vers un objet recherché ?
+La clé est de comprendre ces processus comme prédictifs : la rétinotopie fovéale permet d'anticiper où et quoi regarder tout en guidant les saccades, et cette prédiction s'appuie sur les connexions récurrentes du cortex visuel primaire. Il en propose une implémentation physique sous forme de réseaux de neurones impulsionnels, avec des gains énergétiques de plusieurs centaines de fois par rapport aux méthodes analogiques classiques. Ce principe s'étend à la prévision de séries temporelles et aux textures dynamiques naturelles, et ouvre des pistes pour une intelligence artificielle plus sobre et plus robuste.
 
 [↑ Haut de page](#top)
 
@@ -58,5 +58,10 @@ This repository holds the LaTeX sources (built with `lualatex` through `latexmk`
 ### General-audience biosketch
 
 Laurent Perrinet is a researcher who studies how the brain performs ‘calculations’. His aim is to recreate large-scale neural networks using artificial intelligence tools. In particular, this could lead to a better understanding of what happens between two eye blinks: how the brain perceives an image, processes it and decides on an action such as eye movement. Laurent Perrinet is currently conducting his research at the Institut de Neurosciences de la Timone (France), a joint research unit (CNRS / Aix-Marseille University).
+
+### Institutional biosketch
+
+Laurent Perrinet is a computational neuroscientist at the CNRS, research director at the Institut de Neurosciences de la Timone in Marseille. He addresses a fundamental question: how does fragmentary and uncertain visual information, sampled non-uniformly by the retina, become a coherent percept and then a decision to act, such as a saccade that points towards a sought object?
+The key is to understand these processes as predictive: foveal retinotopy makes it possible to anticipate where and what to look at while guiding saccades, and this prediction relies on the recurrent connections of the primary visual cortex. He proposes a physical implementation of it as spiking neural networks, with energy gains of several hundred times compared with classical analogue methods. This principle extends to time-series forecasting and to natural dynamic textures, and opens the way to a more frugal and more robust artificial intelligence.
 
 [↑ Top of page](#top)
